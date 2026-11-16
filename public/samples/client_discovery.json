@@ -1,0 +1,88 @@
+{
+  "meetingTitle": "FinCorp Global - Enterprise Solution Discovery & Security Review",
+  "meetingType": "Client Discovery & Sales",
+  "date": "2026-11-15",
+  "duration": "35 minutes",
+  "participants": [
+    {"name": "Sarah Jenkins", "role": "Enterprise Account Director"},
+    {"name": "Liam O'Connor", "role": "Senior Solutions Architect"},
+    {"name": "Arthur Pendelton", "role": "Chief Information Security Officer (FinCorp)"},
+    {"name": "Claire Dupont", "role": "VP Operations (FinCorp)"}
+  ],
+  "sentiment": "High Interest & Security-Minded",
+  "executiveSummary": "FinCorp Global is evaluating OmniNote AI to automate meeting transcription, compliance audit trails, and executive note distribution for 1,200 financial analysts. Arthur Pendelton's core concerns centered around SOC 2 Type II attestation, data residency in Frankfurt/Zurich, and zero data retention for AI model training. Liam confirmed private tenant isolation and customer-managed KMS encryption keys.",
+  "keyDecisions": [
+    {
+      "id": "dec-201",
+      "decision": "Deploy a dedicated EU-central-1 single-tenant sandbox instance for FinCorp's security validation audit.",
+      "rationale": "Satisfies Swiss financial market regulatory requirements for initial penetration testing.",
+      "champion": "Liam O'Connor",
+      "status": "Agreed"
+    },
+    {
+      "id": "dec-202",
+      "decision": "Initiate a 45-day pilot with 100 wealth management advisors starting Dec 1.",
+      "rationale": "Proof of concept will measure time saved on client meeting documentation and compliance review speed.",
+      "champion": "Claire Dupont",
+      "status": "Targeting Dec 1"
+    }
+  ],
+  "actionItems": [
+    {
+      "id": "act-201",
+      "task": "Send SOC 2 Type II report, ISO 27001 certificate, and standard BAA/DPA documents.",
+      "assignee": "Sarah Jenkins",
+      "priority": "High",
+      "dueDate": "Nov 17, 2026",
+      "completed": true
+    },
+    {
+      "id": "act-202",
+      "task": "Provide architectural diagram showing Bring-Your-Own-Key (BYOK) KMS encryption flow.",
+      "assignee": "Liam O'Connor",
+      "priority": "High",
+      "dueDate": "Nov 19, 2026",
+      "completed": false
+    },
+    {
+      "id": "act-203",
+      "task": "Review custom master services agreement (MSA) clauses with FinCorp legal counsel.",
+      "assignee": "Arthur Pendelton",
+      "priority": "Medium",
+      "dueDate": "Nov 25, 2026",
+      "completed": false
+    }
+  ],
+  "unresolvedQuestions": [
+    {
+      "question": "Does OmniNote AI support real-time redacting of PCI-DSS credit card and SSN identifiers from live audio?",
+      "context": "Liam to demonstrate the automated PII masking engine during the sandbox onboarding session.",
+      "owner": "Liam O'Connor"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "FinCorp Pain Points & Workflow Inefficiencies",
+      "duration": "10 min",
+      "summary": "Claire highlighted that financial advisors currently spend 90 minutes each day manually writing meeting memorandums after client portfolio reviews."
+    },
+    {
+      "topic": "Data Privacy, Zero-Retention, and Compliance",
+      "duration": "15 min",
+      "summary": "Arthur verified that customer audio streams and text embeddings are never used to train base foundation models."
+    },
+    {
+      "topic": "Pilot Scope & Next Steps",
+      "duration": "10 min",
+      "summary": "Agreed on 100-user pilot kickoff in December with weekly telemetry check-ins."
+    }
+  ],
+  "transcript": [
+    {"timestamp": "00:00", "speaker": "Sarah Jenkins", "text": "Arthur, Claire, thank you for joining us today. We're excited to explore how OmniNote can streamline meeting workflows for FinCorp's advisory teams."},
+    {"timestamp": "02:10", "speaker": "Claire Dupont", "text": "Our primary problem is documentation overhead. Our 1,200 advisors are spending nearly two hours a day writing client notes. We need that automated, but compliance is strictly paramount."},
+    {"timestamp": "04:30", "speaker": "Arthur Pendelton", "text": "Indeed. From a CISO standpoint, my red lines are simple: customer data must never be used to train foundation models, we need single-tenant VPC peering or dedicated cloud isolation, and our data must remain in Zurich or Frankfurt."},
+    {"timestamp": "07:05", "speaker": "Liam O'Connor", "text": "We completely align with those requirements, Arthur. OmniNote offers zero data retention agreements. Furthermore, you can provision customer-managed KMS encryption keys so even our engineers have zero access to plaintext meeting transcripts."},
+    {"timestamp": "12:40", "speaker": "Arthur Pendelton", "text": "That is reassuring. If you provide the KMS architecture specs and your latest SOC 2 Type II report, we can clear this for a 100-user pilot next month."},
+    {"timestamp": "15:00", "speaker": "Sarah Jenkins", "text": "Fantastic. I'll dispatch the compliance bundle today, and Liam will send the encryption diagrams by Thursday. Thank you both!"}
+  ]
+}

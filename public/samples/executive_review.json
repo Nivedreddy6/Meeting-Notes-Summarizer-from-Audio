@@ -1,0 +1,87 @@
+{
+  "meetingTitle": "Executive Leadership & Q3 Financial Performance Review",
+  "meetingType": "Executive Briefing",
+  "date": "2026-11-14",
+  "duration": "55 minutes",
+  "participants": [
+    {"name": "Victoria Sterling", "role": "Chief Executive Officer"},
+    {"name": "David Chen", "role": "Chief Financial Officer"},
+    {"name": "Maya Lin", "role": "Chief Marketing Officer"},
+    {"name": "Tariq Mansoor", "role": "Chief Revenue Officer"}
+  ],
+  "sentiment": "Disciplined Optimism & Revenue Focus",
+  "executiveSummary": "Q3 concluded with $48.2M ARR, exceeding target by 6.4%, driven by strong enterprise tier expansions in North America. Net revenue retention rose to 118%. David presented the 2027 preliminary budget model prioritizing AI product enhancements while keeping general headcount growth at 8%. Tariq committed to closing the $4.5M EMEA pipeline before end of quarter.",
+  "keyDecisions": [
+    {
+      "id": "dec-101",
+      "decision": "Approve $2.8M capital expenditure for dedicated AI GPU cluster acceleration.",
+      "rationale": "Directly supports the GenAI meeting intelligence and automated workflow roadmap expected to drive 35% of 2027 pipeline.",
+      "champion": "Victoria Sterling",
+      "status": "Approved"
+    },
+    {
+      "id": "dec-102",
+      "decision": "Reallocate 20% of outbound marketing spend into customer advocacy and account-based enterprise marketing.",
+      "rationale": "Inbound CAC reduced by 22% when leveraging existing customer case studies and partner co-marketing.",
+      "champion": "Maya Lin",
+      "status": "Approved"
+    }
+  ],
+  "actionItems": [
+    {
+      "id": "act-101",
+      "task": "Deliver final 2027 headcount model with revised engineering allocation.",
+      "assignee": "David Chen",
+      "priority": "High",
+      "dueDate": "Nov 24, 2026",
+      "completed": false
+    },
+    {
+      "id": "act-102",
+      "task": "Provide updated pipeline coverage report for EMEA strategic accounts.",
+      "assignee": "Tariq Mansoor",
+      "priority": "High",
+      "dueDate": "Nov 21, 2026",
+      "completed": false
+    },
+    {
+      "id": "act-103",
+      "task": "Finalize keynote agenda and enterprise customer speaker lineup for Annual Summit.",
+      "assignee": "Maya Lin",
+      "priority": "Medium",
+      "dueDate": "Nov 28, 2026",
+      "completed": false
+    }
+  ],
+  "unresolvedQuestions": [
+    {
+      "question": "Will currency fluctuations in EUR/GBP impact Q4 net collections?",
+      "context": "David to run sensitivity analysis against exchange rate shifts by Friday.",
+      "owner": "David Chen"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Financial Performance & ARR Breakdown",
+      "duration": "20 min",
+      "summary": "David walked through P&L. Gross margins expanded to 79.2% due to cloud infrastructure optimizations."
+    },
+    {
+      "topic": "Sales Pipeline & Expansion Velocity",
+      "duration": "18 min",
+      "summary": "Tariq reported average enterprise deal size increased from $140k to $210k. Sales cycle shortened from 74 to 59 days."
+    },
+    {
+      "topic": "Strategic AI Investments",
+      "duration": "17 min",
+      "summary": "Victoria emphasized that product leadership in generative AI workflows is the company's highest strategic priority for 2027."
+    }
+  ],
+  "transcript": [
+    {"timestamp": "00:00", "speaker": "Victoria Sterling", "text": "Welcome everyone. Let's dig into our Q3 numbers. David, over to you for the financials."},
+    {"timestamp": "01:45", "speaker": "David Chen", "text": "Thanks Victoria. We closed Q3 at 48.2 Million ARR, beating our 45.3 Million guidance. Gross margins expanded to 79.2%, largely due to the cloud cost optimizations implemented in June."},
+    {"timestamp": "04:30", "speaker": "Tariq Mansoor", "text": "On the commercial side, our net revenue retention is sitting comfortably at 118%. The driver is enterprise expansion — existing accounts are adopting our intelligence modules at twice our forecast rate."},
+    {"timestamp": "08:15", "speaker": "Maya Lin", "text": "Our customer case studies are accelerating pipeline velocity. I want to shift 20% of our generic outbound spend into high-touch customer advocacy and industry roundtables."},
+    {"timestamp": "11:20", "speaker": "Victoria Sterling", "text": "Approved Maya. And David, let's lock in the $2.8M capex for AI model training and inference. We need to stay ahead of the competition on meeting intelligence. Let's review action items and adjourn."}
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "meetingTitle": "Q4 Sprint Planning & Architecture Modernization Sync",
+  "meetingType": "Engineering & Architecture",
+  "date": "2026-11-16",
+  "duration": "42 minutes",
+  "participants": [
+    {"name": "Alex Rivera", "role": "Principal Systems Architect"},
+    {"name": "Priya Sharma", "role": "VP of Engineering"},
+    {"name": "Marcus Vance", "role": "Lead Backend Engineer"},
+    {"name": "Elena Rostova", "role": "Product Manager"}
+  ],
+  "sentiment": "Constructive & High Alignment",
+  "executiveSummary": "The engineering team finalized the architectural approach for the Q4 database migration from monolithic Postgres to a distributed sharded setup. Key risks around read latency during peak hours were resolved by introducing a Redis Sentinel caching layer. Marcus and Elena aligned on a phased rollback mechanism to ensure 99.99% uptime during the transition scheduled for the first weekend of next month.",
+  "keyDecisions": [
+    {
+      "id": "dec-1",
+      "decision": "Adopt Redis Sentinel cluster for tier-1 session and hot-record caching.",
+      "rationale": "Reduces read queries on primary DB by an estimated 65% during flash traffic surges.",
+      "champion": "Marcus Vance",
+      "status": "Approved"
+    },
+    {
+      "id": "dec-2",
+      "decision": "Execute schema migration using blue-green database deployment with dual-write replication.",
+      "rationale": "Eliminates customer downtime and provides immediate instant fallback if error rate exceeds 0.05%.",
+      "champion": "Alex Rivera",
+      "status": "Approved"
+    },
+    {
+      "id": "dec-3",
+      "decision": "Postpone GraphQL federation v2 to Q1 to keep sprint scope focused exclusively on database stability.",
+      "rationale": "Prevents team burnout and isolates regression testing variables.",
+      "champion": "Priya Sharma",
+      "status": "Deferred to Q1"
+    }
+  ],
+  "actionItems": [
+    {
+      "id": "act-1",
+      "task": "Finalize Redis connection pooling benchmark numbers and memory sizing document.",
+      "assignee": "Marcus Vance",
+      "priority": "High",
+      "dueDate": "Nov 20, 2026",
+      "completed": false
+    },
+    {
+      "id": "act-2",
+      "task": "Create Grafana dashboard with alerting rules for replication lag > 500ms.",
+      "assignee": "Alex Rivera",
+      "priority": "High",
+      "dueDate": "Nov 22, 2026",
+      "completed": true
+    },
+    {
+      "id": "act-3",
+      "task": "Update customer maintenance window disclosure and draft release changelog.",
+      "assignee": "Elena Rostova",
+      "priority": "Medium",
+      "dueDate": "Nov 25, 2026",
+      "completed": false
+    },
+    {
+      "id": "act-4",
+      "task": "Sign off on AWS reserved instance allocation budget with finance.",
+      "assignee": "Priya Sharma",
+      "priority": "Medium",
+      "dueDate": "Nov 19, 2026",
+      "completed": false
+    },
+    {
+      "id": "act-5",
+      "task": "Conduct load testing simulation with 50,000 concurrent virtual users.",
+      "assignee": "Marcus Vance",
+      "priority": "High",
+      "dueDate": "Nov 27, 2026",
+      "completed": false
+    }
+  ],
+  "unresolvedQuestions": [
+    {
+      "question": "What is the exact failover latency if the primary Redis node drops in AWS us-east-1?",
+      "context": "Marcus will run chaos testing in staging on Thursday to verify whether reconnect takes under 3 seconds.",
+      "owner": "Marcus Vance"
+    },
+    {
+      "question": "Will European GDPR compliance requirements affect the backup snapshot storage region?",
+      "context": "Priya to verify with the data privacy officer before replication across regions is configured.",
+      "owner": "Priya Sharma"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Current Bottlenecks & Post-Mortem Findings",
+      "duration": "10 min",
+      "summary": "Marcus presented metrics from last Tuesday's spike where connection pool starvation caused 400ms p99 latency. The bottleneck was tied to unindexed join queries on tenant audit logs."
+    },
+    {
+      "topic": "Redis Sentinel vs Redis Cluster Evaluation",
+      "duration": "15 min",
+      "summary": "Alex detailed why Sentinel is sufficient for current key counts (under 40GB working set) while avoiding the operational complexity of full cluster slot rebalancing."
+    },
+    {
+      "topic": "Migration Schedule & Cutover Runbook",
+      "duration": "12 min",
+      "summary": "Cutover planned for Sunday Dec 6 at 02:00 UTC. Dual-write will run in shadow mode for 72 hours prior to final traffic switch."
+    },
+    {
+      "topic": "Sprint Allocation & Resourcing",
+      "duration": "5 min",
+      "summary": "Elena confirmed two senior engineers will be dedicated full-time to regression testing, pausing non-critical UI features."
+    }
+  ],
+  "transcript": [
+    {"timestamp": "00:00", "speaker": "Priya Sharma", "text": "Good morning team. Today we're locking down the Q4 architecture plan for the database migration. Alex, why don't you kick off with where we landed on the caching layer?"},
+    {"timestamp": "01:15", "speaker": "Alex Rivera", "text": "Thanks Priya. Looking at Tuesday's metrics, our biggest vulnerability during peak traffic is read pressure on the primary database instance. Marcus and I evaluated Redis Cluster versus Redis Sentinel."},
+    {"timestamp": "02:40", "speaker": "Marcus Vance", "text": "Right. Our active cache footprint is only 32 Gigabytes. Cluster mode brings hash-slot rebalancing overhead that we simply don't need right now. With Sentinel, three nodes give us sub-second automatic failover with minimal operational friction."},
+    {"timestamp": "05:10", "speaker": "Elena Rostova", "text": "From a product standpoint, what's our expected downtime during the actual cutover? Our enterprise enterprise SLAs guarantee 99.99% availability."},
+    {"timestamp": "06:30", "speaker": "Alex Rivera", "text": "Zero scheduled downtime, Elena. We're running dual-write replication in shadow mode for 72 hours beforehand. When we flip the traffic router, if error rates spike above 0.05%, our proxy instantly switches back to the legacy Postgres cluster."},
+    {"timestamp": "09:45", "speaker": "Priya Sharma", "text": "That gives me confidence. What about the GraphQL federation work we discussed last week?"},
+    {"timestamp": "10:20", "speaker": "Marcus Vance", "text": "I strongly suggest deferring GraphQL federation to Q1. Let's keep our sprint laser-focused on database stability and performance. Introducing schema stitching right now adds unnecessary risk variables."},
+    {"timestamp": "12:00", "speaker": "Elena Rostova", "text": "I agree Marcus. I'll communicate to stakeholders that customer-facing GraphQL endpoints will land early January. Database resilience comes first."},
+    {"timestamp": "15:30", "speaker": "Priya Sharma", "text": "Agreed. Let's wrap up with owners: Marcus on connection pooling benchmarks by Friday, Alex on Grafana alerts by Sunday, and I'll confirm AWS reserved pricing. Great work everyone."}
+  ]
+}
