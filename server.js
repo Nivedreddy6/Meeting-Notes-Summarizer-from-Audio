@@ -10,8 +10,7 @@ const url = require('url');
 
 // Port configuration
 const PORT = process.env.PORT || 3000;
-const DIST_DIR = path.join(__dirname, 'dist');
-const PUBLIC_DIR = fs.existsSync(DIST_DIR) ? DIST_DIR : path.join(__dirname, 'public');
+const PUBLIC_DIR = path.join(__dirname, 'dist');
 const ENV_PATH = path.join(__dirname, '.env');
 
 // Simple .env parser (zero dependency)
