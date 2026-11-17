@@ -1,0 +1,298 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a13" />
+      <stop offset="50%" stop-color="#0c1222" />
+      <stop offset="100%" stop-color="#060911" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+
+    <linearGradient id="waveGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="geminiGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285F4" />
+      <stop offset="35%" stop-color="#9B72CB" />
+      <stop offset="70%" stop-color="#D96570" />
+      <stop offset="100%" stop-color="#13B5EA" />
+    </linearGradient>
+
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+
+    <!-- Filters for Glow Effects -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      @keyframes waveAnimation {
+        0% { transform: scaleY(0.2); }
+        50% { transform: scaleY(1.0); }
+        100% { transform: scaleY(0.2); }
+      }
+
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.45; transform: scale(1); }
+        50% { opacity: 0.85; transform: scale(1.08); }
+      }
+
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-8px) rotate(1deg); }
+      }
+
+      @keyframes floatReverse {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(6px); }
+      }
+
+      @keyframes shimmerShift {
+        0% { stop-color: #6366f1; }
+        50% { stop-color: #38bdf8; }
+        100% { stop-color: #a855f7; }
+      }
+
+      .wave-bar {
+        transform-origin: bottom;
+        animation: waveAnimation 1.4s ease-in-out infinite alternate;
+      }
+
+      .floating-card {
+        animation: floatSlow 6s ease-in-out infinite;
+      }
+
+      .floating-badge {
+        animation: floatReverse 4.5s ease-in-out infinite;
+      }
+
+      .glow-orb {
+        animation: pulseGlow 5s ease-in-out infinite;
+        transform-origin: center;
+      }
+
+      /* Staggered wave bar animation delays */
+      .wb-1 { animation-delay: 0.05s; }
+      .wb-2 { animation-delay: 0.15s; }
+      .wb-3 { animation-delay: 0.3s; }
+      .wb-4 { animation-delay: 0.45s; }
+      .wb-5 { animation-delay: 0.1s; }
+      .wb-6 { animation-delay: 0.6s; }
+      .wb-7 { animation-delay: 0.25s; }
+      .wb-8 { animation-delay: 0.5s; }
+      .wb-9 { animation-delay: 0.35s; }
+      .wb-10 { animation-delay: 0.7s; }
+      .wb-11 { animation-delay: 0.2s; }
+      .wb-12 { animation-delay: 0.4s; }
+      .wb-13 { animation-delay: 0.65s; }
+      .wb-14 { animation-delay: 0.15s; }
+      .wb-15 { animation-delay: 0.55s; }
+      .wb-16 { animation-delay: 0.3s; }
+      .wb-17 { animation-delay: 0.75s; }
+      .wb-18 { animation-delay: 0.45s; }
+      .wb-19 { animation-delay: 0.2s; }
+      .wb-20 { animation-delay: 0.6s; }
+      .wb-21 { animation-delay: 0.35s; }
+      .wb-22 { animation-delay: 0.1s; }
+      .wb-23 { animation-delay: 0.5s; }
+      .wb-24 { animation-delay: 0.25s; }
+
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 52px;
+        letter-spacing: -1.5px;
+      }
+
+      .subtitle-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        font-size: 19px;
+        letter-spacing: -0.2px;
+        fill: #94a3b8;
+      }
+
+      .badge-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 0.2px;
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGradient)" />
+
+  <!-- Subtle Cyberpunk Background Grid Pattern -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="360" x2="1200" y2="360" />
+    <line x1="120" y1="0" x2="120" y2="420" />
+    <line x1="240" y1="0" x2="240" y2="420" />
+    <line x1="360" y1="0" x2="360" y2="420" />
+    <line x1="480" y1="0" x2="480" y2="420" />
+    <line x1="600" y1="0" x2="600" y2="420" />
+    <line x1="720" y1="0" x2="720" y2="420" />
+    <line x1="840" y1="0" x2="840" y2="420" />
+    <line x1="960" y1="0" x2="960" y2="420" />
+    <line x1="1080" y1="0" x2="1080" y2="420" />
+  </g>
+
+  <!-- Glowing Radial Background Orbs -->
+  <circle cx="200" cy="120" r="140" fill="#4f46e5" opacity="0.25" filter="url(#glow)" class="glow-orb" />
+  <circle cx="980" cy="280" r="160" fill="#06b6d4" opacity="0.2" filter="url(#glow)" class="glow-orb" />
+  <circle cx="600" cy="380" r="180" fill="#8b5cf6" opacity="0.18" filter="url(#glow)" />
+
+  <!-- Animated Soundwave Frequency Visualizer (Center Backdrop) -->
+  <g transform="translate(180, 240)" opacity="0.45">
+    <!-- 24 Audio Equalizer Bars -->
+    <rect class="wave-bar wb-1" x="0" y="-80" width="8" height="80" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-2" x="16" y="-120" width="8" height="120" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-3" x="32" y="-60" width="8" height="60" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-4" x="48" y="-140" width="8" height="140" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-5" x="64" y="-95" width="8" height="95" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-6" x="80" y="-160" width="8" height="160" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-7" x="96" y="-70" width="8" height="70" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-8" x="112" y="-130" width="8" height="130" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-9" x="128" y="-175" width="8" height="175" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-10" x="144" y="-85" width="8" height="85" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-11" x="160" y="-150" width="8" height="150" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-12" x="176" y="-110" width="8" height="110" rx="4" fill="url(#waveGradient)" />
+    
+    <!-- Right mirror of audio bars -->
+    <rect class="wave-bar wb-13" x="664" y="-110" width="8" height="110" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-14" x="680" y="-150" width="8" height="150" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-15" x="696" y="-85" width="8" height="85" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-16" x="712" y="-175" width="8" height="175" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-17" x="728" y="-130" width="8" height="130" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-18" x="744" y="-70" width="8" height="70" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-19" x="760" y="-160" width="8" height="160" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-20" x="776" y="-95" width="8" height="95" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-21" x="792" y="-140" width="8" height="140" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-22" x="808" y="-60" width="8" height="60" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-23" x="824" y="-120" width="8" height="120" rx="4" fill="url(#waveGradient)" />
+    <rect class="wave-bar wb-24" x="840" y="-80" width="8" height="80" rx="4" fill="url(#waveGradient)" />
+  </g>
+
+  <!-- Left Hero Content Group -->
+  <g transform="translate(80, 85)">
+    <!-- Top Innovation Pill -->
+    <g class="floating-badge">
+      <rect width="250" height="34" rx="17" fill="#6366f1" fill-opacity="0.15" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1.2" />
+      <circle cx="18" cy="17" r="5" fill="#38bdf8" filter="url(#subtleGlow)" />
+      <text x="32" y="22" class="badge-text" fill="#c7d2fe">Next-Gen Audio Intelligence</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="95" class="title-text" fill="#ffffff">
+      OmniNote <tspan fill="url(#primaryGradient)">AI</tspan>
+    </text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="0" y="140" class="subtitle-text">
+      Intelligent Meeting Summarizer from Audio
+    </text>
+    <text x="0" y="168" class="subtitle-text" font-size="16" fill="#64748b">
+      Direct Multimodal Audio Reasoning • Speaker Diarization • Interactive Copilot
+    </text>
+
+    <!-- Feature Badges -->
+    <g transform="translate(0, 205)">
+      <!-- React 19 Badge -->
+      <g>
+        <rect width="110" height="34" rx="8" fill="url(#cardBg)" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1" />
+        <circle cx="18" cy="17" r="4" fill="#38bdf8" />
+        <text x="30" y="22" class="badge-text" fill="#e0f2fe">React 19</text>
+      </g>
+
+      <!-- Gemini Multimodal Badge -->
+      <g transform="translate(122, 0)">
+        <rect width="180" height="34" rx="8" fill="url(#cardBg)" stroke="#a855f7" stroke-opacity="0.3" stroke-width="1" />
+        <path d="M16 11L18 17L24 19L18 21L16 27L14 21L8 19L14 17Z" fill="url(#geminiGlow)" />
+        <text x="32" y="22" class="badge-text" fill="#f3e8ff">Gemini 2.5 Flash</text>
+      </g>
+
+      <!-- Live Mic Recording Badge -->
+      <g transform="translate(314, 0)">
+        <rect width="145" height="34" rx="8" fill="url(#cardBg)" stroke="#10b981" stroke-opacity="0.3" stroke-width="1" />
+        <circle cx="18" cy="17" r="4" fill="#10b981" />
+        <text x="30" y="22" class="badge-text" fill="#d1fae5">Live Mic Ingest</text>
+      </g>
+
+      <!-- Zero Latency -->
+      <g transform="translate(471, 0)">
+        <rect width="145" height="34" rx="8" fill="url(#cardBg)" stroke="#f59e0b" stroke-opacity="0.3" stroke-width="1" />
+        <polygon points="18,10 12,18 17,18 15,24 22,15 18,15" fill="#f59e0b" />
+        <text x="28" y="22" class="badge-text" fill="#fef3c7">Instant Copilot</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Floating Glassmorphic UI Card (Mock Dashboard Preview) -->
+  <g transform="translate(750, 60)" class="floating-card">
+    <!-- Backdrop Blur Glow -->
+    <rect width="370" height="295" rx="18" fill="#4f46e5" opacity="0.12" filter="url(#glow)" />
+    
+    <!-- Glassmorphic Card Container -->
+    <rect width="370" height="295" rx="18" fill="#111827" fill-opacity="0.82" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.2" />
+
+    <!-- Card Top Header -->
+    <g transform="translate(20, 24)">
+      <circle cx="6" cy="6" r="5" fill="#ef4444" opacity="0.8" />
+      <circle cx="22" cy="6" r="5" fill="#f59e0b" opacity="0.8" />
+      <circle cx="38" cy="6" r="5" fill="#10b981" opacity="0.8" />
+      <rect x="220" y="0" width="110" height="20" rx="10" fill="#6366f1" fill-opacity="0.2" />
+      <text x="238" y="14" font-family="sans-serif" font-size="10" font-weight="700" fill="#a5b4fc">AI REASONING</text>
+    </g>
+
+    <!-- Card Inner Content: Executive Summary Snippet -->
+    <g transform="translate(20, 60)">
+      <text x="0" y="16" font-family="sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Q4 Architecture Modernization</text>
+      <text x="0" y="34" font-family="sans-serif" font-size="11" fill="#94a3b8">Duration: 42 min • 4 Speakers • High Alignment</text>
+
+      <!-- Key Decision Pill -->
+      <g transform="translate(0, 52)">
+        <rect width="330" height="42" rx="8" fill="#1e293b" fill-opacity="0.7" stroke="#6366f1" stroke-opacity="0.2" stroke-width="1" />
+        <text x="12" y="18" font-family="sans-serif" font-size="11" font-weight="700" fill="#38bdf8">💡 DECISION LOGGED</text>
+        <text x="12" y="32" font-family="sans-serif" font-size="10" fill="#cbd5e1">Adopt Redis Sentinel for 65% DB load reduction</text>
+      </g>
+
+      <!-- Action Items Mini Checklist -->
+      <g transform="translate(0, 106)">
+        <rect width="330" height="42" rx="8" fill="#1e293b" fill-opacity="0.7" stroke="#10b981" stroke-opacity="0.2" stroke-width="1" />
+        <text x="12" y="18" font-family="sans-serif" font-size="11" font-weight="700" fill="#34d399">✅ ACTION ITEM</text>
+        <text x="12" y="32" font-family="sans-serif" font-size="10" fill="#cbd5e1">Marcus Vance: Benchmark connection pool by Friday</text>
+      </g>
+
+      <!-- Interactive Copilot Query Snippet -->
+      <g transform="translate(0, 160)">
+        <rect width="330" height="48" rx="8" fill="#1e1b4b" fill-opacity="0.8" stroke="#818cf8" stroke-opacity="0.3" stroke-width="1" />
+        <text x="12" y="18" font-family="sans-serif" font-size="10" font-weight="700" fill="#a5b4fc">💬 MEETING COPILOT</text>
+        <text x="12" y="34" font-family="sans-serif" font-size="10" fill="#e2e8f0">"Failover takes under 3s with zero planned downtime."</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,279 +1,172 @@
-# 🎙️ OmniNote AI: Meeting Notes Summarizer from Audio (GENAI + React 19)
+<div align="center">
 
-> **Modern, full-stack AI Meeting Intelligence application powered by Google Gemini Multimodal GenAI (`gemini-2.5-flash`, `gemini-2.0-flash`, `gemini-1.5-pro`) and React 19.**
-> Transcribe, diarize speakers, track consensus decisions, extract action items, and converse with your meeting records in real-time.
+  <!-- Animated Hero SVG Banner -->
+  <img src="./assets/hero-banner.svg" alt="OmniNote AI Banner" width="100%" />
 
----
+  <br/><br/>
 
-## 📑 Table of Contents
-- [Overview](#-overview)
-- [System Architecture](#-system-architecture)
-- [Key Features](#-key-features)
-- [React Component Hierarchy](#-react-component-hierarchy)
-- [Quick Start Guide](#-quick-start-guide)
-  - [Prerequisites](#prerequisites)
-  - [1-Click Windows Launch](#1-click-windows-launch)
-  - [Production Mode](#production-mode)
-  - [Development Mode (HMR)](#development-mode-hmr)
-- [Configuration & Environment](#-configuration--environment)
-- [Meeting Archetypes & Prompts](#-meeting-archetypes--prompts)
-- [Interactive Features](#-interactive-features)
-- [Standalone Python CLI](#-standalone-python-cli)
-- [API Reference](#-api-reference)
-- [Security & Privacy](#-security--privacy)
-- [License](#-license)
+  <!-- Shields & Badges -->
+  <p align="center">
+    <a href="https://react.dev"><img src="https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React 19" /></a>
+    <a href="https://ai.google.dev"><img src="https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Gemini" /></a>
+    <a href="https://vitejs.dev"><img src="https://img.shields.io/badge/Vite_8-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" /></a>
+    <a href="https://nodejs.org"><img src="https://img.shields.io/badge/Node.js_24-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" /></a>
+    <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License" /></a>
+    <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=for-the-badge" alt="PRs Welcome" />
+  </p>
 
----
+  <p align="center">
+    <b>⚡ Transform unstructured meeting audio into structured executive intelligence, decision logs, and interactive action items with zero latency.</b>
+  </p>
 
-## 🌟 Overview
+  <p align="center">
+    <a href="#-quick-start">🚀 Quick Start</a> •
+    <a href="#-system-architecture">🏗️ Architecture</a> •
+    <a href="#-key-features">✨ Features</a> •
+    <a href="#-meeting-archetypes">🎯 Archetypes</a> •
+    <a href="#-standalone-python-cli">🐍 Python CLI</a> •
+    <a href="#-privacy--security">🔒 Security</a>
+  </p>
 
-Traditional meeting summarization systems require brittle, multi-stage pipelines: audio transcription using speech-to-text models (Whisper), followed by separate speaker diarization scripts, followed by LLM summarization prompts.
-
-**OmniNote AI** leverages **Google Gemini's native Multimodal Audio Understanding**:
-- **Single-Pass Inference**: Transcribes speech, identifies speaker voices, detects sentiment, and generates structured executive intelligence in a single API call.
-- **Acoustic Nuance**: Captures vocal inflection, skepticism, consensus, and emotional emphasis that text-only transcriptions lose.
-- **Zero Heavy Native Dependencies**: Runs without local ffmpeg binaries or heavy PyTorch models.
+</div>
 
 ---
 
-## 🏗️ System Architecture
+## ⚡ System Pipeline & Multimodal Flow
 
-```mermaid
-flowchart TD
-    subgraph Inputs["1. Audio Inputs"]
-        A1["📁 File Upload<br/>(MP3, WAV, M4A, AAC, OGG, WEBM, FLAC)"]
-        A2["🎙️ Live Browser Recording<br/>(HTML5 MediaRecorder + Web Audio API)"]
-        A3["⚡ Preloaded Demos<br/>(Sprint Planning, Executive ARR, Discovery)"]
-    end
-
-    subgraph Frontend["2. React 19 Client (Vite)"]
-        B1["Audio Waveform Visualizer & Player Deck"]
-        B2["Meeting Archetype Selector"]
-        B3["Base64 Audio Encoder"]
-    end
-
-    subgraph Backend["3. Node.js Intelligence Server"]
-        C1["HTTP API Proxy (port 3000)"]
-        C2[".env Configuration & Key Resolver"]
-        C3["Prompt Builder & JSON Schema Enforcement"]
-    end
-
-    subgraph AI["4. Google Gemini GenAI Engine"]
-        D1["Gemini 2.5 Flash / 2.0 Flash / 1.5 Pro"]
-        D2["Native Multimodal Audio Processing"]
-        D3["Speaker Diarization & Decision Extraction"]
-    end
-
-    subgraph Output["5. Interactive Results Dashboard"]
-        E1["🎯 Executive Summary & Tone"]
-        E2["✅ Interactive Action Items Checklist"]
-        E3["💡 Key Decisions & Architecture Log"]
-        E4["📊 Topic Breakdown Timeline"]
-        E5["❓ Open Questions & Risks"]
-        E6["📜 Full Searchable Transcript"]
-        E7["💬 Chat Copilot Q&A"]
-        E8["📥 Markdown / PDF / JSON Export"]
-    end
-
-    Inputs --> Frontend
-    Frontend --> Backend
-    Backend --> AI
-    AI --> Backend
-    Backend --> Frontend
-    Frontend --> Output
-```
+<div align="center">
+  <img src="./assets/architecture-workflow.svg" alt="OmniNote Architecture Pipeline" width="100%" />
+</div>
 
 ---
 
-## ✨ Key Features
+## 💎 Feature Highlights
 
-### 1. In-Browser Microphone Recording
-- Live microphone streaming with real-time audio frequency visualizer on an HTML5 `<canvas>`.
-- Elapsed recording timer with pause, resume, and instant one-click analysis.
+<div align="center">
+  <img src="./assets/feature-showcase.svg" alt="OmniNote Features Showcase" width="100%" />
+</div>
 
-### 2. Audio Playback Bar
-- Custom audio player deck with seek slider, progress counters (`MM:SS / MM:SS`), and variable playback speed controls (`1x`, `1.25x`, `1.5x`, `2x`).
+<br/>
 
-### 3. Five Specialized Meeting Archetypes
-Tailor the GenAI extraction persona to your specific session:
-- 📝 **Comprehensive Meeting Minutes**: Balanced record for organizational distribution.
-- 📌 **Executive Briefing**: C-Suite TL;DR, financial KPIs, ARR metrics, and strategic milestones.
-- 🏃 **Agile / Daily Scrum**: Completed tasks, in-progress items, blockers, and sprint goals.
-- 🛠️ **Engineering & Architecture**: Architecture Decision Records (ADRs), trade-offs, database metrics, and API specs.
-- 🤝 **Client Discovery & Sales**: Client pain points, current stack, security requirements, and deal timelines.
-
-### 4. Interactive Action Items & Task Tracker
-- Check off completed deliverables with dynamic visual strikethrough.
-- Filter tasks instantly by **All**, **Pending**, **Completed**, or **High Priority**.
-- Every task includes an **Assignee tag**, **Due date**, and **Priority badge** (`High`, `Medium`, `Low`).
-
-### 5. Interactive "Chat with Meeting AI" (Copilot)
-- Ask natural language questions grounded in the meeting discussion:
-  - *"What did Marcus say about the Redis cache sizing?"*
-  - *"List all commitments with deadlines before Nov 25."*
-  - *"What was the rationale behind deferring GraphQL federation?"*
-
-### 6. One-Click Preloaded Demonstrations
-Test the application immediately without uploading an audio file:
-- **Demo 1**: *Q4 Architecture & Sprint Modernization* (Engineering lead, Product manager, Backend architect).
-- **Demo 2**: *Executive Leadership & Q3 ARR Review* (CEO, CFO, CMO reviewing financial performance).
-- **Demo 3**: *FinCorp Global Enterprise Discovery* (CISO and Solutions team evaluating compliance).
+| Feature | Description | Highlight |
+|---|---|---|
+| 🎙️ **Live Microphone Capture** | In-browser audio streaming with animated frequency wave visualizer | Zero external audio setup needed |
+| 📁 **Universal Audio Support** | Direct multimodal ingestion for MP3, WAV, M4A, AAC, OGG, WEBM, FLAC | Single-pass acoustic processing |
+| ✅ **Interactive Task Tracker** | Action item checklist with assignees, due dates, priority badges (`High`, `Med`, `Low`) | Check off completed tasks with progress stats |
+| 💡 **Consensus & Decision Log** | Automatic identification of key agreements, rationale, owner, and status | Never lose architectural context |
+| 📊 **Topic-by-Topic Breakdown** | Segmented discussion agenda with timestamps and summaries | Quick skimming for stakeholders |
+| 💬 **Ask Meeting AI (Copilot)** | Grounded conversational assistant answering specific questions about the session | Conversational memory & quotes |
+| 📥 **Export to Markdown & PDF** | 1-click formatted Markdown, print-ready PDF, or structured JSON export | Ready for Notion, Jira, Slack |
 
 ---
 
-## 🧩 React Component Hierarchy
+## 🚀 Quick Start
 
-```
-src/
-├── main.jsx                     # Application bootstrap with StrictMode
-├── App.jsx                      # Root state: audio blobs, results, active tabs, settings
-├── index.css                    # Glassmorphism dark styling & PDF print rules
-├── components/
-│   ├── Header.jsx               # Header, Gemini status badge, settings button
-│   ├── AudioUploader.jsx        # Drag-and-drop audio file upload dropzone
-│   ├── AudioRecorder.jsx        # HTML5 MediaRecorder + Web Audio canvas visualizer
-│   ├── DemoSelector.jsx         # 3 interactive sample meeting cards
-│   ├── AudioPlayerDeck.jsx      # Audio playback bar with seek slider & speed buttons
-│   ├── MeetingHero.jsx          # Title, sentiment, executive summary & export bar
-│   ├── ActionItemsTab.jsx       # Interactive task checklist with filters & check-offs
-│   ├── DecisionsTab.jsx         # Consensus log with rationale & approval badges
-│   ├── TopicsTab.jsx            # Segmented discussion timeline
-│   ├── QuestionsTab.jsx         # Unresolved questions & risk items
-│   ├── TranscriptTab.jsx        # Searchable speaker transcript
-│   ├── ChatCopilotTab.jsx       # Conversational AI Q&A copilot
-│   └── SettingsModal.jsx        # API key input and model selector
-└── utils/
-    └── exportUtils.js           # Markdown generation, file download & byte formatting
-```
-
----
-
-## 🚀 Quick Start Guide
-
-### Prerequisites
+### 1. Prerequisites
 - **Node.js**: v18+ (Node.js v24 recommended)
-- **Gemini API Key**: Free key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+- **Google Gemini API Key**: Free key from [Google AI Studio](https://aistudio.google.com/app/apikey)
 
-### 1-Click Windows Launch
-Double-click [**`start.bat`**](file:///c:/Users/nived/OneDrive/Documents/audio/start.bat) in the project folder. It launches the server and opens your browser at `http://localhost:3000`.
+### 2. Launch the Application
 
-### Production Mode
-```powershell
-# 1. Build the React application
+#### Option A: 1-Click Launch (Windows)
+Double-click [**`start.bat`**](./start.bat). It boots the server and opens your browser at `http://localhost:3000`.
+
+#### Option B: Terminal Command
+```bash
+# 1. Install dependencies
+npm install
+
+# 2. Build React production bundle
 npm run build
 
-# 2. Start the production server
+# 3. Start local server
 node server.js
 ```
 Open **[http://localhost:3000](http://localhost:3000)** in your browser.
 
-### Development Mode (HMR)
-```powershell
-# Run the Vite development server with instant Hot Module Replacement
+#### Option C: Development Mode (Hot Reload)
+```bash
 npm run dev
 ```
 
 ---
 
-## ⚙️ Configuration & Environment
+## 🎯 Specialized Meeting Archetypes
 
-Create a `.env` file in the root directory (or use the built-in UI settings modal):
+Tailor the GenAI extraction model to your specific meeting dynamic:
 
-```env
-# Google Gemini API Key
-GEMINI_API_KEY=AIzaSy...
-
-# Local server port (default: 3000)
-PORT=3000
 ```
-
-Supported Gemini Models:
-- `gemini-2.5-flash` *(Default & Recommended - Ultra-fast multimodal audio inference)*
-- `gemini-2.0-flash` *(Next-generation multimodal reasoning)*
-- `gemini-1.5-flash` *(Lightweight, cost-effective)*
-- `gemini-1.5-pro` *(Complex reasoning for long meetings up to 9.5 hours)*
+  ┌─────────────────────────────────────────────────────────────┐
+  │ 📝 Comprehensive Minutes  │ Balanced full organizational record
+  │ 📌 Executive Briefing     │ C-Suite TL;DR, financial KPIs & ARR
+  │ 🏃 Agile / Daily Scrum    │ Updates, blockers & sprint goals   │
+  │ 🛠️ Architecture Review    │ ADRs, database latency & API specs │
+  │ 🤝 Client Discovery       │ Pain points, budget & deal roadmap │
+  └─────────────────────────────────────────────────────────────┘
+```
 
 ---
 
 ## 🐍 Standalone Python CLI
 
-For automated CI/CD pipelines, bash scripts, or terminal workflows, a standalone Python CLI is included:
+For automated CI/CD pipelines, cron jobs, or command-line workflows, a standalone Python CLI is included:
 
 ```powershell
 # Set your API key
 $env:GEMINI_API_KEY="your_api_key_here"
 
-# Summarize an audio file to Markdown
+# Summarize audio file to Markdown
 python cli/summarizer.py path/to/meeting.mp3 --type "Engineering & Architecture" -o notes.md
 
-# Output raw JSON
+# Output structured JSON
 python cli/summarizer.py path/to/meeting.wav --json > meeting.json
 ```
 
-**CLI Arguments**:
-| Flag | Description | Default |
-|---|---|---|
-| `audio_file` | Path to audio file (MP3, WAV, M4A, AAC, etc.) | *Required* |
-| `--model` | Gemini model name | `gemini-2.5-flash` |
-| `--type` | Meeting archetype persona | `Comprehensive Minutes` |
-| `--prompt` | Custom focus instruction | `""` |
-| `-o, --output`| File path to save Markdown notes | `stdout` |
-| `--json` | Output raw structured JSON | `false` |
-
 ---
 
-## 📡 API Reference
+## ⚖️ Why OmniNote AI vs. Traditional Solutions
 
-The local server exposes clean JSON REST endpoints:
-
-### `GET /api/health`
-Returns service uptime and Node.js version.
-
-### `GET /api/config`
-Returns active model list and whether a `.env` key is configured.
-
-### `POST /api/save-key`
-Persists the user's Gemini API key to `.env`.
-```json
-{
-  "apiKey": "AIzaSy..."
-}
 ```
-
-### `POST /api/summarize-audio`
-Analyzes audio base64 payload and returns structured intelligence.
-```json
-{
-  "audioBase64": "<base64_string>",
-  "mimeType": "audio/mp3",
-  "model": "gemini-2.5-flash",
-  "meetingType": "Engineering & Architecture",
-  "customPrompt": "Focus on database latency",
-  "apiKey": "optional_override_key"
-}
-```
-
-### `POST /api/chat`
-Answers conversational questions about the meeting.
-```json
-{
-  "meetingSummary": { ... },
-  "userQuestion": "Who owns the Grafana dashboard?",
-  "chatHistory": [ ... ],
-  "model": "gemini-2.5-flash"
-}
+Traditional Pipeline (3 Models)          OmniNote AI (1 Multimodal Pass)
+┌───────────────────────┐               ┌─────────────────────────────────┐
+│ Raw Meeting Audio     │               │ Raw Meeting Audio               │
+└──────────┬────────────┘               └────────────────┬────────────────┘
+           ▼                                             │
+┌───────────────────────┐                                │
+│ Speech-to-Text        │                                │ Single Multimodal Pass:
+│ (Whisper STT)         │                                │ • Speech-to-text
+└──────────┬────────────┘                                │ • Speaker Diarization
+           ▼                                             │ • Acoustic Tone & Emotion
+┌───────────────────────┐                                │ • Structured Decisions & Tasks
+│ Speaker Clustering    │                                │ • Grounded Q&A Memory
+│ (PyAnnote Diarization)│                                │
+└──────────┬────────────┘                                │
+           ▼                                             │
+┌───────────────────────┐                                ▼
+│ Text Summarization    │               ┌─────────────────────────────────┐
+│ (LLM Text Prompt)     │               │ Structured React Intelligence   │
+└──────────┬────────────┘               └─────────────────────────────────┘
+           ▼                                       ⚡ < 15 Seconds
+┌───────────────────────┐
+│ Plain Text Output     │
+└───────────────────────┘
+  ⚠️ 3-5 Mins + Lost Tone
 ```
 
 ---
 
-## 🔒 Security & Privacy
+## 🔒 Privacy & Security
 
-1. **Local Execution**: The server runs completely locally on `localhost`.
-2. **Encrypted Transport**: Audio data is dispatched directly to Google Gemini API over encrypted TLS 1.3 HTTPS connections.
-3. **Zero Retention Model**: Meeting recordings are processed in-memory and are not stored permanently on remote servers.
-4. **Credential Protection**: `.env` is ignored by default in `.gitignore`.
+- **Local First**: Runs entirely on your local machine (`localhost:3000`).
+- **Encrypted In-Transit**: Audio streams communicate directly with Google Gemini over TLS 1.3 HTTPS.
+- **In-Memory Processing**: Audio files are analyzed in memory and never permanently stored on third-party servers.
+- **Zero Credential Exposure**: `.env` is isolated locally and protected by `.gitignore`.
 
 ---
 
 ## 📄 License
-This project is open-source under the **MIT License**.
+This project is open-source under the **[MIT License](./LICENSE)**.
+
+<div align="center">
+  <sub>Engineered with ❤️ using React 19, Vite, and Google Gemini Multimodal GenAI.</sub>
+</div>

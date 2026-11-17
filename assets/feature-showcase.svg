@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 280" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#042f2e" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2e1065" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#451a03" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <style>
+      @keyframes floatCard {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+      }
+
+      .f-card-1 { animation: floatCard 4s ease-in-out infinite; }
+      .f-card-2 { animation: floatCard 4s ease-in-out 1s infinite; }
+      .f-card-3 { animation: floatCard 4s ease-in-out 2s infinite; }
+      .f-card-4 { animation: floatCard 4s ease-in-out 3s infinite; }
+    </style>
+  </defs>
+
+  <rect width="1100" height="280" rx="16" fill="#080c17" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.5" />
+
+  <!-- 4 Cards -->
+  <!-- Card 1: Action Items -->
+  <g transform="translate(30, 30)" class="f-card-1">
+    <rect width="240" height="220" rx="12" fill="url(#cardGrad2)" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.2" />
+    <circle cx="36" cy="36" r="14" fill="#10b981" fill-opacity="0.2" />
+    <text x="36" y="42" text-anchor="middle" font-size="16">✅</text>
+    <text x="60" y="36" font-family="sans-serif" font-size="14" font-weight="700" fill="#a7f3d0">Action Items</text>
+    <text x="60" y="52" font-family="sans-serif" font-size="11" fill="#6ee7b7">Interactive Checklists</text>
+    
+    <g transform="translate(18, 76)" font-family="sans-serif" font-size="10" fill="#cbd5e1">
+      <rect width="204" height="30" rx="6" fill="#064e3b" fill-opacity="0.5" />
+      <text x="10" y="19">☑️ Benchmark pool (Marcus)</text>
+      <rect y="38" width="204" height="30" rx="6" fill="#064e3b" fill-opacity="0.5" />
+      <text x="10" y="57">☑️ Grafana alert rules (Alex)</text>
+      <rect y="76" width="204" height="30" rx="6" fill="#064e3b" fill-opacity="0.5" />
+      <text x="10" y="95">☑️ Customer window (Elena)</text>
+    </g>
+    <text x="18" y="200" font-family="sans-serif" font-size="9" fill="#34d399">Dynamic status &amp; priority badges</text>
+  </g>
+
+  <!-- Card 2: Decision Log -->
+  <g transform="translate(295, 30)" class="f-card-2">
+    <rect width="240" height="220" rx="12" fill="url(#cardGrad1)" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1.2" />
+    <circle cx="36" cy="36" r="14" fill="#6366f1" fill-opacity="0.2" />
+    <text x="36" y="42" text-anchor="middle" font-size="16">💡</text>
+    <text x="60" y="36" font-family="sans-serif" font-size="14" font-weight="700" fill="#c7d2fe">Decision Logs</text>
+    <text x="60" y="52" font-family="sans-serif" font-size="11" fill="#818cf8">Consensus Records</text>
+
+    <g transform="translate(18, 76)" font-family="sans-serif" font-size="10">
+      <rect width="204" height="50" rx="6" fill="#1e1b4b" fill-opacity="0.8" stroke="#4f46e5" stroke-opacity="0.3" stroke-width="1" />
+      <text x="8" y="18" font-weight="700" fill="#38bdf8">Redis Sentinel Adopted</text>
+      <text x="8" y="34" fill="#94a3b8">Load cut by 65% on primary DB</text>
+
+      <rect y="58" width="204" height="50" rx="6" fill="#1e1b4b" fill-opacity="0.8" stroke="#4f46e5" stroke-opacity="0.3" stroke-width="1" />
+      <text x="8" y="76" font-weight="700" fill="#fbbf24">Deferred to Q1: Federation</text>
+      <text x="8" y="92" fill="#94a3b8">Prevent team scope creep</text>
+    </g>
+    <text x="18" y="200" font-family="sans-serif" font-size="9" fill="#818cf8">Context, champion &amp; approval state</text>
+  </g>
+
+  <!-- Card 3: AI Copilot -->
+  <g transform="translate(560, 30)" class="f-card-3">
+    <rect width="240" height="220" rx="12" fill="url(#cardGrad3)" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1.2" />
+    <circle cx="36" cy="36" r="14" fill="#a855f7" fill-opacity="0.2" />
+    <text x="36" y="42" text-anchor="middle" font-size="16">💬</text>
+    <text x="60" y="36" font-family="sans-serif" font-size="14" font-weight="700" fill="#f3e8ff">Meeting Copilot</text>
+    <text x="60" y="52" font-family="sans-serif" font-size="11" fill="#c084fc">Interactive Grounded Q&amp;A</text>
+
+    <g transform="translate(18, 76)" font-family="sans-serif" font-size="10">
+      <rect width="204" height="32" rx="6" fill="#581c87" fill-opacity="0.4" />
+      <text x="8" y="20" fill="#e9d5ff">User: "What's our downtime?"</text>
+      
+      <rect y="40" width="204" height="64" rx="6" fill="#3b0764" fill-opacity="0.7" stroke="#7e22ce" stroke-opacity="0.3" stroke-width="1" />
+      <text x="8" y="18" font-weight="700" fill="#f0abfc">AI Copilot:</text>
+      <text x="8" y="34" fill="#f5d0fe">"Zero scheduled downtime via</text>
+      <text x="8" y="48" fill="#f5d0fe">dual-write shadow mode."</text>
+    </g>
+    <text x="18" y="200" font-family="sans-serif" font-size="9" fill="#c084fc">Conversational memory &amp; citations</text>
+  </g>
+
+  <!-- Card 4: Audio Player -->
+  <g transform="translate(825, 30)" class="f-card-4">
+    <rect width="240" height="220" rx="12" fill="url(#cardGrad4)" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.2" />
+    <circle cx="36" cy="36" r="14" fill="#f59e0b" fill-opacity="0.2" />
+    <text x="36" y="42" text-anchor="middle" font-size="16">🎚️</text>
+    <text x="60" y="36" font-family="sans-serif" font-size="14" font-weight="700" fill="#fef3c7">Audio Deck</text>
+    <text x="60" y="52" font-family="sans-serif" font-size="11" fill="#fde68a">Waveform &amp; Seek</text>
+
+    <g transform="translate(18, 76)" font-family="sans-serif" font-size="10">
+      <rect width="204" height="40" rx="6" fill="#78350f" fill-opacity="0.4" />
+      <text x="10" y="18" fill="#fed7aa">Sprint_Planning_Sync.wav</text>
+      <text x="10" y="32" font-family="monospace" fill="#fdba74">08:24 / 42:00</text>
+      
+      <rect y="48" width="204" height="20" rx="4" fill="#451a03" />
+      <rect y="48" width="110" height="20" rx="4" fill="#d97706" />
+
+      <g transform="translate(0, 78)">
+        <rect width="45" height="22" rx="4" fill="#b45309" />
+        <text x="12" y="15" fill="#fff">1x</text>
+        <rect x="52" width="45" height="22" rx="4" fill="#78350f" />
+        <text x="62" y="15" fill="#fde68a">1.25x</text>
+        <rect x="104" width="45" height="22" rx="4" fill="#78350f" />
+        <text x="114" y="15" fill="#fde68a">1.5x</text>
+        <rect x="156" width="45" height="22" rx="4" fill="#78350f" />
+        <text x="168" y="15" fill="#fde68a">2x</text>
+      </g>
+    </g>
+    <text x="18" y="200" font-family="sans-serif" font-size="9" fill="#f59e0b">Range requests &amp; speed toggles</text>
+  </g>
+</svg>
