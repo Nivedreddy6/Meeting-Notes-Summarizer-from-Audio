@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 44" width="175" height="44">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 32" width="124" height="32">
   <defs>
     <linearGradient id="bgRepo" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#021412" />
-      <stop offset="50%" stop-color="#042622" />
-      <stop offset="100%" stop-color="#010e0c" />
+      <stop offset="0%" stop-color="#02100e" />
+      <stop offset="50%" stop-color="#04201c" />
+      <stop offset="100%" stop-color="#010a08" />
     </linearGradient>
 
     <linearGradient id="borderRepo" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -12,81 +12,60 @@
       <stop offset="100%" stop-color="#0d9488" />
     </linearGradient>
 
-    <linearGradient id="glossTopRepo" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45" />
-      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
-    </linearGradient>
-
-    <linearGradient id="sweepGleamRepo" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="sheenRepo" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.0" />
-      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.5" />
-      <stop offset="60%" stop-color="#5eead4" stop-opacity="0.6" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.10" />
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
     </linearGradient>
 
     <clipPath id="pillClipRepo">
-      <rect x="2" y="2" width="171" height="40" rx="20" />
+      <rect x="1.5" y="1.5" width="121" height="29" rx="14.5" />
     </clipPath>
 
     <style>
-      @keyframes neonBreatheRepo {
-        0%, 100% {
-          filter: drop-shadow(0 0 4px rgba(20, 184, 166, 0.7)) drop-shadow(0 0 10px rgba(20, 184, 166, 0.4));
-        }
-        50% {
-          filter: drop-shadow(0 0 9px rgba(45, 212, 191, 1)) drop-shadow(0 0 18px rgba(20, 184, 166, 0.8));
-        }
+      @keyframes glowPulseRepo {
+        0%, 100% { filter: drop-shadow(0 0 3px rgba(20, 184, 166, 0.6)) drop-shadow(0 0 6px rgba(20, 184, 166, 0.3)); }
+        50% { filter: drop-shadow(0 0 6px rgba(45, 212, 191, 0.9)) drop-shadow(0 0 12px rgba(20, 184, 166, 0.6)); }
       }
-
-      @keyframes neonFlickerRepo {
-        0%, 100% { opacity: 1; }
-        44% { opacity: 1; }
-        45% { opacity: 0.82; }
-        46% { opacity: 1; }
-        80% { opacity: 1; }
-        81% { opacity: 0.77; }
-        82% { opacity: 1; }
+      .pill-base-repo {
+        animation: glowPulseRepo 2.5s ease-in-out infinite alternate;
       }
-
-      @keyframes gleamMoveRepo {
-        0% { transform: translateX(-100px); }
-        40%, 100% { transform: translateX(200px); }
+      @keyframes cursorBlink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
       }
-
+      .term-cursor {
+        animation: cursorBlink 0.8s infinite;
+      }
       @keyframes chevronNudgeRepo {
         0%, 100% { transform: translateX(0); }
-        50% { transform: translateX(3px); }
+        50% { transform: translateX(2.5px); }
       }
-
-      .btn-outer-repo {
-        animation: neonBreatheRepo 2.4s ease-in-out infinite alternate, neonFlickerRepo 4.7s infinite;
-      }
-
-      .gleam-runner-repo {
-        animation: gleamMoveRepo 3.5s ease-in-out infinite;
-      }
-
-      .chevron-arrow-repo {
+      .chev-repo {
         animation: chevronNudgeRepo 1.2s ease-in-out infinite;
       }
     </style>
   </defs>
 
-  <g class="btn-outer-repo">
-    <rect x="2" y="2" width="171" height="40" rx="20" fill="url(#bgRepo)" stroke="url(#borderRepo)" stroke-width="2.4" />
+  <g class="pill-base-repo">
+    <rect x="1.5" y="1.5" width="121" height="29" rx="14.5" fill="url(#bgRepo)" stroke="url(#borderRepo)" stroke-width="1.8" />
   </g>
 
   <g clip-path="url(#pillClipRepo)">
-    <rect x="6" y="4" width="163" height="17" rx="8.5" fill="url(#glossTopRepo)" />
-    <ellipse cx="87" cy="40" rx="60" ry="2" fill="#14b8a6" opacity="0.3" />
-    <rect class="gleam-runner-repo" x="0" y="0" width="35" height="44" fill="url(#sweepGleamRepo)" transform="skewX(-20)" />
+    <path d="M 62 0 L 93 0 L 124 32 L 93 32 Z" fill="url(#sheenRepo)" />
+    <rect x="5" y="2.5" width="114" height="12" rx="6" fill="#ffffff" opacity="0.08" />
   </g>
 
-  <text x="22" y="27" font-size="16" text-anchor="middle">📁</text>
-  <text x="42" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800" fill="#ffffff" letter-spacing="0.4">Repo Tree</text>
+  <!-- SVG Vector Icon: Terminal Prompt with Blinking Cursor -->
+  <g transform="translate(1, 0)">
+    <path d="M 13,12 L 17,16 L 13,20" fill="none" stroke="#2dd4bf" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+    <line class="term-cursor" x1="18.5" y1="20" x2="23.5" y2="20" stroke="#5eead4" stroke-width="1.7" stroke-linecap="round" />
+  </g>
 
-  <g class="chevron-arrow-repo">
-    <text x="154" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="900" fill="#5eead4">&gt;</text>
+  <text x="34" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="800" fill="#ffffff" letter-spacing="0.3">Repo Tree</text>
+
+  <g class="chev-repo">
+    <path d="M 108 12 L 112 16 L 108 20" fill="none" stroke="#2dd4bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
   </g>
 </svg>

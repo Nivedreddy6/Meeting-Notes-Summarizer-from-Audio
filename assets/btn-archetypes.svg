@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188 44" width="188" height="44">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133 32" width="133" height="32">
   <defs>
     <linearGradient id="bgArchp" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#141002" />
-      <stop offset="50%" stop-color="#261d04" />
-      <stop offset="100%" stop-color="#0e0b01" />
+      <stop offset="0%" stop-color="#120c02" />
+      <stop offset="50%" stop-color="#201504" />
+      <stop offset="100%" stop-color="#0c0701" />
     </linearGradient>
 
     <linearGradient id="borderArchp" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -12,81 +12,63 @@
       <stop offset="100%" stop-color="#ca8a04" />
     </linearGradient>
 
-    <linearGradient id="glossTopArchp" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45" />
-      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
-    </linearGradient>
-
-    <linearGradient id="sweepGleamArchp" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="sheenArchp" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.0" />
-      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.5" />
-      <stop offset="60%" stop-color="#fef08a" stop-opacity="0.6" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.10" />
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
     </linearGradient>
 
     <clipPath id="pillClipArchp">
-      <rect x="2" y="2" width="184" height="40" rx="20" />
+      <rect x="1.5" y="1.5" width="130" height="29" rx="14.5" />
     </clipPath>
 
     <style>
-      @keyframes neonBreatheArchp {
-        0%, 100% {
-          filter: drop-shadow(0 0 4px rgba(234, 179, 8, 0.7)) drop-shadow(0 0 10px rgba(234, 179, 8, 0.4));
-        }
-        50% {
-          filter: drop-shadow(0 0 9px rgba(253, 224, 71, 1)) drop-shadow(0 0 18px rgba(234, 179, 8, 0.8));
-        }
+      @keyframes glowPulseArchp {
+        0%, 100% { filter: drop-shadow(0 0 3px rgba(234, 179, 8, 0.6)) drop-shadow(0 0 6px rgba(234, 179, 8, 0.3)); }
+        50% { filter: drop-shadow(0 0 6px rgba(253, 224, 71, 0.9)) drop-shadow(0 0 12px rgba(234, 179, 8, 0.6)); }
       }
-
-      @keyframes neonFlickerArchp {
-        0%, 100% { opacity: 1; }
-        39% { opacity: 1; }
-        40% { opacity: 0.82; }
-        41% { opacity: 1; }
-        76% { opacity: 1; }
-        77% { opacity: 0.78; }
-        78% { opacity: 1; }
+      .pill-base-archp {
+        animation: glowPulseArchp 2.5s ease-in-out infinite alternate;
       }
-
-      @keyframes gleamMoveArchp {
-        0% { transform: translateX(-100px); }
-        40%, 100% { transform: translateX(210px); }
+      @keyframes haloBlink {
+        0%, 100% { r: 5; opacity: 0.9; }
+        50% { r: 7.5; opacity: 0.2; }
       }
-
+      .key-halo {
+        animation: haloBlink 2s ease-in-out infinite;
+      }
       @keyframes chevronNudgeArchp {
         0%, 100% { transform: translateX(0); }
-        50% { transform: translateX(3px); }
+        50% { transform: translateX(2.5px); }
       }
-
-      .btn-outer-archp {
-        animation: neonBreatheArchp 2.4s ease-in-out infinite alternate, neonFlickerArchp 5.4s infinite;
-      }
-
-      .gleam-runner-archp {
-        animation: gleamMoveArchp 3.8s ease-in-out infinite;
-      }
-
-      .chevron-arrow-archp {
+      .chev-archp {
         animation: chevronNudgeArchp 1.2s ease-in-out infinite;
       }
     </style>
   </defs>
 
-  <g class="btn-outer-archp">
-    <rect x="2" y="2" width="184" height="40" rx="20" fill="url(#bgArchp)" stroke="url(#borderArchp)" stroke-width="2.4" />
+  <g class="pill-base-archp">
+    <rect x="1.5" y="1.5" width="130" height="29" rx="14.5" fill="url(#bgArchp)" stroke="url(#borderArchp)" stroke-width="1.8" />
   </g>
 
   <g clip-path="url(#pillClipArchp)">
-    <rect x="6" y="4" width="176" height="17" rx="8.5" fill="url(#glossTopArchp)" />
-    <ellipse cx="94" cy="40" rx="66" ry="2" fill="#eab308" opacity="0.3" />
-    <rect class="gleam-runner-archp" x="0" y="0" width="35" height="44" fill="url(#sweepGleamArchp)" transform="skewX(-20)" />
+    <path d="M 68 0 L 100 0 L 133 32 L 100 32 Z" fill="url(#sheenArchp)" />
+    <rect x="5" y="2.5" width="123" height="12" rx="6" fill="#ffffff" opacity="0.08" />
   </g>
 
-  <text x="22" y="27" font-size="16" text-anchor="middle">🎯</text>
-  <text x="42" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800" fill="#ffffff" letter-spacing="0.4">Archetypes</text>
+  <!-- SVG Vector Icon: Golden Key with Glowing Halo -->
+  <g transform="translate(1, 0)">
+    <circle class="key-halo" cx="14" cy="16" r="5" fill="none" stroke="#fde047" stroke-width="0.8" />
+    <circle cx="14" cy="16" r="3.8" fill="none" stroke="#facc15" stroke-width="1.6" />
+    <line x1="18" y1="16" x2="25" y2="16" stroke="#facc15" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="22" y1="16" x2="22" y2="19.5" stroke="#facc15" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="24.5" y1="16" x2="24.5" y2="18.5" stroke="#facc15" stroke-width="1.5" stroke-linecap="round" />
+  </g>
 
-  <g class="chevron-arrow-archp">
-    <text x="166" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="900" fill="#fde047">&gt;</text>
+  <text x="34" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="800" fill="#ffffff" letter-spacing="0.3">Archetypes</text>
+
+  <g class="chev-archp">
+    <path d="M 117 12 L 121 16 L 117 20" fill="none" stroke="#fde047" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
   </g>
 </svg>
