@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 370" width="100%" height="100%">
+  <defs>
+    <!-- Background Canvas -->
+    <linearGradient id="toolsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="50%" stop-color="#0a1224" />
+      <stop offset="100%" stop-color="#04060d" />
+    </linearGradient>
+
+    <style>
+      @keyframes toolsLaser {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -180; }
+      }
+      .laser-col {
+        stroke-dasharray: 60, 20;
+        animation: toolsLaser 3.5s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1000" height="370" rx="16" fill="url(#toolsBg)" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2" />
+
+  <!-- Top Window Header Bar -->
+  <rect x="0" y="0" width="1000" height="42" rx="16" fill="#0b1329" fill-opacity="0.95" />
+  <circle cx="25" cy="21" r="5" fill="#ef4444" />
+  <circle cx="42" cy="21" r="5" fill="#eab308" />
+  <circle cx="59" cy="21" r="5" fill="#22c55e" />
+  <text x="82" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="900" letter-spacing="1.5" fill="#38bdf8">TOOLS &amp; TECHNOLOGIES • COMPLETE MODERN STACK</text>
+  <rect x="800" y="11" width="175" height="20" rx="4" fill="#1e1b4b" stroke="#818cf8" stroke-width="1" />
+  <text x="887" y="25" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="800" fill="#c7d2fe">🛠️ 5 CORE DOMAINS</text>
+
+  <!-- 5 Columns for 5 Technology Pillars -->
+
+  <!-- ================= PILLAR 1: FRONTEND UI ================= -->
+  <g transform="translate(25, 60)">
+    <rect width="180" height="295" rx="12" fill="#0c1b2a" fill-opacity="0.95" />
+    <rect width="180" height="295" rx="12" fill="none" stroke="#38bdf8" stroke-width="1.8" class="laser-col" />
+    <rect x="10" y="10" width="160" height="26" rx="5" fill="#0369a1" />
+    <text x="90" y="27" text-anchor="middle" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#ffffff">⚛️ FRONTEND &amp; UI</text>
+
+    <!-- Item 1 -->
+    <rect x="10" y="46" width="160" height="42" rx="6" fill="#082f49" />
+    <text x="18" y="63" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#bae6fd">React 19</text>
+    <text x="18" y="78" font-family="sans-serif" font-size="8.5" fill="#7dd3fc">Concurrent DOM root</text>
+
+    <!-- Item 2 -->
+    <rect x="10" y="94" width="160" height="42" rx="6" fill="#082f49" />
+    <text x="18" y="111" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#bae6fd">Vite 8</text>
+    <text x="18" y="126" font-family="sans-serif" font-size="8.5" fill="#7dd3fc">Instant HMR &amp; Rollup</text>
+
+    <!-- Item 3 -->
+    <rect x="10" y="142" width="160" height="42" rx="6" fill="#082f49" />
+    <text x="18" y="159" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#bae6fd">Web Audio API</text>
+    <text x="18" y="174" font-family="sans-serif" font-size="8.5" fill="#7dd3fc">16kHz PCM recording</text>
+
+    <!-- Item 4 -->
+    <rect x="10" y="190" width="160" height="42" rx="6" fill="#082f49" />
+    <text x="18" y="207" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#bae6fd">HTML5 Canvas</text>
+    <text x="18" y="222" font-family="sans-serif" font-size="8.5" fill="#7dd3fc">60 FPS spectrum visualizer</text>
+
+    <!-- Item 5 -->
+    <rect x="10" y="238" width="160" height="45" rx="6" fill="#082f49" />
+    <text x="18" y="255" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#bae6fd">Glassmorphic CSS</text>
+    <text x="18" y="270" font-family="sans-serif" font-size="8.5" fill="#7dd3fc">Custom neon keyframes</text>
+  </g>
+
+
+  <!-- ================= PILLAR 2: AI & MULTIMODAL ================= -->
+  <g transform="translate(218, 60)">
+    <rect width="180" height="295" rx="12" fill="#1b122e" fill-opacity="0.95" />
+    <rect width="180" height="295" rx="12" fill="none" stroke="#c084fc" stroke-width="1.8" class="laser-col" />
+    <rect x="10" y="10" width="160" height="26" rx="5" fill="#581c87" />
+    <text x="90" y="27" text-anchor="middle" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#ffffff">🧠 GENAI &amp; AUDIO</text>
+
+    <!-- Item 1 -->
+    <rect x="10" y="46" width="160" height="42" rx="6" fill="#2e1065" />
+    <text x="18" y="63" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#f3e8ff">Gemini 2.5 Flash</text>
+    <text x="18" y="78" font-family="sans-serif" font-size="8.5" fill="#d8b4fe">Direct audio multimodal</text>
+
+    <!-- Item 2 -->
+    <rect x="10" y="94" width="160" height="42" rx="6" fill="#2e1065" />
+    <text x="18" y="111" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#f3e8ff">Google AI Studio</text>
+    <text x="18" y="126" font-family="sans-serif" font-size="8.5" fill="#d8b4fe">REST API endpoints</text>
+
+    <!-- Item 3 -->
+    <rect x="10" y="142" width="160" height="42" rx="6" fill="#2e1065" />
+    <text x="18" y="159" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#f3e8ff">Voice Diarization</text>
+    <text x="18" y="174" font-family="sans-serif" font-size="8.5" fill="#d8b4fe">Acoustic timbre separation</text>
+
+    <!-- Item 4 -->
+    <rect x="10" y="190" width="160" height="42" rx="6" fill="#2e1065" />
+    <text x="18" y="207" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#f3e8ff">JSON Schemas</text>
+    <text x="18" y="222" font-family="sans-serif" font-size="8.5" fill="#d8b4fe">Type-constrained output</text>
+
+    <!-- Item 5 -->
+    <rect x="10" y="238" width="160" height="45" rx="6" fill="#2e1065" />
+    <text x="18" y="255" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#f3e8ff">Grounded Q&amp;A</text>
+    <text x="18" y="270" font-family="sans-serif" font-size="8.5" fill="#d8b4fe">Verbatim meeting memory</text>
+  </g>
+
+
+  <!-- ================= PILLAR 3: BACKEND ENGINE ================= -->
+  <g transform="translate(411, 60)">
+    <rect width="180" height="295" rx="12" fill="#07201b" fill-opacity="0.95" />
+    <rect width="180" height="295" rx="12" fill="none" stroke="#10b981" stroke-width="1.8" class="laser-col" />
+    <rect x="10" y="10" width="160" height="26" rx="5" fill="#065f46" />
+    <text x="90" y="27" text-anchor="middle" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#ffffff">⚡ BACKEND ENGINE</text>
+
+    <!-- Item 1 -->
+    <rect x="10" y="46" width="160" height="42" rx="6" fill="#064e3b" />
+    <text x="18" y="63" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#a7f3d0">Node.js v24+</text>
+    <text x="18" y="78" font-family="sans-serif" font-size="8.5" fill="#6ee7b7">Native runtime engine</text>
+
+    <!-- Item 2 -->
+    <rect x="10" y="94" width="160" height="42" rx="6" fill="#064e3b" />
+    <text x="18" y="111" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#a7f3d0">Zero-Dependencies</text>
+    <text x="18" y="126" font-family="sans-serif" font-size="8.5" fill="#6ee7b7">Native http, fs &amp; path</text>
+
+    <!-- Item 3 -->
+    <rect x="10" y="142" width="160" height="42" rx="6" fill="#064e3b" />
+    <text x="18" y="159" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#a7f3d0">Base64 Streamer</text>
+    <text x="18" y="174" font-family="sans-serif" font-size="8.5" fill="#6ee7b7">RAM-only chunking buffer</text>
+
+    <!-- Item 4 -->
+    <rect x="10" y="190" width="160" height="42" rx="6" fill="#064e3b" />
+    <text x="18" y="207" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#a7f3d0">Privacy Guard</text>
+    <text x="18" y="222" font-family="sans-serif" font-size="8.5" fill="#6ee7b7">Zero disk writes</text>
+
+    <!-- Item 5 -->
+    <rect x="10" y="238" width="160" height="45" rx="6" fill="#064e3b" />
+    <text x="18" y="255" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#a7f3d0">Localhost Proxy</text>
+    <text x="18" y="270" font-family="sans-serif" font-size="8.5" fill="#6ee7b7">CORS-free internal routing</text>
+  </g>
+
+
+  <!-- ================= PILLAR 4: CLI & AUTOMATION ================= -->
+  <g transform="translate(604, 60)">
+    <rect width="180" height="295" rx="12" fill="#131b2e" fill-opacity="0.95" />
+    <rect width="180" height="295" rx="12" fill="none" stroke="#818cf8" stroke-width="1.8" class="laser-col" />
+    <rect x="10" y="10" width="160" height="26" rx="5" fill="#312e81" />
+    <text x="90" y="27" text-anchor="middle" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#ffffff">🐍 CLI &amp; RUNTIME</text>
+
+    <!-- Item 1 -->
+    <rect x="10" y="46" width="160" height="42" rx="6" fill="#1e1b4b" />
+    <text x="18" y="63" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#c7d2fe">Python 3.12+</text>
+    <text x="18" y="78" font-family="sans-serif" font-size="8.5" fill="#a5b4fc">Standalone CLI script</text>
+
+    <!-- Item 2 -->
+    <rect x="10" y="94" width="160" height="42" rx="6" fill="#1e1b4b" />
+    <text x="18" y="111" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#c7d2fe">summarizer.py</text>
+    <text x="18" y="126" font-family="sans-serif" font-size="8.5" fill="#a5b4fc">Headless audio processor</text>
+
+    <!-- Item 3 -->
+    <rect x="10" y="142" width="160" height="42" rx="6" fill="#1e1b4b" />
+    <text x="18" y="159" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#c7d2fe">start.bat</text>
+    <text x="18" y="174" font-family="sans-serif" font-size="8.5" fill="#a5b4fc">Windows 1-click launcher</text>
+
+    <!-- Item 4 -->
+    <rect x="10" y="190" width="160" height="42" rx="6" fill="#1e1b4b" />
+    <text x="18" y="207" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#c7d2fe">Git Versioning</text>
+    <text x="18" y="222" font-family="sans-serif" font-size="8.5" fill="#a5b4fc">Production main branch</text>
+
+    <!-- Item 5 -->
+    <rect x="10" y="238" width="160" height="45" rx="6" fill="#1e1b4b" />
+    <text x="18" y="255" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#c7d2fe">Cross-Platform</text>
+    <text x="18" y="270" font-family="sans-serif" font-size="8.5" fill="#a5b4fc">Windows, macOS &amp; Linux</text>
+  </g>
+
+
+  <!-- ================= PILLAR 5: EXPORTS & FORMATS ================= -->
+  <g transform="translate(797, 60)">
+    <rect width="180" height="295" rx="12" fill="#201a08" fill-opacity="0.95" />
+    <rect width="180" height="295" rx="12" fill="none" stroke="#f59e0b" stroke-width="1.8" class="laser-col" />
+    <rect x="10" y="10" width="160" height="26" rx="5" fill="#78350f" />
+    <text x="90" y="27" text-anchor="middle" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#ffffff">📥 EXPORTS &amp; FORMATS</text>
+
+    <!-- Item 1 -->
+    <rect x="10" y="46" width="160" height="42" rx="6" fill="#451a03" />
+    <text x="18" y="63" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#fef3c7">Print-Ready PDF</text>
+    <text x="18" y="78" font-family="sans-serif" font-size="8.5" fill="#fde68a">Executive styled layouts</text>
+
+    <!-- Item 2 -->
+    <rect x="10" y="94" width="160" height="42" rx="6" fill="#451a03" />
+    <text x="18" y="111" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#fef3c7">Markdown (.md)</text>
+    <text x="18" y="126" font-family="sans-serif" font-size="8.5" fill="#fde68a">Notion &amp; Obsidian ready</text>
+
+    <!-- Item 3 -->
+    <rect x="10" y="142" width="160" height="42" rx="6" fill="#451a03" />
+    <text x="18" y="159" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#fef3c7">Typed JSON</text>
+    <text x="18" y="174" font-family="sans-serif" font-size="8.5" fill="#fde68a">Jira &amp; Slack integration</text>
+
+    <!-- Item 4 -->
+    <rect x="10" y="190" width="160" height="42" rx="6" fill="#451a03" />
+    <text x="18" y="207" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#fef3c7">WAV &amp; MP3 Clip</text>
+    <text x="18" y="222" font-family="sans-serif" font-size="8.5" fill="#fde68a">Embedded audio sample</text>
+
+    <!-- Item 5 -->
+    <rect x="10" y="238" width="160" height="45" rx="6" fill="#451a03" />
+    <text x="18" y="255" font-family="sans-serif" font-size="10.5" font-weight="800" fill="#fef3c7">ADR Governance</text>
+    <text x="18" y="270" font-family="sans-serif" font-size="8.5" fill="#fde68a">Auditable decision log</text>
+  </g>
+</svg>

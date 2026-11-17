@@ -30,37 +30,59 @@
 ## 🏗️ Architecture & Multimodal Data Flow
 
 > [!IMPORTANT]
-> **Why Direct Multimodal Audio?** Traditional meeting tools require a 2-step pipeline: *Audio → Whisper STT → Raw Text → LLM Reasoning*. This loses tone, inflection, speaker identities, and sarcasm while tripling API latency. OmniNote AI streams raw audio chunks directly to **Gemini 2.5 Flash** in a unified single pass.
+> **Why Direct Multimodal Audio?** Traditional meeting tools require a fragile 2-step pipeline: *Audio → Whisper STT → Raw Text → LLM Reasoning*. This loses tone, inflection, speaker identities, and acoustic cadence while tripling API latency. OmniNote AI streams raw audio chunks directly to **Gemini 2.5 Flash** in a unified single pass.
 
 <div align="center">
-  <!-- End-to-End System Architecture Blueprint -->
-  <img src="./assets/architecture-flow.svg" alt="OmniNote System Architecture Blueprint" width="100%" />
+  <!-- End-to-End System Architecture Schematic Flow -->
+  <img src="./assets/architecture-flow.svg" alt="OmniNote System Architecture Schematic Flow" width="100%" />
 </div>
 
 <br/>
 
 ### Multi-Tiered Data Pipeline Breakdown
 
-1. **🎙️ Layer 1 — Client Ingestion Layer**:
+1. **🎙️ Stage 1 — Audio Ingestion Nodes**:
    - **Live Microphone**: Captures 16kHz PCM audio stream via browser `MediaRecorder` API with a 60 FPS HTML5 Canvas frequency spectrum visualizer.
    - **File Upload Engine**: Handles `.mp3`, `.wav`, `.m4a`, `.aac`, `.webm`, and `.flac` files with client-side chunking up to 200MB.
    - **Instant Demo Cache**: Preloaded synthetic and realistic meetings (`sprint_sync.json`, `sample_meeting_clip.wav`) for 1-second testing without audio uploads.
 
-2. **⚡ Layer 2 — Zero-Dependency Streaming Proxy (`server.js`)**:
-   - **Node.js HTTP Server**: Uses native `http` and `fs` modules with zero external npm daemon dependencies.
+2. **⚡ Stage 2 — Zero-Dependency Streaming Hub (`server.js`)**:
+   - **Node.js HTTP Server**: Uses native `http`, `fs`, and `path` modules with zero external npm daemon dependencies.
    - **Archetype Schema Injector**: Injects strict JSON schemas corresponding to the selected meeting persona.
    - **In-Memory Privacy Guard**: Streams audio strictly in-memory. Zero temporary files are written to disk.
 
-3. **🧠 Layer 3 — Gemini 2.5 Flash Multimodal Core**:
+3. **🧠 Stage 3 — The Neural Reactor (Gemini 2.5 Flash Core)**:
    - **Direct Audio Tokenizer**: Tokenizes audio directly into the neural network without speech-to-text transcoding.
    - **Acoustic Voice Diarization**: Discerning speaker separation based on voice timbre, pitch, pauses, and acoustic signatures.
    - **Structured Reasoning Engine**: Simultaneously extracts summary TL;DR, action item owners, consensus decision ADRs, and unresolved risks in under 7.3s.
 
-4. **⚛️ Layer 4 — React 19 Workspace & Client Suite**:
+4. **⚛️ Stage 4 — React 19 Workspace Outputs**:
    - **Action Items Board**: Interactive checklist with assignees, due dates, priority pills (`HIGH`, `MED`, `LOW`), and live completion progress.
    - **Consensus Decision Log**: Formal Architecture Decision Records (ADRs) documenting rationales, champions, and governance approval.
    - **Grounded Copilot**: Conversational AI assistant with in-memory session memory for verbatim citations.
    - **Universal Exporter**: 1-click export to Markdown (`.md`), styled Print-Ready PDF, and raw JSON.
+
+---
+
+## 🛠️ Tools & Technologies Ecosystem
+
+> [!TIP]
+> **Modern Zero-Bloat Stack**: Engineered with cutting-edge React 19, native browser Web Audio API, and Google Gemini 2.5 Flash multimodal models—delivering high performance with zero heavy native runtime dependencies.
+
+<div align="center">
+  <!-- Tools and Technologies Ecosystem SVG -->
+  <img src="./assets/tools-tech-stack.svg" alt="Tools and Technologies Ecosystem" width="100%" />
+</div>
+
+<br/>
+
+| Technological Domain | Core Stack & Libraries | Version / Target | Architectural Responsibility |
+|:---|:---|:---:|:---|
+| **⚛️ Frontend & UI** | `React 19`, `Vite 8`, `Web Audio API`, `HTML5 Canvas`, `Lucide React` | React 19.2 / Vite 8.3 | 60 FPS audio frequency visualizer, modular reactive component state, and responsive glassmorphic dark theme. |
+| **🧠 GenAI & Audio** | `Google Gemini 2.5 Flash`, `Google AI Studio API`, `Type-Safe JSON Schemas` | Gemini 2.5 Flash | Direct multimodal audio tokenization, single-pass acoustic diarization, sentiment tracking, and sub-8s structured reasoning. |
+| **⚡ Backend & Proxy** | `Node.js Native HTTP`, `File Stream Buffer`, `Base64 Chunker` | Node.js v24+ | Zero-dependency HTTP server, in-memory proxy bridging browser to Gemini API, and archetype schema injection. |
+| **🐍 CLI & Runtime** | `Python 3.12+`, `Python Requests`, `Windows Shell Script` | Python 3.12+ / Win batch | Standalone headless audio summarizer script (`cli/summarizer.py`) and 1-click `start.bat` double-click runner. |
+| **📥 Exports & Portability**| `Print-Ready Styled PDF`, `GitHub Flavored Markdown`, `Typed JSON Payloads` | Universal | 1-click export for Notion, Jira, Slack, Teams, and executive leadership distribution. |
 
 ---
 
@@ -79,7 +101,8 @@
 ```
 Meeting-Notes-Summarizer-from-Audio/
 ├── assets/                          # Animated SVG architecture diagrams & visual assets
-│   ├── architecture-flow.svg        # 4-tier system architecture blueprint
+│   ├── architecture-flow.svg        # Schematic AI system flow diagram with neural reactor
+│   ├── tools-tech-stack.svg         # 5-domain tools & technologies ecosystem stack
 │   ├── repo-structure.svg           # Visual repository directory map
 │   ├── hero-banner.svg              # Animated neon frequency wave banner
 │   ├── features-grid.svg            # Animated 6-card capability showcase
