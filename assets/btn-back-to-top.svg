@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 36" width="130" height="36">
+  <defs>
+    <linearGradient id="bgTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1020" />
+      <stop offset="100%" stop-color="#050810" />
+    </linearGradient>
+    <linearGradient id="glowTop" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+  </defs>
+  <rect x="1.5" y="1.5" width="127" height="33" rx="16.5" fill="url(#bgTop)" stroke="url(#glowTop)" stroke-width="1.4" />
+  <text x="65" y="22" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="800" fill="#c7d2fe">▲ Back to Top</text>
+</svg>

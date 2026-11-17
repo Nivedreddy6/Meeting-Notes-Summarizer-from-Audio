@@ -1,3 +1,4 @@
+<a id="top"></a>
 <div align="center">
 
   <!-- Hero Animated Banner with Marching Laser Border & Dynamic Audio Equalizer -->
@@ -23,10 +24,35 @@
 
   <h3><b>⚡ Transform unstructured meeting recordings and live microphone streams into executive intelligence, consensus decisions, interactive task boards, and grounded conversational Q&amp;A.</b></h3>
 
+  <br/>
+
+  <!-- Interactive Quick-Navigation Pill Buttons Deck (Clickable Anchors) -->
+  <p align="center">
+    <a href="#quickstart"><img src="./assets/btn-quickstart.svg" alt="Quickstart" height="38" /></a>
+    &nbsp;
+    <a href="#architecture"><img src="./assets/btn-architecture.svg" alt="Architecture" height="38" /></a>
+    &nbsp;
+    <a href="#features"><img src="./assets/btn-features.svg" alt="Features" height="38" /></a>
+    &nbsp;
+    <a href="#tools-and-technologies"><img src="./assets/btn-tools.svg" alt="Tools & Technologies" height="38" /></a>
+    &nbsp;
+    <a href="#archetypes"><img src="./assets/btn-archetypes.svg" alt="Archetypes" height="38" /></a>
+  </p>
+  <p align="center">
+    <a href="#workspace"><img src="./assets/btn-workspace.svg" alt="Workspace" height="38" /></a>
+    &nbsp;
+    <a href="#benchmarks"><img src="./assets/btn-benchmarks.svg" alt="Benchmarks" height="38" /></a>
+    &nbsp;
+    <a href="#samples"><img src="./assets/btn-samples.svg" alt="Test Demos" height="38" /></a>
+    &nbsp;
+    <a href="#repository"><img src="./assets/btn-repository.svg" alt="Repository Tree" height="38" /></a>
+  </p>
+
 </div>
 
 ---
 
+<a id="architecture"></a>
 ## 🏗️ Architecture & Multimodal Data Flow
 
 <div align="center">
@@ -39,8 +65,11 @@
   <img src="./assets/system-architecture-schematic.svg" alt="OmniNote System Architecture Schematic Flow" width="100%" />
 </div>
 
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
+
 ---
 
+<a id="tools-and-technologies"></a>
 ## 🛠️ Tools & Technologies Ecosystem
 
 <div align="center">
@@ -48,8 +77,11 @@
   <img src="./assets/tools-tech-stack.svg" alt="Tools and Technologies Ecosystem Matrix" width="100%" />
 </div>
 
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
+
 ---
 
+<a id="repository"></a>
 ## 📁 Repository Directory Structure
 
 <div align="center">
@@ -57,8 +89,11 @@
   <img src="./assets/repo-tree-animated.svg" alt="Animated Repository Directory Tree Terminal" width="100%" />
 </div>
 
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
+
 ---
 
+<a id="features"></a>
 ## ✨ Core Features & Intelligence Suite
 
 <div align="center">
@@ -66,8 +101,11 @@
   <img src="./assets/features-bento-grid.svg" alt="OmniNote Features Bento Grid" width="100%" />
 </div>
 
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
+
 ---
 
+<a id="workspace"></a>
 ## 🖥️ React 19 Workspace & Interactive Tabs
 
 <div align="center">
@@ -75,8 +113,11 @@
   <img src="./assets/ui-studio-console.svg" alt="React 19 Studio Console" width="100%" />
 </div>
 
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
+
 ---
 
+<a id="archetypes"></a>
 ## 🎯 5 Specialized Meeting Archetypes
 
 <div align="center">
@@ -84,8 +125,11 @@
   <img src="./assets/archetypes-distinct-personas.svg" alt="Meeting Archetypes Distinct Personas" width="100%" />
 </div>
 
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
+
 ---
 
+<a id="benchmarks"></a>
 ## ⚡ Performance Benchmarks & Latency Advantage
 
 <div align="center">
@@ -93,8 +137,11 @@
   <img src="./assets/performance-telemetry-speed.svg" alt="Performance Latency Speedometer Telemetry" width="100%" />
 </div>
 
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
+
 ---
 
+<a id="quickstart"></a>
 ## 🚀 Quick Start Guide (1-Minute Setup)
 
 <div align="center">
@@ -130,14 +177,19 @@ PORT=3000
 
 Open **`http://localhost:3000`** in your browser.
 
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
+
 ---
 
+<a id="samples"></a>
 ## 📦 Instant Test Samples (Zero Audio Required)
 
 <div align="center">
   <!-- Preloaded Demo Cartridges Showcase -->
   <img src="./assets/samples-showcase.svg" alt="Preloaded Demo Samples" width="100%" />
 </div>
+
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
 
 ---
 

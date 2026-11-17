@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 46" width="170" height="46">
+  <defs>
+    <linearGradient id="bgWork" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c20" />
+      <stop offset="50%" stop-color="#141738" />
+      <stop offset="100%" stop-color="#060714" />
+    </linearGradient>
+
+    <linearGradient id="glowWork" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+
+    <linearGradient id="sheenWork" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45" />
+      <stop offset="50%" stop-color="#c7d2fe" stop-opacity="0.20" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <clipPath id="pillClipWork">
+      <rect x="2" y="2" width="166" height="42" rx="21" />
+    </clipPath>
+
+    <style>
+      @keyframes neonPulseWork {
+        0%, 100% {
+          filter: drop-shadow(0 0 4px rgba(99, 102, 241, 0.5)) drop-shadow(0 0 8px rgba(99, 102, 241, 0.3));
+        }
+        50% {
+          filter: drop-shadow(0 0 8px rgba(129, 140, 248, 0.9)) drop-shadow(0 0 16px rgba(99, 102, 241, 0.6));
+        }
+      }
+      .pill-container-work {
+        animation: neonPulseWork 2.5s ease-in-out infinite alternate;
+        cursor: pointer;
+      }
+    </style>
+  </defs>
+
+  <g class="pill-container-work">
+    <rect x="2" y="2" width="166" height="42" rx="21" fill="url(#bgWork)" stroke="url(#glowWork)" stroke-width="2.2" />
+
+    <g clip-path="url(#pillClipWork)">
+      <path d="M 90 0 L 135 0 L 170 46 L 125 46 Z" fill="url(#sheenWork)" />
+      <ellipse cx="85" cy="5" rx="72" ry="3" fill="#ffffff" opacity="0.25" />
+    </g>
+
+    <text x="22" y="28" font-size="16" text-anchor="middle">🖥️</text>
+    <text x="86" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="800" fill="#ffffff" letter-spacing="0.3">Workspace</text>
+    <text x="148" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="900" fill="#a5b4fc">&gt;</text>
+  </g>
+</svg>
