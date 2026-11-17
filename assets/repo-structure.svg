@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="100%" height="100%">
+  <defs>
+    <!-- Background Canvas -->
+    <linearGradient id="repoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="50%" stop-color="#091222" />
+      <stop offset="100%" stop-color="#04060d" />
+    </linearGradient>
+
+    <style>
+      @keyframes repoBorderDash {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -200; }
+      }
+      .repo-laser {
+        stroke-dasharray: 80, 25;
+        animation: repoBorderDash 5s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Blueprint Background -->
+  <rect width="1000" height="480" rx="16" fill="url(#repoBg)" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2" />
+  <rect width="1000" height="480" rx="16" fill="none" stroke="#38bdf8" stroke-width="1.6" class="repo-laser" />
+
+  <!-- Top Window Header Bar -->
+  <rect x="0" y="0" width="1000" height="40" rx="16" fill="#0f172a" fill-opacity="0.95" />
+  <circle cx="25" cy="20" r="5" fill="#ef4444" />
+  <circle cx="42" cy="20" r="5" fill="#eab308" />
+  <circle cx="59" cy="20" r="5" fill="#22c55e" />
+  <text x="82" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="800" fill="#38bdf8">REPOSITORY DIRECTORY STRUCTURE &amp; ARCHITECTURE MAP</text>
+  <rect x="800" y="10" width="175" height="20" rx="4" fill="#1e1b4b" stroke="#818cf8" stroke-width="1" />
+  <text x="887" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#c7d2fe">📁 MODULAR CODEBASE</text>
+
+  <!-- 3 Major Structural Columns -->
+
+  <!-- ================= COLUMN 1: REACT 19 ENTRY & STATE ================= -->
+  <rect x="25" y="55" width="280" height="405" rx="10" fill="#0c1b2a" fill-opacity="0.9" stroke="#0284c7" stroke-width="1.2" />
+  <rect x="35" y="65" width="260" height="26" rx="5" fill="#0369a1" />
+  <text x="165" y="82" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="800" fill="#ffffff">⚛️ SRC ROOT &amp; STATE ENGINE</text>
+
+  <!-- main.jsx -->
+  <rect x="35" y="102" width="260" height="52" rx="6" fill="#082f49" />
+  <text x="48" y="122" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#38bdf8">📄 src/main.jsx</text>
+  <text x="48" y="142" font-family="sans-serif" font-size="9.5" fill="#bae6fd">React 19 Concurrent Root &amp; DOM Mount</text>
+
+  <!-- App.jsx -->
+  <rect x="35" y="162" width="260" height="66" rx="6" fill="#082f49" />
+  <text x="48" y="182" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#38bdf8">📄 src/App.jsx</text>
+  <text x="48" y="200" font-family="sans-serif" font-size="9.5" fill="#bae6fd">• Global meeting state management</text>
+  <text x="48" y="216" font-family="sans-serif" font-size="9.5" fill="#bae6fd">• Archetype extraction routing &amp; API bridge</text>
+
+  <!-- index.css -->
+  <rect x="35" y="236" width="260" height="66" rx="6" fill="#082f49" />
+  <text x="48" y="256" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#38bdf8">🎨 src/index.css</text>
+  <text x="48" y="274" font-family="sans-serif" font-size="9.5" fill="#bae6fd">• Glassmorphic theme &amp; cyber palettes</text>
+  <text x="48" y="290" font-family="sans-serif" font-size="9.5" fill="#bae6fd">• CSS @keyframes animations (lasers, pulses)</text>
+
+  <!-- start.bat -->
+  <rect x="35" y="310" width="260" height="66" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="1" />
+  <text x="48" y="330" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#a7f3d0">⚡ start.bat (Windows)</text>
+  <text x="48" y="348" font-family="sans-serif" font-size="9.5" fill="#a7f3d0">• 1-Click double-click launch script</text>
+  <text x="48" y="364" font-family="sans-serif" font-size="9.5" fill="#a7f3d0">• Auto builds &amp; launches browser on :3000</text>
+
+  <!-- cli/summarizer.py -->
+  <rect x="35" y="384" width="260" height="64" rx="6" fill="#1e1b4b" stroke="#818cf8" stroke-width="1" />
+  <text x="48" y="404" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#c7d2fe">🐍 cli/summarizer.py</text>
+  <text x="48" y="422" font-family="sans-serif" font-size="9.5" fill="#c7d2fe">• Standalone Python command-line utility</text>
+  <text x="48" y="438" font-family="sans-serif" font-size="9.5" fill="#c7d2fe">• Batch summarize WAV/MP3 files directly</text>
+
+
+  <!-- ================= COLUMN 2: SRC/COMPONENTS SUITE ================= -->
+  <rect x="320" y="55" width="360" height="405" rx="10" fill="#13122c" fill-opacity="0.9" stroke="#9333ea" stroke-width="1.2" />
+  <rect x="330" y="65" width="340" height="26" rx="5" fill="#581c87" />
+  <text x="500" y="82" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="800" fill="#ffffff">🧩 SRC/COMPONENTS (REACT SUITE)</text>
+
+  <g font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#f3e8ff">
+    <rect x="330" y="102" width="340" height="24" rx="4" fill="#2e1065" />
+    <text x="342" y="118">Header.jsx</text>
+    <text x="475" y="118" font-family="sans-serif" fill="#d8b4fe">Branding, API config &amp; live badge</text>
+
+    <rect x="330" y="130" width="340" height="24" rx="4" fill="#2e1065" />
+    <text x="342" y="146">AudioUploader.jsx</text>
+    <text x="475" y="146" font-family="sans-serif" fill="#d8b4fe">Drag &amp; drop audio ingestion</text>
+
+    <rect x="330" y="158" width="340" height="24" rx="4" fill="#2e1065" />
+    <text x="342" y="174">AudioRecorder.jsx</text>
+    <text x="475" y="174" font-family="sans-serif" fill="#d8b4fe">Live mic &amp; 60fps Canvas equalizer</text>
+
+    <rect x="330" y="186" width="340" height="24" rx="4" fill="#2e1065" />
+    <text x="342" y="202">DemoSelector.jsx</text>
+    <text x="475" y="202" font-family="sans-serif" fill="#d8b4fe">1-click preloaded meeting demos</text>
+
+    <rect x="330" y="214" width="340" height="24" rx="4" fill="#2e1065" />
+    <text x="342" y="230">AudioPlayerDeck.jsx</text>
+    <text x="475" y="230" font-family="sans-serif" fill="#d8b4fe">Waveform seek &amp; speed toggles</text>
+
+    <rect x="330" y="242" width="340" height="24" rx="4" fill="#2e1065" />
+    <text x="342" y="258">MeetingHero.jsx</text>
+    <text x="475" y="258" font-family="sans-serif" fill="#d8b4fe">Executive summary &amp; export bar</text>
+
+    <rect x="330" y="270" width="340" height="24" rx="4" fill="#2e1065" />
+    <text x="342" y="286">ActionItemsTab.jsx</text>
+    <text x="475" y="286" font-family="sans-serif" fill="#d8b4fe">Interactive tasks &amp; priority badges</text>
+
+    <rect x="330" y="298" width="340" height="24" rx="4" fill="#2e1065" />
+    <text x="342" y="314">DecisionsTab.jsx</text>
+    <text x="475" y="314" font-family="sans-serif" fill="#d8b4fe">Consensus ADR logs &amp; champions</text>
+
+    <rect x="330" y="326" width="340" height="24" rx="4" fill="#2e1065" />
+    <text x="342" y="342">TopicsTab.jsx</text>
+    <text x="475" y="342" font-family="sans-serif" fill="#d8b4fe">Agenda timeline &amp; topic durations</text>
+
+    <rect x="330" y="354" width="340" height="24" rx="4" fill="#2e1065" />
+    <text x="342" y="370">QuestionsTab.jsx</text>
+    <text x="475" y="370" font-family="sans-serif" fill="#d8b4fe">Unresolved risks &amp; open questions</text>
+
+    <rect x="330" y="382" width="340" height="24" rx="4" fill="#2e1065" />
+    <text x="342" y="398">TranscriptTab.jsx</text>
+    <text x="475" y="398" font-family="sans-serif" fill="#d8b4fe">Diarized speaker quotes &amp; times</text>
+
+    <rect x="330" y="410" width="340" height="24" rx="4" fill="#2e1065" />
+    <text x="342" y="426">ChatCopilotTab.jsx</text>
+    <text x="475" y="426" font-family="sans-serif" fill="#d8b4fe">Interactive conversational Q&amp;A AI</text>
+
+    <rect x="330" y="438" width="340" height="18" rx="4" fill="#2e1065" />
+    <text x="342" y="452">SettingsModal.jsx</text>
+    <text x="475" y="452" font-family="sans-serif" fill="#d8b4fe">Gemini API key management modal</text>
+  </g>
+
+
+  <!-- ================= COLUMN 3: BACKEND, PUBLIC & CONFIG ================= -->
+  <rect x="695" y="55" width="280" height="405" rx="10" fill="#07201b" fill-opacity="0.9" stroke="#059669" stroke-width="1.2" />
+  <rect x="705" y="65" width="260" height="26" rx="5" fill="#065f46" />
+  <text x="835" y="82" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="800" fill="#ffffff">⚙️ BACKEND, ASSETS &amp; CONFIG</text>
+
+  <!-- server.js -->
+  <rect x="705" y="102" width="260" height="66" rx="6" fill="#064e3b" />
+  <text x="718" y="122" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#a7f3d0">⚡ server.js</text>
+  <text x="718" y="140" font-family="sans-serif" font-size="9.5" fill="#d1fae5">• Zero-dependency HTTP proxy</text>
+  <text x="718" y="156" font-family="sans-serif" font-size="9.5" fill="#d1fae5">• Serves /dist and bridges Gemini API</text>
+
+  <!-- public/samples/ -->
+  <rect x="705" y="176" width="260" height="80" rx="6" fill="#064e3b" />
+  <text x="718" y="196" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#a7f3d0">📦 public/samples/</text>
+  <text x="718" y="214" font-family="sans-serif" font-size="9.5" fill="#d1fae5">• sprint_sync.json</text>
+  <text x="718" y="230" font-family="sans-serif" font-size="9.5" fill="#d1fae5">• executive_review.json, client_disc.json</text>
+  <text x="718" y="246" font-family="sans-serif" font-size="9.5" fill="#34d399">• sample_meeting_clip.wav</text>
+
+  <!-- assets/ -->
+  <rect x="705" y="264" width="260" height="70" rx="6" fill="#064e3b" />
+  <text x="718" y="284" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#a7f3d0">🎨 assets/</text>
+  <text x="718" y="302" font-family="sans-serif" font-size="9.5" fill="#d1fae5">• architecture-flow.svg, repo-structure.svg</text>
+  <text x="718" y="318" font-family="sans-serif" font-size="9.5" fill="#d1fae5">• hero-banner.svg, features-grid.svg...</text>
+
+  <!-- package.json & vite.config.js -->
+  <rect x="705" y="342" width="260" height="106" rx="6" fill="#064e3b" />
+  <text x="718" y="362" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#a7f3d0">⚙️ Build &amp; Tooling</text>
+  <text x="718" y="380" font-family="sans-serif" font-size="9.5" fill="#d1fae5">• package.json (React 19, Vite, Lucide)</text>
+  <text x="718" y="396" font-family="sans-serif" font-size="9.5" fill="#d1fae5">• vite.config.js (Fast Refresh &amp; chunking)</text>
+  <text x="718" y="412" font-family="sans-serif" font-size="9.5" fill="#d1fae5">• .env (GEMINI_API_KEY, PORT=3000)</text>
+  <text x="718" y="432" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#a7f3d0">✓ Fully self-contained repository</text>
+</svg>
