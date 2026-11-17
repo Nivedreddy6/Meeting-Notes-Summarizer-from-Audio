@@ -1,4 +1,3 @@
-<a id="top"></a>
 <div align="center">
 
   <!-- Hero Animated Banner with Marching Laser Border & Dynamic Audio Equalizer -->
@@ -26,33 +25,32 @@
 
   <br/>
 
-  <!-- Interactive Quick-Navigation Pill Buttons Deck (Clickable Anchors) -->
+  <!-- High-Precision Rounded Navigation Pill Buttons Deck (Non-Navigating Static Images) -->
   <p align="center">
-    <a href="#quickstart"><img src="./assets/pill-quickstart.svg" alt="Quickstart" height="30" /></a>
+    <img src="./assets/pill-quickstart.svg" alt="Quickstart" height="30" />
     &nbsp;
-    <a href="#architecture"><img src="./assets/pill-architecture.svg" alt="Architecture" height="30" /></a>
+    <img src="./assets/pill-architecture.svg" alt="Architecture" height="30" />
     &nbsp;
-    <a href="#features"><img src="./assets/pill-features.svg" alt="Features" height="30" /></a>
+    <img src="./assets/pill-features.svg" alt="Features" height="30" />
     &nbsp;
-    <a href="#tools-and-technologies"><img src="./assets/pill-tools.svg" alt="Tools & Technologies" height="30" /></a>
+    <img src="./assets/pill-tools.svg" alt="Tools & Technologies" height="30" />
     &nbsp;
-    <a href="#archetypes"><img src="./assets/pill-archetypes.svg" alt="Archetypes" height="30" /></a>
+    <img src="./assets/pill-archetypes.svg" alt="Archetypes" height="30" />
     &nbsp;
-    <a href="#workspace"><img src="./assets/pill-workspace.svg" alt="Workspace" height="30" /></a>
+    <img src="./assets/pill-workspace.svg" alt="Workspace" height="30" />
   </p>
   <p align="center">
-    <a href="#benchmarks"><img src="./assets/pill-benchmarks.svg" alt="Benchmarks" height="30" /></a>
+    <img src="./assets/pill-benchmarks.svg" alt="Benchmarks" height="30" />
     &nbsp;
-    <a href="#samples"><img src="./assets/pill-samples.svg" alt="Test Demos" height="30" /></a>
+    <img src="./assets/pill-samples.svg" alt="Test Demos" height="30" />
     &nbsp;
-    <a href="#repository"><img src="./assets/pill-repository.svg" alt="Repository Tree" height="30" /></a>
+    <img src="./assets/pill-repository.svg" alt="Repository Tree" height="30" />
   </p>
 
 </div>
 
 ---
 
-<a id="architecture"></a>
 ## 🏗️ Architecture & Multimodal Data Flow
 
 <div align="center">
@@ -65,11 +63,8 @@
   <img src="./assets/system-architecture-schematic.svg" alt="OmniNote System Architecture Schematic Flow" width="100%" />
 </div>
 
-<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
-
 ---
 
-<a id="tools-and-technologies"></a>
 ## 🛠️ Tools & Technologies Ecosystem
 
 <div align="center">
@@ -77,11 +72,8 @@
   <img src="./assets/tools-tech-stack.svg" alt="Tools and Technologies Ecosystem Matrix" width="100%" />
 </div>
 
-<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
-
 ---
 
-<a id="repository"></a>
 ## 📁 Repository Directory Structure
 
 <div align="center">
@@ -89,11 +81,8 @@
   <img src="./assets/repo-tree-animated.svg" alt="Animated Repository Directory Tree Terminal" width="100%" />
 </div>
 
-<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
-
 ---
 
-<a id="features"></a>
 ## ✨ Core Features & Intelligence Suite
 
 <div align="center">
@@ -101,11 +90,8 @@
   <img src="./assets/features-bento-grid.svg" alt="OmniNote Features Bento Grid" width="100%" />
 </div>
 
-<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
-
 ---
 
-<a id="workspace"></a>
 ## 🖥️ React 19 Workspace & Interactive Tabs
 
 <div align="center">
@@ -113,11 +99,8 @@
   <img src="./assets/ui-studio-console.svg" alt="React 19 Studio Console" width="100%" />
 </div>
 
-<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
-
 ---
 
-<a id="archetypes"></a>
 ## 🎯 5 Specialized Meeting Archetypes
 
 <div align="center">
@@ -125,11 +108,8 @@
   <img src="./assets/archetypes-distinct-personas.svg" alt="Meeting Archetypes Distinct Personas" width="100%" />
 </div>
 
-<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
-
 ---
 
-<a id="benchmarks"></a>
 ## ⚡ Performance Benchmarks & Latency Advantage
 
 <div align="center">
@@ -137,11 +117,8 @@
   <img src="./assets/performance-telemetry-speed.svg" alt="Performance Latency Speedometer Telemetry" width="100%" />
 </div>
 
-<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
-
 ---
 
-<a id="quickstart"></a>
 ## 🚀 Quick Start Guide (1-Minute Setup)
 
 <div align="center">
@@ -177,19 +154,14 @@ PORT=3000
 
 Open **`http://localhost:3000`** in your browser.
 
-<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
-
 ---
 
-<a id="samples"></a>
 ## 📦 Instant Test Samples (Zero Audio Required)
 
 <div align="center">
   <!-- Preloaded Demo Cartridges Showcase -->
   <img src="./assets/samples-showcase.svg" alt="Preloaded Demo Samples" width="100%" />
 </div>
-
-<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="26" /></a></p>
 
 ---
 
