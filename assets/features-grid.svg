@@ -1,136 +1,164 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 350" width="100%" height="100%">
   <defs>
-    <!-- Card Gradients -->
-    <linearGradient id="bgCanvas" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070a14" />
-      <stop offset="100%" stop-color="#0a1020" />
+    <!-- Background Canvas Gradient -->
+    <linearGradient id="bgGrid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060913" />
+      <stop offset="100%" stop-color="#091122" />
     </linearGradient>
 
-    <!-- Card 1: Emerald/Cyan -->
+    <!-- Card Backgrounds -->
     <linearGradient id="gMic" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#064e3b" stop-opacity="0.5" />
-      <stop offset="100%" stop-color="#0b1728" stop-opacity="0.9" />
+      <stop offset="0%" stop-color="#064e3b" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#071822" stop-opacity="0.95" />
     </linearGradient>
 
-    <!-- Card 2: Violet/Purple -->
     <linearGradient id="gGemini" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4c1d95" stop-opacity="0.5" />
-      <stop offset="100%" stop-color="#0b1728" stop-opacity="0.9" />
+      <stop offset="0%" stop-color="#4c1d95" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0d1428" stop-opacity="0.95" />
     </linearGradient>
 
-    <!-- Card 3: Teal/Emerald -->
     <linearGradient id="gTask" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#115e59" stop-opacity="0.5" />
-      <stop offset="100%" stop-color="#0b1728" stop-opacity="0.9" />
+      <stop offset="0%" stop-color="#0f766e" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#071b28" stop-opacity="0.95" />
     </linearGradient>
 
-    <!-- Card 4: Indigo/Blue -->
     <linearGradient id="gDecision" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e1b4b" stop-opacity="0.6" />
-      <stop offset="100%" stop-color="#0b1728" stop-opacity="0.9" />
+      <stop offset="0%" stop-color="#1e1b4b" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#081024" stop-opacity="0.95" />
     </linearGradient>
 
-    <!-- Card 5: Fuchsia/Pink -->
     <linearGradient id="gCopilot" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#701a75" stop-opacity="0.5" />
-      <stop offset="100%" stop-color="#0b1728" stop-opacity="0.9" />
+      <stop offset="0%" stop-color="#701a75" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#110d24" stop-opacity="0.95" />
     </linearGradient>
 
-    <!-- Card 6: Amber/Orange -->
     <linearGradient id="gAudioDeck" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#78350f" stop-opacity="0.5" />
-      <stop offset="100%" stop-color="#0b1728" stop-opacity="0.9" />
+      <stop offset="0%" stop-color="#78350f" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#141120" stop-opacity="0.95" />
     </linearGradient>
 
     <style>
-      @keyframes neonBorderPulse {
-        0%, 100% { stroke-opacity: 0.3; }
-        50% { stroke-opacity: 0.85; }
+      /* CSS KEYFRAME ANIMATIONS */
+      @keyframes laserDash {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -200; }
       }
-      @keyframes eqPulseMini {
-        0%, 100% { height: 6px; y: 64px; }
-        50% { height: 18px; y: 52px; }
+
+      @keyframes miniBounce1 {
+        0%, 100% { height: 4px; y: 64px; }
+        50% { height: 20px; y: 48px; }
       }
-      .card-glow-1 { animation: neonBorderPulse 3s ease-in-out infinite; }
-      .card-glow-2 { animation: neonBorderPulse 3s ease-in-out infinite 0.5s; }
-      .card-glow-3 { animation: neonBorderPulse 3s ease-in-out infinite 1s; }
-      .card-glow-4 { animation: neonBorderPulse 3s ease-in-out infinite 1.5s; }
-      .card-glow-5 { animation: neonBorderPulse 3s ease-in-out infinite 2s; }
-      .card-glow-6 { animation: neonBorderPulse 3s ease-in-out infinite 2.5s; }
-      .eq-mini-1 { animation: eqPulseMini 1s ease-in-out infinite alternate 0.1s; }
-      .eq-mini-2 { animation: eqPulseMini 1s ease-in-out infinite alternate 0.3s; }
-      .eq-mini-3 { animation: eqPulseMini 1s ease-in-out infinite alternate 0.5s; }
+      @keyframes miniBounce2 {
+        0%, 100% { height: 6px; y: 62px; }
+        50% { height: 24px; y: 44px; }
+      }
+      @keyframes miniBounce3 {
+        0%, 100% { height: 3px; y: 65px; }
+        50% { height: 16px; y: 52px; }
+      }
+
+      @keyframes borderShift {
+        0%, 100% { stroke-opacity: 0.5; stroke-width: 1.5; }
+        50% { stroke-opacity: 1; stroke-width: 2.2; }
+      }
+
+      .laser-card {
+        stroke-dasharray: 80, 25;
+        animation: laserDash 4s linear infinite;
+      }
+      .laser-card-fast {
+        stroke-dasharray: 60, 20;
+        animation: laserDash 3s linear infinite;
+      }
+
+      .mb1 { animation: miniBounce1 0.9s ease-in-out infinite alternate; }
+      .mb2 { animation: miniBounce2 0.7s ease-in-out infinite alternate 0.2s; }
+      .mb3 { animation: miniBounce3 1.1s ease-in-out infinite alternate 0.4s; }
+
+      .pulse-glow { animation: borderShift 2.5s ease-in-out infinite; }
     </style>
   </defs>
 
-  <!-- Background Canvas -->
-  <rect width="1000" height="340" rx="16" fill="url(#bgCanvas)" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2" />
+  <!-- Background Base Canvas -->
+  <rect width="1000" height="350" rx="16" fill="url(#bgGrid)" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2" />
 
   <!-- ================= ROW 1 ================= -->
 
   <!-- CARD 1: Live Audio Ingest -->
-  <rect x="30" y="25" width="295" height="135" rx="12" fill="url(#gMic)" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.2" class="card-glow-1" />
-  <circle cx="58" cy="55" r="14" fill="#10b981" fill-opacity="0.25" />
-  <text x="58" y="61" text-anchor="middle" font-size="14">🎙️</text>
-  <text x="82" y="52" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#a7f3d0">Live Mic &amp; Audio Ingest</text>
-  <text x="82" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#6ee7b7">Browser Web Audio API</text>
-  <!-- Mini Equalizer bars -->
-  <rect x="270" y="58" width="3" height="12" rx="1" fill="#34d399" class="eq-mini-1" />
-  <rect x="276" y="52" width="3" height="18" rx="1" fill="#34d399" class="eq-mini-2" />
-  <rect x="282" y="60" width="3" height="10" rx="1" fill="#34d399" class="eq-mini-3" />
-  <text x="48" y="98" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#cbd5e1">• Realtime microphone frequency visualizer</text>
-  <text x="48" y="116" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#cbd5e1">• MP3, WAV, M4A, AAC, OGG, WEBM, FLAC</text>
-  <text x="48" y="136" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="600" fill="#34d399">⚡ Zero external installation needed</text>
+  <rect x="25" y="25" width="300" height="142" rx="12" fill="url(#gMic)" />
+  <rect x="25" y="25" width="300" height="142" rx="12" fill="none" stroke="#10b981" stroke-width="1.8" class="laser-card" />
+  <circle cx="55" cy="56" r="15" fill="#10b981" fill-opacity="0.3" />
+  <text x="55" y="62" text-anchor="middle" font-size="15">🎙️</text>
+  <text x="80" y="52" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13.5" font-weight="800" fill="#a7f3d0">Live Mic &amp; Audio Ingest</text>
+  <text x="80" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#34d399">Browser Web Audio API (60 FPS)</text>
+  <!-- Animated Equalizer Bars inside Card -->
+  <rect x="268" y="58" width="3.5" height="10" rx="1" fill="#34d399" class="mb1" />
+  <rect x="275" y="52" width="3.5" height="16" rx="1" fill="#10b981" class="mb2" />
+  <rect x="282" y="62" width="3.5" height="6" rx="1" fill="#6ee7b7" class="mb3" />
+  <text x="45" y="98" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#e2e8f0">• Real-time microphone frequency visualizer</text>
+  <text x="45" y="118" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#e2e8f0">• MP3, WAV, M4A, AAC, OGG, WEBM, FLAC</text>
+  <rect x="45" y="132" width="185" height="20" rx="4" fill="#065f46" />
+  <text x="52" y="146" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#a7f3d0">⚡ Zero external installation needed</text>
 
   <!-- CARD 2: Gemini Multimodal AI -->
-  <rect x="352" y="25" width="295" height="135" rx="12" fill="url(#gGemini)" stroke="#c084fc" stroke-opacity="0.4" stroke-width="1.2" class="card-glow-2" />
-  <circle cx="380" cy="55" r="14" fill="#9333ea" fill-opacity="0.25" />
-  <text x="380" y="61" text-anchor="middle" font-size="14">🧠</text>
-  <text x="404" y="52" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#f3e8ff">Gemini 2.5 Flash GenAI</text>
-  <text x="404" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#d8b4fe">Single-Pass Acoustic Reasoning</text>
-  <text x="370" y="98" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#e9d5ff">• Direct multimodal audio processing</text>
-  <text x="370" y="116" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#e9d5ff">• Speaker voice diarization &amp; sentiment</text>
-  <text x="370" y="136" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="600" fill="#c084fc">⚡ 10x faster than Whisper + LLM chains</text>
+  <rect x="350" y="25" width="300" height="142" rx="12" fill="url(#gGemini)" />
+  <rect x="350" y="25" width="300" height="142" rx="12" fill="none" stroke="#c084fc" stroke-width="1.8" class="laser-card-fast" />
+  <circle cx="380" cy="56" r="15" fill="#9333ea" fill-opacity="0.3" />
+  <text x="380" y="62" text-anchor="middle" font-size="15">🧠</text>
+  <text x="405" y="52" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13.5" font-weight="800" fill="#f3e8ff">Gemini 2.5 Flash GenAI</text>
+  <text x="405" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#d8b4fe">Single-Pass Acoustic Reasoning</text>
+  <text x="370" y="98" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#f3e8ff">• Direct audio tokenization (No Whisper chain)</text>
+  <text x="370" y="118" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#f3e8ff">• Speaker voice diarization &amp; sentiment</text>
+  <rect x="370" y="132" width="195" height="20" rx="4" fill="#581c87" />
+  <text x="377" y="146" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#f3e8ff">⚡ 10x faster than traditional pipelines</text>
 
   <!-- CARD 3: Interactive Action Items -->
-  <rect x="674" y="25" width="295" height="135" rx="12" fill="url(#gTask)" stroke="#2dd4bf" stroke-opacity="0.4" stroke-width="1.2" class="card-glow-3" />
-  <circle cx="702" cy="55" r="14" fill="#0f766e" fill-opacity="0.25" />
-  <text x="702" y="61" text-anchor="middle" font-size="14">✅</text>
-  <text x="726" y="52" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#ccfbf1">Interactive Action Tasks</text>
-  <text x="726" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#5eead4">Smart Ownership &amp; Tracking</text>
-  <text x="692" y="98" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#cbd5e1">• Assignee tags, due dates &amp; priority</text>
-  <text x="692" y="116" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#cbd5e1">• Dynamic check-off &amp; filter pills</text>
-  <text x="692" y="136" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="600" fill="#2dd4bf">⚡ Live completion progress tracking</text>
+  <rect x="675" y="25" width="300" height="142" rx="12" fill="url(#gTask)" />
+  <rect x="675" y="25" width="300" height="142" rx="12" fill="none" stroke="#2dd4bf" stroke-width="1.8" class="laser-card" />
+  <circle cx="705" cy="56" r="15" fill="#0f766e" fill-opacity="0.3" />
+  <text x="705" y="62" text-anchor="middle" font-size="15">✅</text>
+  <text x="730" y="52" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13.5" font-weight="800" fill="#ccfbf1">Interactive Action Board</text>
+  <text x="730" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#5eead4">Smart Ownership &amp; Tracking</text>
+  <text x="695" y="98" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#e2e8f0">• Assignee tags, due dates &amp; priority badges</text>
+  <text x="695" y="118" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#e2e8f0">• Clickable checkboxes with live progress</text>
+  <rect x="695" y="132" width="185" height="20" rx="4" fill="#134e4a" />
+  <text x="702" y="146" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#5eead4">⚡ Live completion progress tracking</text>
 
   <!-- ================= ROW 2 ================= -->
 
   <!-- CARD 4: Consensus Decision Log -->
-  <rect x="30" y="180" width="295" height="135" rx="12" fill="url(#gDecision)" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1.2" class="card-glow-4" />
-  <circle cx="58" cy="210" r="14" fill="#4338ca" fill-opacity="0.25" />
-  <text x="58" y="216" text-anchor="middle" font-size="14">💡</text>
-  <text x="82" y="207" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#c7d2fe">Consensus Decision Log</text>
-  <text x="82" y="223" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#818cf8">Architecture &amp; Strategy ADRs</text>
-  <text x="48" y="253" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#cbd5e1">• Structured rationale &amp; context</text>
-  <text x="48" y="271" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#cbd5e1">• Champion ownership &amp; approval badges</text>
-  <text x="48" y="291" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="600" fill="#818cf8">⚡ Never lose critical meeting decisions</text>
+  <rect x="25" y="185" width="300" height="142" rx="12" fill="url(#gDecision)" />
+  <rect x="25" y="185" width="300" height="142" rx="12" fill="none" stroke="#818cf8" stroke-width="1.8" class="laser-card-fast" />
+  <circle cx="55" cy="216" r="15" fill="#4338ca" fill-opacity="0.3" />
+  <text x="55" y="222" text-anchor="middle" font-size="15">💡</text>
+  <text x="80" y="212" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13.5" font-weight="800" fill="#c7d2fe">Consensus Decision Log</text>
+  <text x="80" y="228" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#818cf8">Architecture &amp; Strategy ADRs</text>
+  <text x="45" y="258" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#e2e8f0">• Problem context &amp; consensus resolution</text>
+  <text x="45" y="278" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#e2e8f0">• Champion owners &amp; approval badges</text>
+  <rect x="45" y="292" width="185" height="20" rx="4" fill="#312e81" />
+  <text x="52" y="306" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#c7d2fe">⚡ Never lose critical meeting decisions</text>
 
   <!-- CARD 5: Meeting AI Copilot -->
-  <rect x="352" y="180" width="295" height="135" rx="12" fill="url(#gCopilot)" stroke="#e879f9" stroke-opacity="0.4" stroke-width="1.2" class="card-glow-5" />
-  <circle cx="380" cy="210" r="14" fill="#86198f" fill-opacity="0.25" />
-  <text x="380" y="216" text-anchor="middle" font-size="14">💬</text>
-  <text x="404" y="207" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#fae8ff">Ask Meeting AI (Copilot)</text>
-  <text x="404" y="223" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#f0abfc">Grounded Conversational Q&amp;A</text>
-  <text x="370" y="253" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#e9d5ff">• Inquire about numbers, quotes &amp; tasks</text>
-  <text x="370" y="271" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#e9d5ff">• Full conversational session memory</text>
-  <text x="370" y="291" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="600" fill="#e879f9">⚡ Verified answers from audio transcript</text>
+  <rect x="350" y="185" width="300" height="142" rx="12" fill="url(#gCopilot)" />
+  <rect x="350" y="185" width="300" height="142" rx="12" fill="none" stroke="#e879f9" stroke-width="1.8" class="laser-card" />
+  <circle cx="380" cy="216" r="15" fill="#86198f" fill-opacity="0.3" />
+  <text x="380" y="222" text-anchor="middle" font-size="15">💬</text>
+  <text x="405" y="212" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13.5" font-weight="800" fill="#fae8ff">Ask Meeting AI (Copilot)</text>
+  <text x="405" y="228" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#f0abfc">Grounded Conversational Q&amp;A</text>
+  <text x="370" y="258" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#f5d0fe">• Inquire about numbers, quotes &amp; timelines</text>
+  <text x="370" y="278" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#f5d0fe">• Grounded answers with verbatim citations</text>
+  <rect x="370" y="292" width="195" height="20" rx="4" fill="#701a75" />
+  <text x="377" y="306" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#f5d0fe">⚡ Verified answers from audio transcript</text>
 
   <!-- CARD 6: Audio Deck & Export -->
-  <rect x="674" y="180" width="295" height="135" rx="12" fill="url(#gAudioDeck)" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.2" class="card-glow-6" />
-  <circle cx="702" cy="210" r="14" fill="#b45309" fill-opacity="0.25" />
-  <text x="702" y="216" text-anchor="middle" font-size="14">🎚️</text>
-  <text x="726" y="207" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#fef3c7">Audio Deck &amp; Multi-Export</text>
-  <text x="726" y="223" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#fde68a">Waveform Seek &amp; Export Formats</text>
-  <text x="692" y="253" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#cbd5e1">• Speed toggles (1x, 1.25x, 1.5x, 2x)</text>
-  <text x="692" y="271" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#cbd5e1">• 1-click Markdown, PDF &amp; JSON export</text>
-  <text x="692" y="291" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="600" fill="#f59e0b">⚡ Ready for Notion, Jira, Slack &amp; Teams</text>
+  <rect x="675" y="185" width="300" height="142" rx="12" fill="url(#gAudioDeck)" />
+  <rect x="675" y="185" width="300" height="142" rx="12" fill="none" stroke="#f59e0b" stroke-width="1.8" class="laser-card-fast" />
+  <circle cx="705" cy="216" r="15" fill="#b45309" fill-opacity="0.3" />
+  <text x="705" y="222" text-anchor="middle" font-size="15">🎚️</text>
+  <text x="730" y="212" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13.5" font-weight="800" fill="#fef3c7">Audio Deck &amp; Multi-Export</text>
+  <text x="730" y="228" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="600" fill="#fde68a">Waveform Seek &amp; Export Formats</text>
+  <text x="695" y="258" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#e2e8f0">• Speed toggles (1x, 1.25x, 1.5x, 2x)</text>
+  <text x="695" y="278" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#e2e8f0">• 1-click Markdown, PDF &amp; JSON export</text>
+  <rect x="695" y="292" width="195" height="20" rx="4" fill="#78350f" />
+  <text x="702" y="306" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#fef3c7">⚡ Ready for Notion, Jira, Slack &amp; Teams</text>
 </svg>

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="samplesBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060913" />
+      <stop offset="100%" stop-color="#0c1224" />
+    </linearGradient>
+
+    <linearGradient id="sprintCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#091328" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="execCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c2d3a" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#081522" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="clientCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a1a08" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#120e18" stop-opacity="0.95" />
+    </linearGradient>
+
+    <style>
+      @keyframes sampleLaser {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -160; }
+      }
+      .laser-sample {
+        stroke-dasharray: 60, 20;
+        animation: sampleLaser 3.5s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base Canvas -->
+  <rect width="1000" height="240" rx="16" fill="url(#samplesBg)" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2" />
+
+  <!-- Section Header -->
+  <text x="35" y="32" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="800" letter-spacing="1.5" fill="#38bdf8">1-CLICK INSTANT TEST SAMPLES</text>
+  <text x="35" y="54" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="900" fill="#ffffff">Preloaded Real-World Meeting Demos (Zero Upload Needed)</text>
+  <rect x="740" y="24" width="225" height="28" rx="14" fill="#132438" stroke="#38bdf8" stroke-width="1.2" />
+  <text x="852" y="42" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="800" fill="#38bdf8">⚡ TEST IN 1 SECOND</text>
+
+  <!-- 3 Demo Cards -->
+
+  <!-- CARD 1: Sprint 42 Sync -->
+  <rect x="25" y="70" width="300" height="150" rx="12" fill="url(#sprintCardBg)" />
+  <rect x="25" y="70" width="300" height="150" rx="12" fill="none" stroke="#818cf8" stroke-width="1.8" class="laser-sample" />
+  <circle cx="52" cy="98" r="14" fill="#4338ca" fill-opacity="0.4" />
+  <text x="52" y="103" text-anchor="middle" font-size="13">🛠️</text>
+  <text x="75" y="95" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="800" fill="#c7d2fe">Sprint 42 Tech Sync</text>
+  <rect x="75" y="103" width="130" height="16" rx="3" fill="#312e81" />
+  <text x="80" y="115" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="700" fill="#c7d2fe">AUDIO: sample_meeting.wav</text>
+  <text x="40" y="142" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#e2e8f0">• Redis Sentinel failover benchmark</text>
+  <text x="40" y="160" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#e2e8f0">• DB connection pool under 5k req/s</text>
+  <text x="40" y="178" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#e2e8f0">• Billing webhook OpenAPI contracts</text>
+  <rect x="40" y="190" width="105" height="18" rx="4" fill="#4338ca" />
+  <text x="48" y="203" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="700" fill="#ffffff">Architecture ADR</text>
+
+  <!-- CARD 2: Executive Review -->
+  <rect x="350" y="70" width="300" height="150" rx="12" fill="url(#execCardBg)" />
+  <rect x="350" y="70" width="300" height="150" rx="12" fill="none" stroke="#38bdf8" stroke-width="1.8" class="laser-sample" />
+  <circle cx="377" cy="98" r="14" fill="#0284c7" fill-opacity="0.4" />
+  <text x="377" y="103" text-anchor="middle" font-size="13">📌</text>
+  <text x="400" y="95" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="800" fill="#bae6fd">Q4 Leadership Review</text>
+  <rect x="400" y="103" width="130" height="16" rx="3" fill="#0369a1" />
+  <text x="405" y="115" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="700" fill="#bae6fd">C-SUITE MACRO TL;DR</text>
+  <text x="365" y="142" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#e2e8f0">• $12.4M ARR revenue acceleration</text>
+  <text x="365" y="160" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#e2e8f0">• Enterprise SOC-2 Type II audit</text>
+  <text x="365" y="178" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#e2e8f0">• Gross margin target 78% expansion</text>
+  <rect x="365" y="190" width="115" height="18" rx="4" fill="#0284c7" />
+  <text x="373" y="203" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="700" fill="#ffffff">Executive Briefing</text>
+
+  <!-- CARD 3: Client Discovery -->
+  <rect x="675" y="70" width="300" height="150" rx="12" fill="url(#clientCardBg)" />
+  <rect x="675" y="70" width="300" height="150" rx="12" fill="none" stroke="#f59e0b" stroke-width="1.8" class="laser-sample" />
+  <circle cx="702" cy="98" r="14" fill="#b45309" fill-opacity="0.4" />
+  <text x="702" y="103" text-anchor="middle" font-size="13">🤝</text>
+  <text x="725" y="95" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="800" fill="#fef3c7">Enterprise Client Call</text>
+  <rect x="725" y="103" width="130" height="16" rx="3" fill="#78350f" />
+  <text x="730" y="115" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="700" fill="#fef3c7">SOLUTIONS DISCOVERY</text>
+  <text x="690" y="142" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#e2e8f0">• Legacy on-premise CRM migration</text>
+  <text x="690" y="160" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#e2e8f0">• HIPAA &amp; GDPR compliance criteria</text>
+  <text x="690" y="178" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" fill="#e2e8f0">• 90-day production rollout schedule</text>
+  <rect x="690" y="190" width="105" height="18" rx="4" fill="#b45309" />
+  <text x="698" y="203" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="700" fill="#ffffff">Client Discovery</text>
+</svg>

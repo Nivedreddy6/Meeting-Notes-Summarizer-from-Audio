@@ -1,62 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 210" width="100%" height="100%">
   <defs>
     <linearGradient id="techBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070a14" />
-      <stop offset="100%" stop-color="#0a1224" />
+      <stop offset="0%" stop-color="#060913" />
+      <stop offset="100%" stop-color="#091122" />
     </linearGradient>
 
     <style>
-      @keyframes metricPulse {
-        0%, 100% { fill-opacity: 0.8; }
-        50% { fill-opacity: 1; }
+      @keyframes techLaser {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -180; }
       }
-      @keyframes borderGlow {
-        0%, 100% { stroke-opacity: 0.3; }
-        50% { stroke-opacity: 0.8; }
+      .laser-tech {
+        stroke-dasharray: 60, 20;
+        animation: techLaser 3.5s linear infinite;
       }
-      .metric-glow { animation: metricPulse 2s ease-in-out infinite; }
-      .tech-card { animation: borderGlow 3s ease-in-out infinite; }
     </style>
   </defs>
 
-  <!-- Background Canvas -->
-  <rect width="1000" height="200" rx="14" fill="url(#techBg)" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2" />
+  <!-- Background Base Canvas -->
+  <rect width="1000" height="210" rx="16" fill="url(#techBg)" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2" />
 
   <!-- Section Title -->
-  <text x="35" y="32" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.5" fill="#38bdf8">ENGINEERING SPECIFICATIONS</text>
-  <text x="35" y="54" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="800" fill="#ffffff">Architecture &amp; Performance Benchmarks</text>
+  <text x="35" y="32" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="800" letter-spacing="1.5" fill="#38bdf8">ENGINEERING SPECIFICATIONS</text>
+  <text x="35" y="56" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="19" font-weight="900" fill="#ffffff">Architecture Core &amp; Performance Foundations</text>
 
   <!-- 4 Pillars of Architecture -->
 
   <!-- Card 1: Multimodal Engine -->
-  <rect x="25" y="70" width="225" height="112" rx="10" fill="#17122a" fill-opacity="0.9" stroke="#c084fc" stroke-opacity="0.4" stroke-width="1.2" class="tech-card" />
-  <text x="42" y="93" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#f3e8ff">🧠 Gemini 2.5 Flash</text>
-  <text x="42" y="112" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" fill="#cbd5e1">• Direct single-pass audio reasoning</text>
-  <text x="42" y="128" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" fill="#cbd5e1">• Speaker timbre diarization</text>
-  <rect x="42" y="142" width="125" height="22" rx="4" fill="#581c87" />
-  <text x="104" y="157" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#e9d5ff">⚡ &lt;8s Latency (Fast)</text>
+  <rect x="25" y="74" width="225" height="120" rx="10" fill="#17122a" fill-opacity="0.95" />
+  <rect x="25" y="74" width="225" height="120" rx="10" fill="none" stroke="#c084fc" stroke-width="1.6" class="laser-tech" />
+  <text x="42" y="98" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="800" fill="#f3e8ff">🧠 Gemini 2.5 Flash</text>
+  <text x="42" y="118" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#cbd5e1">• Direct single-pass audio</text>
+  <text x="42" y="136" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#cbd5e1">• Acoustic voice diarization</text>
+  <rect x="42" y="152" width="135" height="24" rx="4" fill="#581c87" />
+  <text x="109" y="168" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="800" fill="#e9d5ff">⚡ &lt;8s Latency (Fast)</text>
 
   <!-- Card 2: React 19 Frontend -->
-  <rect x="265" y="70" width="225" height="112" rx="10" fill="#0c1b2a" fill-opacity="0.9" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.2" class="tech-card" />
-  <text x="282" y="93" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#bae6fd">⚛️ React 19 + Vite 8</text>
-  <text x="282" y="112" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" fill="#cbd5e1">• Instant hot-module replacement</text>
-  <text x="282" y="128" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" fill="#cbd5e1">• Zero-dependency UI primitives</text>
-  <rect x="282" y="142" width="125" height="22" rx="4" fill="#0369a1" />
-  <text x="344" y="157" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#bae6fd">⚡ 60 FPS Fluid UI</text>
+  <rect x="265" y="74" width="225" height="120" rx="10" fill="#0c1b2a" fill-opacity="0.95" />
+  <rect x="265" y="74" width="225" height="120" rx="10" fill="none" stroke="#38bdf8" stroke-width="1.6" class="laser-tech" />
+  <text x="282" y="98" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="800" fill="#bae6fd">⚛️ React 19 + Vite 8</text>
+  <text x="282" y="118" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#cbd5e1">• Instant HMR development</text>
+  <text x="282" y="136" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#cbd5e1">• Modular component tree</text>
+  <rect x="282" y="152" width="135" height="24" rx="4" fill="#0369a1" />
+  <text x="349" y="168" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="800" fill="#bae6fd">⚡ 60 FPS Fluid Deck</text>
 
   <!-- Card 3: Audio Processing Deck -->
-  <rect x="505" y="70" width="225" height="112" rx="10" fill="#062e24" fill-opacity="0.9" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.2" class="tech-card" />
-  <text x="522" y="93" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#a7f3d0">🎙️ Web Audio Engine</text>
-  <text x="522" y="112" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" fill="#cbd5e1">• HTML5 MediaRecorder stream</text>
-  <text x="522" y="128" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" fill="#cbd5e1">• Canvas frequency equalizer</text>
-  <rect x="522" y="142" width="125" height="22" rx="4" fill="#065f46" />
-  <text x="584" y="157" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#a7f3d0">⚡ Lossless Ingestion</text>
+  <rect x="505" y="74" width="225" height="120" rx="10" fill="#062e24" fill-opacity="0.95" />
+  <rect x="505" y="74" width="225" height="120" rx="10" fill="none" stroke="#10b981" stroke-width="1.6" class="laser-tech" />
+  <text x="522" y="98" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="800" fill="#a7f3d0">🎙️ Web Audio Engine</text>
+  <text x="522" y="118" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#cbd5e1">• HTML5 MediaRecorder</text>
+  <text x="522" y="136" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#cbd5e1">• Canvas frequency visualizer</text>
+  <rect x="522" y="152" width="135" height="24" rx="4" fill="#065f46" />
+  <text x="589" y="168" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="800" fill="#a7f3d0">⚡ Lossless Ingestion</text>
 
   <!-- Card 4: Enterprise Privacy & Export -->
-  <rect x="745" y="70" width="230" height="112" rx="10" fill="#201a08" fill-opacity="0.9" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.2" class="tech-card" />
-  <text x="762" y="93" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#fef3c7">🔒 Client-Side Privacy</text>
-  <text x="762" y="112" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" fill="#cbd5e1">• In-memory audio processing</text>
-  <text x="762" y="128" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" fill="#cbd5e1">• 1-click Markdown, PDF &amp; JSON</text>
-  <rect x="762" y="142" width="135" height="22" rx="4" fill="#78350f" />
-  <text x="829" y="157" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" fill="#fde68a">⚡ Zero Data Retention</text>
+  <rect x="745" y="74" width="230" height="120" rx="10" fill="#201a08" fill-opacity="0.95" />
+  <rect x="745" y="74" width="230" height="120" rx="10" fill="none" stroke="#f59e0b" stroke-width="1.6" class="laser-tech" />
+  <text x="762" y="98" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="800" fill="#fef3c7">🔒 Client-Side Privacy</text>
+  <text x="762" y="118" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#cbd5e1">• In-memory audio streaming</text>
+  <text x="762" y="136" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#cbd5e1">• 1-click Markdown, PDF, JSON</text>
+  <rect x="762" y="152" width="145" height="24" rx="4" fill="#78350f" />
+  <text x="834" y="168" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="800" fill="#fde68a">⚡ Zero Data Retention</text>
 </svg>
