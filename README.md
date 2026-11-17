@@ -1,7 +1,8 @@
+<a id="top"></a>
 <div align="center">
 
-  <!-- Hero Animated Banner with Marching Laser Border & Dynamic Audio Equalizer -->
-  <img src="./assets/hero-banner.svg" alt="OmniNote AI Banner" width="100%" />
+  <!-- Hero Animated Banner (Wrapped to stay on page, zero navigation to assets) -->
+  <a href="#top"><img src="./assets/hero-banner.svg" alt="OmniNote AI Banner" width="100%" /></a>
 
   <br/><br/>
 
@@ -25,105 +26,127 @@
 
   <br/>
 
-  <!-- High-Precision Rounded Navigation Pill Buttons Deck (Non-Navigating Static Images) -->
+  <!-- Interactive Quick-Navigation Pill Buttons Deck (Jumps to README sections, never to assets) -->
   <p align="center">
-    <img src="./assets/pill-quickstart.svg" alt="Quickstart" height="30" />
+    <a href="#quickstart"><img src="./assets/pill-quickstart.svg" alt="Quickstart" height="28" /></a>
     &nbsp;
-    <img src="./assets/pill-architecture.svg" alt="Architecture" height="30" />
+    <a href="#architecture"><img src="./assets/pill-architecture.svg" alt="Architecture" height="28" /></a>
     &nbsp;
-    <img src="./assets/pill-features.svg" alt="Features" height="30" />
+    <a href="#features"><img src="./assets/pill-features.svg" alt="Features" height="28" /></a>
     &nbsp;
-    <img src="./assets/pill-tools.svg" alt="Tools & Technologies" height="30" />
+    <a href="#tools-and-technologies"><img src="./assets/pill-tools.svg" alt="Tools & Technologies" height="28" /></a>
     &nbsp;
-    <img src="./assets/pill-archetypes.svg" alt="Archetypes" height="30" />
+    <a href="#archetypes"><img src="./assets/pill-archetypes.svg" alt="Archetypes" height="28" /></a>
     &nbsp;
-    <img src="./assets/pill-workspace.svg" alt="Workspace" height="30" />
+    <a href="#workspace"><img src="./assets/pill-workspace.svg" alt="Workspace" height="28" /></a>
   </p>
   <p align="center">
-    <img src="./assets/pill-benchmarks.svg" alt="Benchmarks" height="30" />
+    <a href="#benchmarks"><img src="./assets/pill-benchmarks.svg" alt="Benchmarks" height="28" /></a>
     &nbsp;
-    <img src="./assets/pill-samples.svg" alt="Test Demos" height="30" />
+    <a href="#samples"><img src="./assets/pill-samples.svg" alt="Test Demos" height="28" /></a>
     &nbsp;
-    <img src="./assets/pill-repository.svg" alt="Repository Tree" height="30" />
+    <a href="#repository"><img src="./assets/pill-repository.svg" alt="Repository Tree" height="28" /></a>
   </p>
 
 </div>
 
 ---
 
+<a id="architecture"></a>
 ## 🏗️ Architecture & Multimodal Data Flow
 
 <div align="center">
   <!-- Interactive Control Buttons & Multimodal Pipeline Flow -->
-  <img src="./assets/interactive-architecture-buttons-flow.svg" alt="Interactive Buttons Architecture and Multimodal Flow" width="100%" />
+  <a href="#architecture"><img src="./assets/interactive-architecture-buttons-flow.svg" alt="Interactive Buttons Architecture and Multimodal Flow" width="100%" /></a>
 
   <br/><br/>
 
   <!-- End-to-End System Architecture Schematic Flow -->
-  <img src="./assets/system-architecture-schematic.svg" alt="OmniNote System Architecture Schematic Flow" width="100%" />
+  <a href="#architecture"><img src="./assets/system-architecture-schematic.svg" alt="OmniNote System Architecture Schematic Flow" width="100%" /></a>
 </div>
+
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="24" /></a></p>
 
 ---
 
+<a id="tools-and-technologies"></a>
 ## 🛠️ Tools & Technologies Ecosystem
 
 <div align="center">
   <!-- 5-Domain Tools and Technologies Ecosystem Matrix -->
-  <img src="./assets/tools-tech-stack.svg" alt="Tools and Technologies Ecosystem Matrix" width="100%" />
+  <a href="#tools-and-technologies"><img src="./assets/tools-tech-stack.svg" alt="Tools and Technologies Ecosystem Matrix" width="100%" /></a>
 </div>
+
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="24" /></a></p>
 
 ---
 
+<a id="repository"></a>
 ## 📁 Repository Directory Structure
 
 <div align="center">
   <!-- Animated Cyberpunk Repository Tree Terminal with Marching Laser & Blinking Cursor -->
-  <img src="./assets/repo-tree-animated.svg" alt="Animated Repository Directory Tree Terminal" width="100%" />
+  <a href="#repository"><img src="./assets/repo-tree-animated.svg" alt="Animated Repository Directory Tree Terminal" width="100%" /></a>
 </div>
+
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="24" /></a></p>
 
 ---
 
+<a id="features"></a>
 ## ✨ Core Features & Intelligence Suite
 
 <div align="center">
   <!-- Apple/Linear Style Bento Grid with 6 Radically Distinct Interactive Widgets -->
-  <img src="./assets/features-bento-grid.svg" alt="OmniNote Features Bento Grid" width="100%" />
+  <a href="#features"><img src="./assets/features-bento-grid.svg" alt="OmniNote Features Bento Grid" width="100%" /></a>
 </div>
+
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="24" /></a></p>
 
 ---
 
+<a id="workspace"></a>
 ## 🖥️ React 19 Workspace & Interactive Tabs
 
 <div align="center">
   <!-- React 19 Studio Console: Diarized Dialogue Stream, Interactive Action Board & Grounded AI Copilot -->
-  <img src="./assets/ui-studio-console.svg" alt="React 19 Studio Console" width="100%" />
+  <a href="#workspace"><img src="./assets/ui-studio-console.svg" alt="React 19 Studio Console" width="100%" /></a>
 </div>
+
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="24" /></a></p>
 
 ---
 
+<a id="archetypes"></a>
 ## 🎯 5 Specialized Meeting Archetypes
 
 <div align="center">
   <!-- 5 Radically Distinct Persona Artifacts: Legal Scroll, Luxury Gold Card, Agile Scrum Board, Blueprint ADR, Sales Discovery -->
-  <img src="./assets/archetypes-distinct-personas.svg" alt="Meeting Archetypes Distinct Personas" width="100%" />
+  <a href="#archetypes"><img src="./assets/archetypes-distinct-personas.svg" alt="Meeting Archetypes Distinct Personas" width="100%" /></a>
 </div>
+
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="24" /></a></p>
 
 ---
 
+<a id="benchmarks"></a>
 ## ⚡ Performance Benchmarks & Latency Advantage
 
 <div align="center">
   <!-- Dual Speedometer Telemetry Latency Drag Race: Gemini 2.5 Flash vs Legacy Whisper STT Chains -->
-  <img src="./assets/performance-telemetry-speed.svg" alt="Performance Latency Speedometer Telemetry" width="100%" />
+  <a href="#benchmarks"><img src="./assets/performance-telemetry-speed.svg" alt="Performance Latency Speedometer Telemetry" width="100%" /></a>
 </div>
+
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="24" /></a></p>
 
 ---
 
+<a id="quickstart"></a>
 ## 🚀 Quick Start Guide (1-Minute Setup)
 
 <div align="center">
   <!-- Cyberpunk Terminal Quick Start Guide -->
-  <img src="./assets/quickstart-card.svg" alt="Quick Start Terminal Guide" width="100%" />
+  <a href="#quickstart"><img src="./assets/quickstart-card.svg" alt="Quick Start Terminal Guide" width="100%" /></a>
 </div>
 
 <br/>
@@ -154,14 +177,19 @@ PORT=3000
 
 Open **`http://localhost:3000`** in your browser.
 
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="24" /></a></p>
+
 ---
 
+<a id="samples"></a>
 ## 📦 Instant Test Samples (Zero Audio Required)
 
 <div align="center">
   <!-- Preloaded Demo Cartridges Showcase -->
-  <img src="./assets/samples-showcase.svg" alt="Preloaded Demo Samples" width="100%" />
+  <a href="#samples"><img src="./assets/samples-showcase.svg" alt="Preloaded Demo Samples" width="100%" /></a>
 </div>
+
+<p align="right"><a href="#top"><img src="./assets/btn-back-to-top.svg" alt="Back to Top" height="24" /></a></p>
 
 ---
 
@@ -177,5 +205,5 @@ Open **`http://localhost:3000`** in your browser.
 
 <div align="center">
   <!-- Animated Footer Signature by Nived Reddy -->
-  <img src="./assets/footer-signature.svg" alt="Designed & Engineered by Nived Reddy" width="100%" />
+  <a href="#top"><img src="./assets/footer-signature.svg" alt="Designed & Engineered by Nived Reddy" width="100%" /></a>
 </div>
