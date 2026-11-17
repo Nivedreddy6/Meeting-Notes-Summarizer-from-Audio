@@ -1,0 +1,278 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" width="100%" height="100%">
+  <defs>
+    <!-- Background Canvas Gradient -->
+    <linearGradient id="treeTermBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040711" />
+      <stop offset="50%" stop-color="#080e1e" />
+      <stop offset="100%" stop-color="#03050c" />
+    </linearGradient>
+
+    <!-- Marching Laser Border Gradient -->
+    <linearGradient id="treeBorderLaser" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="33%" stop-color="#a855f7" />
+      <stop offset="66%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <style>
+      /* CSS KEYFRAME ANIMATIONS */
+      @keyframes laserCycle {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -300; }
+      }
+      @keyframes blinkCursor {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      @keyframes branchGlow {
+        0%, 100% { stroke-opacity: 0.35; }
+        50% { stroke-opacity: 0.9; }
+      }
+
+      .animated-tree-border {
+        stroke-dasharray: 100, 30;
+        animation: laserCycle 5s linear infinite;
+      }
+      .cursor-blink {
+        animation: blinkCursor 0.8s infinite;
+      }
+      .branch-line {
+        animation: branchGlow 2.5s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Terminal Background -->
+  <rect width="1000" height="580" rx="16" fill="url(#treeTermBg)" />
+
+  <!-- Animated Marching Perimeter Laser Border -->
+  <rect width="1000" height="580" rx="16" fill="none" stroke="url(#treeBorderLaser)" stroke-width="2" class="animated-tree-border" />
+
+  <!-- Top Terminal Window Bar -->
+  <rect x="0" y="0" width="1000" height="42" rx="16" fill="#0b1329" fill-opacity="0.95" />
+  <circle cx="25" cy="21" r="5" fill="#ef4444" />
+  <circle cx="42" cy="21" r="5" fill="#eab308" />
+  <circle cx="59" cy="21" r="5" fill="#22c55e" />
+  <text x="82" y="26" font-family="'JetBrains Mono', Consolas, monospace" font-size="12" font-weight="700" fill="#94a3b8">bash — root@omninote:~$ tree --all --classify</text>
+  
+  <rect x="780" y="10" width="195" height="22" rx="4" fill="#1e1b4b" stroke="#818cf8" stroke-width="1" />
+  <text x="877" y="25" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="800" fill="#c7d2fe">● MAIN BRANCH (LIVE)</text>
+
+  <!-- Prompt Command Line -->
+  <text x="35" y="68" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#38bdf8">omninote@production:~$ <tspan fill="#f8fafc">tree -L 3 -F</tspan><tspan fill="#38bdf8" class="cursor-blink">_</tspan></text>
+
+  <!-- Central Column Divider Line -->
+  <line x1="495" y1="85" x2="495" y2="540" stroke="#1e293b" stroke-width="1.2" stroke-dasharray="4, 4" />
+
+
+  <!-- ================= LEFT COLUMN: ROOT, ASSETS, CLI & BACKEND ================= -->
+
+  <!-- Root Directory -->
+  <rect x="35" y="85" width="445" height="28" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" />
+  <text x="48" y="103" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="900" fill="#ffffff">📂 Meeting-Notes-Summarizer-from-Audio/</text>
+
+  <!-- ├── assets/ -->
+  <path d="M 55 113 L 55 350 M 55 130 L 75 130" fill="none" stroke="#38bdf8" stroke-width="1.5" class="branch-line" />
+  <rect x="78" y="118" width="402" height="24" rx="4" fill="#1e1b4b" />
+  <text x="88" y="134" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#c7d2fe">📁 assets/</text>
+  <text x="185" y="134" font-family="sans-serif" font-size="9.5" fill="#a5b4fc"># Animated SVG visual architecture suite</text>
+
+  <!-- assets files -->
+  <g font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#e2e8f0">
+    <!-- Branch line for assets children -->
+    <path d="M 85 142 L 85 305" fill="none" stroke="#6366f1" stroke-width="1.2" opacity="0.6" />
+
+    <!-- system-architecture-schematic.svg -->
+    <path d="M 85 160 L 105 160" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.6" />
+    <text x="110" y="164" fill="#38bdf8">🎨 system-architecture.svg</text>
+    <text x="315" y="164" font-family="sans-serif" font-size="8.5" fill="#94a3b8">Schematic AI circuit network</text>
+
+    <!-- tools-tech-stack.svg -->
+    <path d="M 85 182 L 105 182" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.6" />
+    <text x="110" y="186" fill="#34d399">🛠️ tools-tech-stack.svg</text>
+    <text x="315" y="186" font-family="sans-serif" font-size="8.5" fill="#94a3b8">5-domain tech ecosystem matrix</text>
+
+    <!-- hero-banner.svg -->
+    <path d="M 85 204 L 105 204" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.6" />
+    <text x="110" y="208" fill="#c084fc">🖼️ hero-banner.svg</text>
+    <text x="315" y="208" font-family="sans-serif" font-size="8.5" fill="#94a3b8">Bouncing audio frequency waves</text>
+
+    <!-- features-grid.svg -->
+    <path d="M 85 226 L 105 226" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.6" />
+    <text x="110" y="230" fill="#38bdf8">✨ features-grid.svg</text>
+    <text x="315" y="230" font-family="sans-serif" font-size="8.5" fill="#94a3b8">6-card capability showcase</text>
+
+    <!-- performance-table.svg -->
+    <path d="M 85 248 L 105 248" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.6" />
+    <text x="110" y="252" fill="#f43f5e">⚡ performance-table.svg</text>
+    <text x="315" y="252" font-family="sans-serif" font-size="8.5" fill="#94a3b8">Growing bar latency comparison</text>
+
+    <!-- quickstart-card.svg -->
+    <path d="M 85 270 L 105 270" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.6" />
+    <text x="110" y="274" fill="#f59e0b">💻 quickstart-card.svg</text>
+    <text x="315" y="274" font-family="sans-serif" font-size="8.5" fill="#94a3b8">Cyberpunk 1-min setup terminal</text>
+
+    <!-- samples-showcase.svg -->
+    <path d="M 85 292 L 105 292" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.6" />
+    <text x="110" y="296" fill="#a7f3d0">📦 samples-showcase.svg</text>
+    <text x="315" y="296" font-family="sans-serif" font-size="8.5" fill="#94a3b8">Interactive preloaded demos</text>
+
+    <!-- archetypes-matrix.svg -->
+    <path d="M 85 314 L 105 314" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.6" />
+    <text x="110" y="318" fill="#e879f9">🎯 archetypes-matrix.svg</text>
+    <text x="315" y="318" font-family="sans-serif" font-size="8.5" fill="#94a3b8">5-column persona prompt matrix</text>
+  </g>
+
+  <!-- ├── public/samples/ -->
+  <path d="M 55 350 L 75 350" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+  <rect x="78" y="338" width="402" height="24" rx="4" fill="#064e3b" />
+  <text x="88" y="354" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#a7f3d0">📁 public/samples/</text>
+  <text x="235" y="354" font-family="sans-serif" font-size="9.5" fill="#6ee7b7"># Preloaded demo datasets &amp; WAV audio</text>
+
+  <g font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#cbd5e1">
+    <path d="M 85 362 L 85 410" fill="none" stroke="#10b981" stroke-width="1.2" opacity="0.6" />
+    <path d="M 85 378 L 105 378" fill="none" stroke="#10b981" stroke-width="1" opacity="0.6" />
+    <text x="110" y="382" fill="#34d399">🎵 sample_meeting_clip.wav</text>
+    <text x="315" y="382" font-family="sans-serif" font-size="8.5" fill="#94a3b8">Real meeting audio sample</text>
+
+    <path d="M 85 400 L 105 400" fill="none" stroke="#10b981" stroke-width="1" opacity="0.6" />
+    <text x="110" y="404" fill="#34d399">📄 sprint_sync.json</text>
+    <text x="315" y="404" font-family="sans-serif" font-size="8.5" fill="#94a3b8">Pre-computed ADRs &amp; tasks</text>
+  </g>
+
+  <!-- ├── cli/summarizer.py -->
+  <path d="M 55 350 L 55 520" fill="none" stroke="#38bdf8" stroke-width="1.5" class="branch-line" />
+  <path d="M 55 432 L 75 432" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+  <rect x="78" y="420" width="402" height="24" rx="4" fill="#131b2e" />
+  <text x="88" y="436" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#c7d2fe">🐍 cli/summarizer.py</text>
+  <text x="245" y="436" font-family="sans-serif" font-size="9" fill="#94a3b8"># Standalone Python headless CLI utility</text>
+
+  <!-- ├── server.js -->
+  <path d="M 55 460 L 75 460" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+  <rect x="78" y="448" width="402" height="24" rx="4" fill="#17122a" />
+  <text x="88" y="464" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#f3e8ff">⚡ server.js</text>
+  <text x="215" y="464" font-family="sans-serif" font-size="9" fill="#d8b4fe"># Zero-dependency Node.js streaming HTTP proxy</text>
+
+  <!-- ├── start.bat -->
+  <path d="M 55 488 L 75 488" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+  <rect x="78" y="476" width="402" height="24" rx="4" fill="#0c231c" />
+  <text x="88" y="492" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#a7f3d0">🚀 start.bat</text>
+  <text x="215" y="492" font-family="sans-serif" font-size="9" fill="#6ee7b7"># Windows 1-click double-click launcher script</text>
+
+  <!-- └── README.md & LICENSE -->
+  <path d="M 55 516 L 75 516" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+  <rect x="78" y="504" width="402" height="24" rx="4" fill="#0f172a" />
+  <text x="88" y="520" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#94a3b8">📄 README.md &amp; LICENSE</text>
+  <text x="260" y="520" font-family="sans-serif" font-size="9" fill="#64748b"># Visual documentation &amp; MIT License</text>
+
+
+  <!-- ================= RIGHT COLUMN: SRC/ REACT 19 & COMPONENTS ================= -->
+
+  <!-- ├── src/ -->
+  <rect x="515" y="85" width="455" height="28" rx="6" fill="#082f49" stroke="#38bdf8" stroke-width="1.2" />
+  <text x="528" y="103" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="900" fill="#38bdf8">⚛️ src/ (React 19 Application Root)</text>
+
+  <!-- src children branch -->
+  <path d="M 535 113 L 535 500" fill="none" stroke="#0284c7" stroke-width="1.5" class="branch-line" />
+
+  <!-- main.jsx -->
+  <path d="M 535 130 L 555 130" fill="none" stroke="#0284c7" stroke-width="1.2" />
+  <rect x="558" y="118" width="412" height="24" rx="4" fill="#0c1b2a" />
+  <text x="568" y="134" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#bae6fd">main.jsx</text>
+  <text x="660" y="134" font-family="sans-serif" font-size="9" fill="#7dd3fc">React concurrent DOM root &amp; bootstrap entrypoint</text>
+
+  <!-- App.jsx -->
+  <path d="M 535 158 L 555 158" fill="none" stroke="#0284c7" stroke-width="1.2" />
+  <rect x="558" y="146" width="412" height="24" rx="4" fill="#0c1b2a" />
+  <text x="568" y="162" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#bae6fd">App.jsx</text>
+  <text x="660" y="162" font-family="sans-serif" font-size="9" fill="#7dd3fc">Global meeting state, audio streamer &amp; tab router</text>
+
+  <!-- index.css -->
+  <path d="M 535 186 L 555 186" fill="none" stroke="#0284c7" stroke-width="1.2" />
+  <rect x="558" y="174" width="412" height="24" rx="4" fill="#0c1b2a" />
+  <text x="568" y="190" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#bae6fd">index.css</text>
+  <text x="660" y="190" font-family="sans-serif" font-size="9" fill="#7dd3fc">Glassmorphism, cyber neon theme &amp; keyframe CSS</text>
+
+  <!-- └── components/ -->
+  <path d="M 535 214 L 555 214" fill="none" stroke="#0284c7" stroke-width="1.5" />
+  <rect x="558" y="202" width="412" height="24" rx="4" fill="#2e1065" stroke="#9333ea" stroke-width="1" />
+  <text x="568" y="218" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#f0abfc">📁 components/</text>
+  <text x="690" y="218" font-family="sans-serif" font-size="9.5" fill="#d8b4fe"># Modular React 19 UI component suite</text>
+
+  <!-- Component Items List -->
+  <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#f3e8ff">
+    <path d="M 570 226 L 570 475" fill="none" stroke="#9333ea" stroke-width="1.2" opacity="0.6" />
+
+    <path d="M 570 242 L 585 242" fill="none" stroke="#9333ea" stroke-width="1" opacity="0.6" />
+    <text x="590" y="246" fill="#f3e8ff">Header.jsx</text>
+    <text x="735" y="246" font-family="sans-serif" font-size="8.5" fill="#a5b4fc">Branding, connection status &amp; API key modal</text>
+
+    <path d="M 570 264 L 585 264" fill="none" stroke="#9333ea" stroke-width="1" opacity="0.6" />
+    <text x="590" y="268" fill="#a7f3d0">AudioRecorder.jsx</text>
+    <text x="735" y="268" font-family="sans-serif" font-size="8.5" fill="#6ee7b7">Live mic recording &amp; 60fps Canvas equalizer</text>
+
+    <path d="M 570 286 L 585 286" fill="none" stroke="#9333ea" stroke-width="1" opacity="0.6" />
+    <text x="590" y="290" fill="#bae6fd">AudioUploader.jsx</text>
+    <text x="735" y="290" font-family="sans-serif" font-size="8.5" fill="#7dd3fc">Drag &amp; drop audio ingestion deck (MP3, WAV)</text>
+
+    <path d="M 570 308 L 585 308" fill="none" stroke="#9333ea" stroke-width="1" opacity="0.6" />
+    <text x="590" y="312" fill="#c7d2fe">AudioPlayerDeck.jsx</text>
+    <text x="735" y="312" font-family="sans-serif" font-size="8.5" fill="#a5b4fc">Scrubbable waveform seek &amp; speed toggles</text>
+
+    <path d="M 570 330 L 585 330" fill="none" stroke="#9333ea" stroke-width="1" opacity="0.6" />
+    <text x="590" y="334" fill="#fde68a">MeetingHero.jsx</text>
+    <text x="735" y="334" font-family="sans-serif" font-size="8.5" fill="#fef08a">Executive summary TL;DR &amp; quick export bar</text>
+
+    <path d="M 570 352 L 585 352" fill="none" stroke="#9333ea" stroke-width="1" opacity="0.6" />
+    <text x="590" y="356" fill="#a7f3d0">ActionItemsTab.jsx</text>
+    <text x="735" y="356" font-family="sans-serif" font-size="8.5" fill="#6ee7b7">Interactive checklist with priority tags &amp; owners</text>
+
+    <path d="M 570 374 L 585 374" fill="none" stroke="#9333ea" stroke-width="1" opacity="0.6" />
+    <text x="590" y="378" fill="#c7d2fe">DecisionsTab.jsx</text>
+    <text x="735" y="378" font-family="sans-serif" font-size="8.5" fill="#a5b4fc">Consensus Decision ADR records &amp; champions</text>
+
+    <path d="M 570 396 L 585 396" fill="none" stroke="#9333ea" stroke-width="1" opacity="0.6" />
+    <text x="590" y="400" fill="#bae6fd">TopicsTab.jsx</text>
+    <text x="735" y="400" font-family="sans-serif" font-size="8.5" fill="#7dd3fc">Agenda breakdown timeline &amp; duration pills</text>
+
+    <path d="M 570 418 L 585 418" fill="none" stroke="#9333ea" stroke-width="1" opacity="0.6" />
+    <text x="590" y="422" fill="#fca5a5">QuestionsTab.jsx</text>
+    <text x="735" y="422" font-family="sans-serif" font-size="8.5" fill="#fecaca">Unresolved risks &amp; open follow-up questions</text>
+
+    <path d="M 570 440 L 585 440" fill="none" stroke="#9333ea" stroke-width="1" opacity="0.6" />
+    <text x="590" y="444" fill="#d8b4fe">TranscriptTab.jsx</text>
+    <text x="735" y="444" font-family="sans-serif" font-size="8.5" fill="#e9d5ff">Diarized speaker quotes with searchable timecodes</text>
+
+    <path d="M 570 462 L 585 462" fill="none" stroke="#9333ea" stroke-width="1" opacity="0.6" />
+    <text x="590" y="466" fill="#f0abfc">ChatCopilotTab.jsx</text>
+    <text x="735" y="466" font-family="sans-serif" font-size="8.5" fill="#f5d0fe">Grounded conversational meeting AI assistant</text>
+
+    <path d="M 570 484 L 585 484" fill="none" stroke="#9333ea" stroke-width="1" opacity="0.6" />
+    <text x="590" y="488" fill="#e2e8f0">SettingsModal.jsx</text>
+    <text x="735" y="488" font-family="sans-serif" font-size="8.5" fill="#94a3b8">Gemini API key management modal</text>
+  </g>
+
+  <!-- Build & Config files -->
+  <path d="M 535 515 L 555 515" fill="none" stroke="#0284c7" stroke-width="1.2" />
+  <rect x="558" y="503" width="412" height="24" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1" />
+  <text x="568" y="519" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#a7f3d0">package.json &amp; vite.config.js</text>
+  <text x="770" y="519" font-family="sans-serif" font-size="9" fill="#94a3b8"># Vite 8 &amp; React 19 toolchain</text>
+
+  <!-- Bottom Legend Bar -->
+  <rect x="35" y="542" width="935" height="26" rx="6" fill="#0b1329" />
+  <circle cx="55" cy="555" r="4" fill="#38bdf8" />
+  <text x="66" y="559" font-family="sans-serif" font-size="9" font-weight="700" fill="#94a3b8">React 19 Core</text>
+
+  <circle cx="210" cy="555" r="4" fill="#c084fc" />
+  <text x="221" y="559" font-family="sans-serif" font-size="9" font-weight="700" fill="#94a3b8">Modular Components</text>
+
+  <circle cx="410" cy="555" r="4" fill="#10b981" />
+  <text x="421" y="559" font-family="sans-serif" font-size="9" font-weight="700" fill="#94a3b8">Backend &amp; Node Proxy</text>
+
+  <circle cx="610" cy="555" r="4" fill="#f59e0b" />
+  <text x="621" y="559" font-family="sans-serif" font-size="9" font-weight="700" fill="#94a3b8">Assets &amp; Demos</text>
+
+  <circle cx="780" cy="555" r="4" fill="#ef4444" />
+  <text x="791" y="559" font-family="sans-serif" font-size="9" font-weight="700" fill="#94a3b8">Python CLI</text>
+</svg>

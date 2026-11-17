@@ -98,49 +98,10 @@
 
 <br/>
 
-```
-Meeting-Notes-Summarizer-from-Audio/
-├── assets/                          # Animated SVG architecture diagrams & visual assets
-│   ├── system-architecture-schematic.svg # Schematic AI system circuit diagram with neural reactor
-│   ├── tools-tech-stack.svg         # 5-domain tools & technologies ecosystem stack
-│   ├── repo-structure.svg           # Visual repository directory map
-│   ├── hero-banner.svg              # Animated neon frequency wave banner
-│   ├── features-grid.svg            # Animated 6-card capability showcase
-│   ├── workflow-pipeline.svg        # 4-step horizontal pipeline with flow arrows
-│   ├── ui-tabs-showcase.svg         # React 19 UI workspace showcase
-│   ├── archetypes-matrix.svg        # 5-column persona matrix
-│   ├── performance-table.svg        # Animated latency comparison benchmark table
-│   ├── quickstart-card.svg          # Cyberpunk terminal setup guide
-│   ├── samples-showcase.svg         # Preloaded instant test demo cards
-│   └── tech-stack.svg               # Engineering specifications & benchmarks
-├── src/                             # React 19 application root
-│   ├── main.jsx                     # React concurrent DOM mount entrypoint
-│   ├── App.jsx                      # Global meeting state, audio controller & API router
-│   ├── index.css                    # Glassmorphic CSS styling & keyframe animations
-│   └── components/                  # Modular React component suite
-│       ├── Header.jsx               # Navigation bar, live status & API key toggle
-│       ├── AudioUploader.jsx        # Drag-and-drop file ingestion deck
-│       ├── AudioRecorder.jsx        # Live mic recording with Canvas visualizer
-│       ├── DemoSelector.jsx         # 1-click sample demo switcher
-│       ├── AudioPlayerDeck.jsx      # Scrubbable waveform playback & speed bar (1x-2x)
-│       ├── MeetingHero.jsx          # Executive summary headline & export bar
-│       ├── ActionItemsTab.jsx       # Interactive task checklist with priority pills
-│       ├── DecisionsTab.jsx         # Consensus Decision ADR records & champions
-│       ├── TopicsTab.jsx            # Agenda breakdown & duration pills
-│       ├── QuestionsTab.jsx         # Unresolved risks & open questions
-│       ├── TranscriptTab.jsx        # Diarized speaker transcript with search
-│       ├── ChatCopilotTab.jsx       # Grounded interactive AI chat assistant
-│       └── SettingsModal.jsx        # Secure Gemini API key configuration modal
-├── public/                          # Static public assets
-│   └── samples/                     # Realistic JSON datasets & audio WAV clip
-├── cli/                             # Command-line interface utilities
-│   └── summarizer.py                # Standalone Python CLI utility
-├── server.js                        # Zero-dependency Node.js HTTP & API proxy server
-├── start.bat                        # Windows 1-click double-click launcher
-├── package.json                     # Vite 8 & React 19 dependencies
-├── vite.config.js                   # Vite build configuration & chunk splitting
-└── README.md                        # Documentation & visual showcase
-```
+<div align="center">
+  <!-- Animated Repository Tree Terminal with Marching Laser & Blinking Cursor -->
+  <img src="./assets/repo-tree-animated.svg" alt="Animated Repository Directory Tree" width="100%" />
+</div>
 
 ---
 
