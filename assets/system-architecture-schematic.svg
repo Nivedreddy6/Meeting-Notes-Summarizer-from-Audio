@@ -1,0 +1,243 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="100%" height="100%">
+  <defs>
+    <!-- Background Canvas Gradient -->
+    <linearGradient id="schematicBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040612" />
+      <stop offset="50%" stop-color="#080e22" />
+      <stop offset="100%" stop-color="#02040a" />
+    </linearGradient>
+
+    <!-- Neural Core Radial Reactor Gradient -->
+    <radialGradient id="reactorCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.95" />
+      <stop offset="45%" stop-color="#6366f1" stop-opacity="0.8" />
+      <stop offset="80%" stop-color="#1e1b4b" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0b1026" />
+    </radialGradient>
+
+    <!-- Circuit Wire Gradients -->
+    <linearGradient id="wireIngest" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="wireAI" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="wireOut" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+
+    <style>
+      /* CSS KEYFRAME ANIMATIONS */
+      @keyframes dashFlow {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -40; }
+      }
+      @keyframes orbitRotate {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: 360; }
+      }
+      @keyframes signalPulse {
+        0%, 100% { r: 3.5px; fill-opacity: 0.5; }
+        50% { r: 6.5px; fill-opacity: 1; }
+      }
+      @keyframes glowFrame {
+        0%, 100% { stroke-opacity: 0.4; }
+        50% { stroke-opacity: 0.95; }
+      }
+
+      .circuit-wire {
+        stroke-dasharray: 6, 4;
+        animation: dashFlow 1.2s linear infinite;
+      }
+      .circuit-wire-fast {
+        stroke-dasharray: 5, 3;
+        animation: dashFlow 0.8s linear infinite;
+      }
+      .reactor-orbit {
+        stroke-dasharray: 18, 6;
+        animation: orbitRotate 8s linear infinite;
+      }
+      .signal-chip {
+        animation: signalPulse 1.8s ease-in-out infinite;
+      }
+      .node-frame {
+        animation: glowFrame 2.5s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Schematic Canvas -->
+  <rect width="1000" height="520" rx="16" fill="url(#schematicBg)" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Background Blueprint Coordinate Grid -->
+  <g opacity="0.04" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="65" x2="1000" y2="65" />
+    <line x1="0" y1="180" x2="1000" y2="180" />
+    <line x1="0" y1="295" x2="1000" y2="295" />
+    <line x1="0" y1="410" x2="1000" y2="410" />
+    <line x1="220" y1="0" x2="220" y2="520" />
+    <line x1="460" y1="0" x2="460" y2="520" />
+    <line x1="680" y1="0" x2="680" y2="520" />
+  </g>
+
+  <!-- Top Title Header Bar -->
+  <rect x="0" y="0" width="1000" height="46" rx="16" fill="#0b1329" fill-opacity="0.95" />
+  <circle cx="25" cy="23" r="5" fill="#ef4444" />
+  <circle cx="42" cy="23" r="5" fill="#eab308" />
+  <circle cx="59" cy="23" r="5" fill="#22c55e" />
+  <text x="82" y="28" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="900" letter-spacing="1.5" fill="#38bdf8">END-TO-END SYSTEM ARCHITECTURE FLOW • SCHEMATIC DIAGRAM</text>
+  <rect x="790" y="12" width="185" height="22" rx="4" fill="#1e1b4b" stroke="#818cf8" stroke-width="1" />
+  <text x="882" y="27" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="800" fill="#c7d2fe">● FULL MULTIMODAL MESH</text>
+
+
+  <!-- ================= CIRCUIT WIRING (Explicit Absolute Coordinates) ================= -->
+  <!-- Wire 1: Mic -> Gateway Hub -->
+  <path d="M 220 117 L 255 117 L 255 257 L 290 257" fill="none" stroke="url(#wireIngest)" stroke-width="2.5" class="circuit-wire" />
+  <!-- Wire 2: File Ingest -> Gateway Hub -->
+  <path d="M 220 252 L 290 257" fill="none" stroke="url(#wireIngest)" stroke-width="2.5" class="circuit-wire" />
+  <!-- Wire 3: Demo Cache -> Gateway Hub -->
+  <path d="M 220 387 L 255 387 L 255 257 L 290 257" fill="none" stroke="url(#wireIngest)" stroke-width="2.5" class="circuit-wire" />
+
+  <!-- Wire 4: Gateway Hub -> Neural Core Reactor -->
+  <path d="M 460 257 L 495 257" fill="none" stroke="url(#wireAI)" stroke-width="3" class="circuit-wire-fast" />
+
+  <!-- Wire 5: Neural Core -> Output 1 (Action Items) -->
+  <path d="M 665 240 L 715 240 L 715 97 L 760 97" fill="none" stroke="url(#wireOut)" stroke-width="2.2" class="circuit-wire" />
+  <!-- Wire 6: Neural Core -> Output 2 (Decision ADRs) -->
+  <path d="M 665 248 L 730 248 L 730 177 L 760 177" fill="none" stroke="url(#wireOut)" stroke-width="2.2" class="circuit-wire" />
+  <!-- Wire 7: Neural Core -> Output 3 (Grounded Copilot) -->
+  <path d="M 665 257 L 760 257" fill="none" stroke="url(#wireOut)" stroke-width="2.5" class="circuit-wire-fast" />
+  <!-- Wire 8: Neural Core -> Output 4 (Topics Timeline) -->
+  <path d="M 665 266 L 730 266 L 730 337 L 760 337" fill="none" stroke="url(#wireOut)" stroke-width="2.2" class="circuit-wire" />
+  <!-- Wire 9: Neural Core -> Output 5 (Universal Export) -->
+  <path d="M 665 274 L 715 274 L 715 417 L 760 417" fill="none" stroke="url(#wireOut)" stroke-width="2.2" class="circuit-wire" />
+
+
+  <!-- ================= STAGE 1: AUDIO INGESTION PODS (Left) ================= -->
+
+  <!-- Node 1: Live Mic Stream -->
+  <rect x="30" y="70" width="190" height="95" rx="14" fill="#062e24" stroke="#10b981" stroke-width="1.8" class="node-frame" />
+  <circle cx="62" cy="100" r="14" fill="#047857" />
+  <text x="62" y="105" text-anchor="middle" font-size="14">🎙️</text>
+  <text x="86" y="97" font-family="sans-serif" font-size="12" font-weight="800" fill="#a7f3d0">Live Mic Stream</text>
+  <text x="86" y="112" font-family="sans-serif" font-size="9.5" font-weight="600" fill="#34d399">Web Audio API</text>
+  <text x="48" y="135" font-family="sans-serif" font-size="9.5" fill="#cbd5e1">• 16kHz PCM audio stream</text>
+  <text x="48" y="150" font-family="sans-serif" font-size="9.5" fill="#cbd5e1">• 60fps Canvas spectrum</text>
+
+  <!-- Node 2: File Upload Ingest -->
+  <rect x="30" y="205" width="190" height="95" rx="14" fill="#0c1e28" stroke="#38bdf8" stroke-width="1.8" class="node-frame" />
+  <circle cx="62" cy="235" r="14" fill="#0284c7" />
+  <text x="62" y="240" text-anchor="middle" font-size="14">📁</text>
+  <text x="86" y="232" font-family="sans-serif" font-size="12" font-weight="800" fill="#bae6fd">File Ingest</text>
+  <text x="86" y="247" font-family="sans-serif" font-size="9.5" font-weight="600" fill="#38bdf8">Audio Decoder</text>
+  <text x="48" y="270" font-family="sans-serif" font-size="9.5" fill="#cbd5e1">• MP3, WAV, M4A, AAC, WEBM</text>
+  <text x="48" y="285" font-family="sans-serif" font-size="9.5" fill="#cbd5e1">• Base64 memory chunker</text>
+
+  <!-- Node 3: Demo Switcher -->
+  <rect x="30" y="340" width="190" height="95" rx="14" fill="#1e182e" stroke="#c084fc" stroke-width="1.8" class="node-frame" />
+  <circle cx="62" cy="370" r="14" fill="#7e22ce" />
+  <text x="62" y="375" text-anchor="middle" font-size="14">⚡</text>
+  <text x="86" y="367" font-family="sans-serif" font-size="12" font-weight="800" fill="#f3e8ff">Demo Cache</text>
+  <text x="86" y="382" font-family="sans-serif" font-size="9.5" font-weight="600" fill="#c084fc">Instant Demos</text>
+  <text x="48" y="405" font-family="sans-serif" font-size="9.5" fill="#cbd5e1">• Sprint 42 Tech Sync WAV</text>
+  <text x="48" y="420" font-family="sans-serif" font-size="9.5" fill="#cbd5e1">• 1-second instant run</text>
+
+
+  <!-- ================= STAGE 2: NODE.JS STREAMING HUB & ROUTER ================= -->
+  <rect x="290" y="170" width="170" height="175" rx="16" fill="#0f172a" stroke="#818cf8" stroke-width="2" class="node-frame" />
+  <!-- Hub Header Tab -->
+  <rect x="320" y="158" width="110" height="22" rx="4" fill="#312e81" stroke="#818cf8" stroke-width="1" />
+  <text x="375" y="173" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="800" fill="#ffffff">STREAM HUB</text>
+
+  <circle cx="375" cy="208" r="16" fill="#312e81" stroke="#818cf8" stroke-width="1.5" />
+  <text x="375" y="214" text-anchor="middle" font-size="15">⚡</text>
+  <text x="375" y="240" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="800" fill="#c7d2fe">server.js</text>
+  <text x="375" y="254" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#94a3b8">Zero-Dependency</text>
+
+  <!-- Schema & Privacy Badges inside Hub -->
+  <rect x="305" y="268" width="140" height="24" rx="4" fill="#1e1b4b" />
+  <text x="375" y="284" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#a5b4fc">Schema Injector</text>
+
+  <rect x="305" y="300" width="140" height="24" rx="4" fill="#064e3b" />
+  <text x="375" y="316" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="800" fill="#6ee7b7">🔒 In-Memory Only</text>
+
+
+  <!-- ================= STAGE 3: THE NEURAL CORE REACTOR (Center) ================= -->
+  <!-- Outer Rotating Dashed Orbital Ring -->
+  <circle cx="580" cy="257" r="85" fill="none" stroke="#818cf8" stroke-width="2" class="reactor-orbit" />
+  <circle cx="580" cy="257" r="72" fill="url(#reactorCore)" stroke="#c084fc" stroke-width="2.5" />
+
+  <!-- 4 Pulsing Orbiting Signal Chips -->
+  <circle cx="580" cy="172" r="5" fill="#38bdf8" class="signal-chip" />
+  <circle cx="665" cy="257" r="5" fill="#a855f7" class="signal-chip" />
+  <circle cx="580" cy="342" r="5" fill="#10b981" class="signal-chip" />
+  <circle cx="495" cy="257" r="5" fill="#f59e0b" class="signal-chip" />
+
+  <!-- Center Neural Icon & Text -->
+  <text x="580" y="235" text-anchor="middle" font-size="28">🧠</text>
+  <text x="580" y="258" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="900" fill="#ffffff">GEMINI 2.5</text>
+  <text x="580" y="273" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="800" fill="#e9d5ff">FLASH MULTIMODAL</text>
+  <rect x="530" y="282" width="100" height="18" rx="4" fill="#581c87" />
+  <text x="580" y="295" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="800" fill="#38bdf8">&lt; 7.3s SINGLE PASS</text>
+
+
+  <!-- ================= STAGE 4: OUTPUT WORKSPACE DECK (Right) ================= -->
+
+  <!-- Output 1: Action Items Board -->
+  <rect x="760" y="68" width="215" height="58" rx="10" fill="#0c1b2a" stroke="#2dd4bf" stroke-width="1.6" class="node-frame" />
+  <circle cx="784" cy="97" r="13" fill="#0f766e" />
+  <text x="784" y="102" text-anchor="middle" font-size="12">✅</text>
+  <text x="806" y="92" font-family="sans-serif" font-size="11.5" font-weight="800" fill="#ccfbf1">Action Items Board</text>
+  <text x="806" y="108" font-family="sans-serif" font-size="9.5" fill="#94a3b8">Assignees, priority pills, due dates</text>
+
+  <!-- Output 2: Decision ADR Log -->
+  <rect x="760" y="148" width="215" height="58" rx="10" fill="#0c1b2a" stroke="#818cf8" stroke-width="1.6" class="node-frame" />
+  <circle cx="784" cy="177" r="13" fill="#312e81" />
+  <text x="784" y="182" text-anchor="middle" font-size="12">💡</text>
+  <text x="806" y="172" font-family="sans-serif" font-size="11.5" font-weight="800" fill="#c7d2fe">Consensus Decision ADR</text>
+  <text x="806" y="188" font-family="sans-serif" font-size="9.5" fill="#94a3b8">Problem context, champions, rationales</text>
+
+  <!-- Output 3: Grounded AI Copilot -->
+  <rect x="760" y="228" width="215" height="58" rx="10" fill="#1b102b" stroke="#e879f9" stroke-width="1.8" class="node-frame" />
+  <circle cx="784" cy="257" r="13" fill="#701a75" />
+  <text x="784" y="262" text-anchor="middle" font-size="12">💬</text>
+  <text x="806" y="252" font-family="sans-serif" font-size="11.5" font-weight="800" fill="#fae8ff">Grounded Copilot AI</text>
+  <text x="806" y="268" font-family="sans-serif" font-size="9.5" fill="#f0abfc">Conversational verbatim Q&amp;A</text>
+
+  <!-- Output 4: Topics & Timeline -->
+  <rect x="760" y="308" width="215" height="58" rx="10" fill="#0c1b2a" stroke="#38bdf8" stroke-width="1.6" class="node-frame" />
+  <circle cx="784" cy="337" r="13" fill="#0369a1" />
+  <text x="784" y="342" text-anchor="middle" font-size="12">📊</text>
+  <text x="806" y="332" font-family="sans-serif" font-size="11.5" font-weight="800" fill="#bae6fd">Agenda &amp; Timeline</text>
+  <text x="806" y="348" font-family="sans-serif" font-size="9.5" fill="#94a3b8">Topic breakdown &amp; duration markers</text>
+
+  <!-- Output 5: Universal Multi-Export -->
+  <rect x="760" y="388" width="215" height="58" rx="10" fill="#201a08" stroke="#f59e0b" stroke-width="1.6" class="node-frame" />
+  <circle cx="784" cy="417" r="13" fill="#78350f" />
+  <text x="784" y="422" text-anchor="middle" font-size="12">📥</text>
+  <text x="806" y="412" font-family="sans-serif" font-size="11.5" font-weight="800" fill="#fef3c7">Universal Multi-Export</text>
+  <text x="806" y="428" font-family="sans-serif" font-size="9.5" fill="#fde68a">1-Click Markdown, PDF &amp; JSON</text>
+
+
+  <!-- ================= BOTTOM LEGEND BAR ================= -->
+  <rect x="25" y="475" width="950" height="30" rx="8" fill="#0b1329" />
+  <circle cx="45" cy="490" r="4" fill="#10b981" />
+  <text x="56" y="494" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#94a3b8">Stage 1: Audio Ingestion</text>
+  <line x1="185" y1="482" x2="185" y2="498" stroke="#334155" stroke-width="1" />
+
+  <circle cx="205" cy="490" r="4" fill="#818cf8" />
+  <text x="216" y="494" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#94a3b8">Stage 2: Zero-Dependency Streaming Hub</text>
+  <line x1="435" y1="482" x2="435" y2="498" stroke="#334155" stroke-width="1" />
+
+  <circle cx="455" cy="490" r="4" fill="#c084fc" />
+  <text x="466" y="494" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#94a3b8">Stage 3: Gemini 2.5 Flash Neural Engine</text>
+  <line x1="685" y1="482" x2="685" y2="498" stroke="#334155" stroke-width="1" />
+
+  <circle cx="705" cy="490" r="4" fill="#f59e0b" />
+  <text x="716" y="494" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#94a3b8">Stage 4: React 19 Workspace Outputs</text>
+</svg>

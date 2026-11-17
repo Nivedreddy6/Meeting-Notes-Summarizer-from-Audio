@@ -34,7 +34,7 @@
 
 <div align="center">
   <!-- End-to-End System Architecture Schematic Flow -->
-  <img src="./assets/architecture-flow.svg" alt="OmniNote System Architecture Schematic Flow" width="100%" />
+  <img src="./assets/system-architecture-schematic.svg" alt="OmniNote System Architecture Schematic Flow" width="100%" />
 </div>
 
 <br/>
@@ -101,7 +101,7 @@
 ```
 Meeting-Notes-Summarizer-from-Audio/
 ├── assets/                          # Animated SVG architecture diagrams & visual assets
-│   ├── architecture-flow.svg        # Schematic AI system flow diagram with neural reactor
+│   ├── system-architecture-schematic.svg # Schematic AI system circuit diagram with neural reactor
 │   ├── tools-tech-stack.svg         # 5-domain tools & technologies ecosystem stack
 │   ├── repo-structure.svg           # Visual repository directory map
 │   ├── hero-banner.svg              # Animated neon frequency wave banner
