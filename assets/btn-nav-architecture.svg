@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 198 44" width="198" height="44">
+  <defs>
+    <linearGradient id="bgArch" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021018" />
+      <stop offset="50%" stop-color="#052233" />
+      <stop offset="100%" stop-color="#010a10" />
+    </linearGradient>
+
+    <linearGradient id="borderArch" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d2ff" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <linearGradient id="glossTopArch" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <linearGradient id="sweepGleamArch" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.0" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.5" />
+      <stop offset="60%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <clipPath id="pillClipArch">
+      <rect x="2" y="2" width="194" height="40" rx="20" />
+    </clipPath>
+
+    <style>
+      @keyframes neonBreatheArch {
+        0%, 100% {
+          filter: drop-shadow(0 0 4px rgba(0, 210, 255, 0.7)) drop-shadow(0 0 10px rgba(0, 210, 255, 0.4));
+        }
+        50% {
+          filter: drop-shadow(0 0 9px rgba(56, 189, 248, 1)) drop-shadow(0 0 18px rgba(0, 210, 255, 0.8));
+        }
+      }
+
+      @keyframes neonFlickerArch {
+        0%, 100% { opacity: 1; }
+        35% { opacity: 1; }
+        36% { opacity: 0.84; }
+        37% { opacity: 1; }
+        71% { opacity: 1; }
+        72% { opacity: 0.78; }
+        73% { opacity: 1; }
+      }
+
+      @keyframes gleamMoveArch {
+        0% { transform: translateX(-100px); }
+        40%, 100% { transform: translateX(220px); }
+      }
+
+      @keyframes chevronNudgeArch {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(3px); }
+      }
+
+      .btn-outer-arch {
+        animation: neonBreatheArch 2.4s ease-in-out infinite alternate, neonFlickerArch 5.2s infinite;
+      }
+
+      .gleam-runner-arch {
+        animation: gleamMoveArch 3.7s ease-in-out infinite;
+      }
+
+      .chevron-arrow-arch {
+        animation: chevronNudgeArch 1.2s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <g class="btn-outer-arch">
+    <rect x="2" y="2" width="194" height="40" rx="20" fill="url(#bgArch)" stroke="url(#borderArch)" stroke-width="2.4" />
+  </g>
+
+  <g clip-path="url(#pillClipArch)">
+    <rect x="6" y="4" width="186" height="17" rx="8.5" fill="url(#glossTopArch)" />
+    <ellipse cx="99" cy="40" rx="70" ry="2" fill="#00d2ff" opacity="0.3" />
+    <rect class="gleam-runner-arch" x="0" y="0" width="35" height="44" fill="url(#sweepGleamArch)" transform="skewX(-20)" />
+  </g>
+
+  <text x="22" y="27" font-size="16" text-anchor="middle">🧊</text>
+  <text x="42" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800" fill="#ffffff" letter-spacing="0.4">Architecture</text>
+
+  <g class="chevron-arrow-arch">
+    <text x="176" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="900" fill="#38bdf8">&gt;</text>
+  </g>
+</svg>

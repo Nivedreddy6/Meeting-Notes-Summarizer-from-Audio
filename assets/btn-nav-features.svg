@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 44" width="168" height="44">
+  <defs>
+    <linearGradient id="bgFeat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140218" />
+      <stop offset="50%" stop-color="#280530" />
+      <stop offset="100%" stop-color="#0e0110" />
+    </linearGradient>
+
+    <linearGradient id="borderFeat" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="50%" stop-color="#f472b6" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="glossTopFeat" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <linearGradient id="sweepGleamFeat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.0" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.5" />
+      <stop offset="60%" stop-color="#f472b6" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <clipPath id="pillClipFeat">
+      <rect x="2" y="2" width="164" height="40" rx="20" />
+    </clipPath>
+
+    <style>
+      @keyframes neonBreatheFeat {
+        0%, 100% {
+          filter: drop-shadow(0 0 4px rgba(217, 70, 239, 0.7)) drop-shadow(0 0 10px rgba(217, 70, 239, 0.4));
+        }
+        50% {
+          filter: drop-shadow(0 0 9px rgba(244, 114, 182, 1)) drop-shadow(0 0 18px rgba(217, 70, 239, 0.8));
+        }
+      }
+
+      @keyframes neonFlickerFeat {
+        0%, 100% { opacity: 1; }
+        45% { opacity: 1; }
+        46% { opacity: 0.8; }
+        47% { opacity: 1; }
+        83% { opacity: 1; }
+        84% { opacity: 0.76; }
+        85% { opacity: 1; }
+      }
+
+      @keyframes gleamMoveFeat {
+        0% { transform: translateX(-100px); }
+        40%, 100% { transform: translateX(200px); }
+      }
+
+      @keyframes chevronNudgeFeat {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(3px); }
+      }
+
+      .btn-outer-feat {
+        animation: neonBreatheFeat 2.4s ease-in-out infinite alternate, neonFlickerFeat 4.6s infinite;
+      }
+
+      .gleam-runner-feat {
+        animation: gleamMoveFeat 3.4s ease-in-out infinite;
+      }
+
+      .chevron-arrow-feat {
+        animation: chevronNudgeFeat 1.2s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <g class="btn-outer-feat">
+    <rect x="2" y="2" width="164" height="40" rx="20" fill="url(#bgFeat)" stroke="url(#borderFeat)" stroke-width="2.4" />
+  </g>
+
+  <g clip-path="url(#pillClipFeat)">
+    <rect x="6" y="4" width="156" height="17" rx="8.5" fill="url(#glossTopFeat)" />
+    <ellipse cx="84" cy="40" rx="60" ry="2" fill="#d946ef" opacity="0.3" />
+    <rect class="gleam-runner-feat" x="0" y="0" width="35" height="44" fill="url(#sweepGleamFeat)" transform="skewX(-20)" />
+  </g>
+
+  <text x="22" y="27" font-size="16" text-anchor="middle">✨</text>
+  <text x="42" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800" fill="#ffffff" letter-spacing="0.4">Features</text>
+
+  <g class="chevron-arrow-feat">
+    <text x="146" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="900" fill="#f472b6">&gt;</text>
+  </g>
+</svg>

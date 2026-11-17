@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 44" width="192" height="44">
+  <defs>
+    <linearGradient id="bgBench" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140404" />
+      <stop offset="50%" stop-color="#280808" />
+      <stop offset="100%" stop-color="#0e0202" />
+    </linearGradient>
+
+    <linearGradient id="borderBench" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="50%" stop-color="#f87171" />
+      <stop offset="100%" stop-color="#dc2626" />
+    </linearGradient>
+
+    <linearGradient id="glossTopBench" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <linearGradient id="sweepGleamBench" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.0" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.5" />
+      <stop offset="60%" stop-color="#fca5a5" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <clipPath id="pillClipBench">
+      <rect x="2" y="2" width="188" height="40" rx="20" />
+    </clipPath>
+
+    <style>
+      @keyframes neonBreatheBench {
+        0%, 100% {
+          filter: drop-shadow(0 0 4px rgba(239, 68, 68, 0.7)) drop-shadow(0 0 10px rgba(239, 68, 68, 0.4));
+        }
+        50% {
+          filter: drop-shadow(0 0 9px rgba(248, 113, 113, 1)) drop-shadow(0 0 18px rgba(239, 68, 68, 0.8));
+        }
+      }
+
+      @keyframes neonFlickerBench {
+        0%, 100% { opacity: 1; }
+        43% { opacity: 1; }
+        44% { opacity: 0.8; }
+        45% { opacity: 1; }
+        82% { opacity: 1; }
+        83% { opacity: 0.76; }
+        84% { opacity: 1; }
+      }
+
+      @keyframes gleamMoveBench {
+        0% { transform: translateX(-100px); }
+        40%, 100% { transform: translateX(210px); }
+      }
+
+      @keyframes chevronNudgeBench {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(3px); }
+      }
+
+      .btn-outer-bench {
+        animation: neonBreatheBench 2.4s ease-in-out infinite alternate, neonFlickerBench 4.9s infinite;
+      }
+
+      .gleam-runner-bench {
+        animation: gleamMoveBench 3.5s ease-in-out infinite;
+      }
+
+      .chevron-arrow-bench {
+        animation: chevronNudgeBench 1.2s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <g class="btn-outer-bench">
+    <rect x="2" y="2" width="188" height="40" rx="20" fill="url(#bgBench)" stroke="url(#borderBench)" stroke-width="2.4" />
+  </g>
+
+  <g clip-path="url(#pillClipBench)">
+    <rect x="6" y="4" width="180" height="17" rx="8.5" fill="url(#glossTopBench)" />
+    <ellipse cx="96" cy="40" rx="68" ry="2" fill="#ef4444" opacity="0.3" />
+    <rect class="gleam-runner-bench" x="0" y="0" width="35" height="44" fill="url(#sweepGleamBench)" transform="skewX(-20)" />
+  </g>
+
+  <text x="22" y="27" font-size="16" text-anchor="middle">⚡</text>
+  <text x="42" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800" fill="#ffffff" letter-spacing="0.4">Benchmarks</text>
+
+  <g class="chevron-arrow-bench">
+    <text x="170" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="900" fill="#f87171">&gt;</text>
+  </g>
+</svg>

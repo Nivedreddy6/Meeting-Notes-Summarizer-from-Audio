@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 44" width="175" height="44">
+  <defs>
+    <linearGradient id="bgQuick" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140802" />
+      <stop offset="50%" stop-color="#241103" />
+      <stop offset="100%" stop-color="#0e0501" />
+    </linearGradient>
+
+    <linearGradient id="borderQuick" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="50%" stop-color="#fb923c" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+
+    <linearGradient id="glossTopQuick" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <linearGradient id="sweepGleamQuick" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.0" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.5" />
+      <stop offset="60%" stop-color="#fdba74" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <clipPath id="pillClipQuick">
+      <rect x="2" y="2" width="171" height="40" rx="20" />
+    </clipPath>
+
+    <style>
+      @keyframes neonBreatheQuick {
+        0%, 100% {
+          filter: drop-shadow(0 0 4px rgba(249, 115, 22, 0.7)) drop-shadow(0 0 10px rgba(249, 115, 22, 0.4));
+        }
+        50% {
+          filter: drop-shadow(0 0 9px rgba(251, 146, 60, 1)) drop-shadow(0 0 18px rgba(249, 115, 22, 0.8));
+        }
+      }
+
+      @keyframes neonFlickerQuick {
+        0%, 100% { opacity: 1; }
+        42% { opacity: 1; }
+        43% { opacity: 0.8; }
+        44% { opacity: 1; }
+        81% { opacity: 1; }
+        82% { opacity: 0.75; }
+        83% { opacity: 1; }
+      }
+
+      @keyframes gleamMoveQuick {
+        0% { transform: translateX(-100px); }
+        40%, 100% { transform: translateX(200px); }
+      }
+
+      @keyframes chevronNudgeQuick {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(3px); }
+      }
+
+      .btn-outer-quick {
+        animation: neonBreatheQuick 2.4s ease-in-out infinite alternate, neonFlickerQuick 4.8s infinite;
+      }
+
+      .gleam-runner-quick {
+        animation: gleamMoveQuick 3.5s ease-in-out infinite;
+      }
+
+      .chevron-arrow-quick {
+        animation: chevronNudgeQuick 1.2s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <g class="btn-outer-quick">
+    <rect x="2" y="2" width="171" height="40" rx="20" fill="url(#bgQuick)" stroke="url(#borderQuick)" stroke-width="2.4" />
+  </g>
+
+  <g clip-path="url(#pillClipQuick)">
+    <rect x="6" y="4" width="163" height="17" rx="8.5" fill="url(#glossTopQuick)" />
+    <ellipse cx="87" cy="40" rx="60" ry="2" fill="#f97316" opacity="0.3" />
+    <rect class="gleam-runner-quick" x="0" y="0" width="35" height="44" fill="url(#sweepGleamQuick)" transform="skewX(-20)" />
+  </g>
+
+  <text x="22" y="27" font-size="16" text-anchor="middle">⚡</text>
+  <text x="42" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800" fill="#ffffff" letter-spacing="0.4">Quickstart</text>
+
+  <g class="chevron-arrow-quick">
+    <text x="154" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="900" fill="#fb923c">&gt;</text>
+  </g>
+</svg>

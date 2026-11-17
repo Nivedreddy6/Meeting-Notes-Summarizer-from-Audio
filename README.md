@@ -28,24 +28,24 @@
 
   <!-- Interactive Quick-Navigation Pill Buttons Deck (Clickable Anchors) -->
   <p align="center">
-    <a href="#quickstart"><img src="./assets/btn-quickstart.svg" alt="Quickstart" height="38" /></a>
+    <a href="#quickstart"><img src="./assets/btn-nav-quickstart.svg" alt="Quickstart" height="38" /></a>
     &nbsp;
-    <a href="#architecture"><img src="./assets/btn-architecture.svg" alt="Architecture" height="38" /></a>
+    <a href="#architecture"><img src="./assets/btn-nav-architecture.svg" alt="Architecture" height="38" /></a>
     &nbsp;
-    <a href="#features"><img src="./assets/btn-features.svg" alt="Features" height="38" /></a>
+    <a href="#features"><img src="./assets/btn-nav-features.svg" alt="Features" height="38" /></a>
     &nbsp;
-    <a href="#tools-and-technologies"><img src="./assets/btn-tools.svg" alt="Tools & Technologies" height="38" /></a>
+    <a href="#tools-and-technologies"><img src="./assets/btn-nav-tools.svg" alt="Tools & Technologies" height="38" /></a>
     &nbsp;
-    <a href="#archetypes"><img src="./assets/btn-archetypes.svg" alt="Archetypes" height="38" /></a>
+    <a href="#archetypes"><img src="./assets/btn-nav-archetypes.svg" alt="Archetypes" height="38" /></a>
   </p>
   <p align="center">
-    <a href="#workspace"><img src="./assets/btn-workspace.svg" alt="Workspace" height="38" /></a>
+    <a href="#workspace"><img src="./assets/btn-nav-workspace.svg" alt="Workspace" height="38" /></a>
     &nbsp;
-    <a href="#benchmarks"><img src="./assets/btn-benchmarks.svg" alt="Benchmarks" height="38" /></a>
+    <a href="#benchmarks"><img src="./assets/btn-nav-benchmarks.svg" alt="Benchmarks" height="38" /></a>
     &nbsp;
-    <a href="#samples"><img src="./assets/btn-samples.svg" alt="Test Demos" height="38" /></a>
+    <a href="#samples"><img src="./assets/btn-nav-samples.svg" alt="Test Demos" height="38" /></a>
     &nbsp;
-    <a href="#repository"><img src="./assets/btn-repository.svg" alt="Repository Tree" height="38" /></a>
+    <a href="#repository"><img src="./assets/btn-nav-repository.svg" alt="Repository Tree" height="38" /></a>
   </p>
 
 </div>

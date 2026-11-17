@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196 44" width="196" height="44">
+  <defs>
+    <!-- Dark Glass Capsule Background -->
+    <linearGradient id="bgTools" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04140e" />
+      <stop offset="50%" stop-color="#082318" />
+      <stop offset="100%" stop-color="#030d0a" />
+    </linearGradient>
+
+    <!-- Neon Glow Border Gradient -->
+    <linearGradient id="borderTools" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="50%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <!-- Top Half Curved Gel Capsule Gloss -->
+    <linearGradient id="glossTopTools" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Sweeping Diagonal Gleam -->
+    <linearGradient id="sweepGleamTools" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.0" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.5" />
+      <stop offset="60%" stop-color="#34d399" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <clipPath id="pillClipTools">
+      <rect x="2" y="2" width="192" height="40" rx="20" />
+    </clipPath>
+
+    <style>
+      /* CSS KEYFRAME ANIMATIONS: GLOWING, FLICKERING & NUDGING */
+      @keyframes neonBreatheTools {
+        0%, 100% {
+          filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.7)) drop-shadow(0 0 10px rgba(16, 185, 129, 0.4));
+        }
+        50% {
+          filter: drop-shadow(0 0 9px rgba(52, 211, 153, 1)) drop-shadow(0 0 18px rgba(16, 185, 129, 0.8));
+        }
+      }
+
+      @keyframes neonFlickerTools {
+        0%, 100% { opacity: 1; }
+        37% { opacity: 1; }
+        38% { opacity: 0.82; }
+        39% { opacity: 1; }
+        74% { opacity: 1; }
+        75% { opacity: 0.78; }
+        76% { opacity: 1; }
+        78% { opacity: 0.9; }
+        79% { opacity: 1; }
+      }
+
+      @keyframes gleamMove {
+        0% { transform: translateX(-100px); }
+        40%, 100% { transform: translateX(220px); }
+      }
+
+      @keyframes chevronNudge {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(3px); }
+      }
+
+      .btn-outer-tools {
+        animation: neonBreatheTools 2.4s ease-in-out infinite alternate, neonFlickerTools 5s infinite;
+      }
+
+      .gleam-runner {
+        animation: gleamMove 3.6s ease-in-out infinite;
+      }
+
+      .chevron-arrow {
+        animation: chevronNudge 1.2s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Glowing Capsule Base -->
+  <g class="btn-outer-tools">
+    <rect x="2" y="2" width="192" height="40" rx="20" fill="url(#bgTools)" stroke="url(#borderTools)" stroke-width="2.4" />
+  </g>
+
+  <!-- Gel Capsule Gloss & Sweeping Gleam (Clipped to Pill) -->
+  <g clip-path="url(#pillClipTools)">
+    <!-- Top-Half Curved Gel Highlight -->
+    <rect x="6" y="4" width="184" height="17" rx="8.5" fill="url(#glossTopTools)" />
+    <!-- Bottom Rim Subdued Glow -->
+    <ellipse cx="98" cy="40" rx="70" ry="2" fill="#10b981" opacity="0.3" />
+    <!-- Diagonal Animated Gleam Wave -->
+    <rect class="gleam-runner" x="0" y="0" width="35" height="44" fill="url(#sweepGleamTools)" transform="skewX(-20)" />
+  </g>
+
+  <!-- Left Icon -->
+  <text x="22" y="27" font-size="16" text-anchor="middle">🛠️</text>
+
+  <!-- Button Text Label: Plenty of space before chevron -->
+  <text x="42" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800" fill="#ffffff" letter-spacing="0.4">Tools &amp; Tech</text>
+
+  <!-- Right Animated Chevron Arrow -->
+  <g class="chevron-arrow">
+    <text x="174" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="900" fill="#34d399">&gt;</text>
+  </g>
+</svg>
