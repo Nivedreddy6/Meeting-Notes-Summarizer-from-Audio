@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 290" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a14" />
+      <stop offset="50%" stop-color="#0c1224" />
+      <stop offset="100%" stop-color="#060812" />
+    </linearGradient>
+
+    <!-- Text Neon Gradient -->
+    <linearGradient id="neonTitle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8">
+        <animate attributeName="stop-color" values="#818cf8;#38bdf8;#c084fc;#818cf8" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#38bdf8">
+        <animate attributeName="stop-color" values="#38bdf8;#c084fc;#818cf8;#38bdf8" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#c084fc">
+        <animate attributeName="stop-color" values="#c084fc;#818cf8;#38bdf8;#c084fc" dur="6s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Equalizer Bar Gradient -->
+    <linearGradient id="eqGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <!-- Ambient Glow Gradient -->
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.22" />
+      <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#070a14" stop-opacity="0" />
+    </radialGradient>
+
+    <style>
+      @keyframes eqBarPulse {
+        0%, 100% { height: 8px; y: 172px; }
+        50% { height: 38px; y: 142px; }
+      }
+
+      @keyframes pulseDot {
+        0%, 100% { fill-opacity: 1; r: 4px; }
+        50% { fill-opacity: 0.4; r: 5.5px; }
+      }
+
+      .eq-bar {
+        animation: eqBarPulse 1.2s ease-in-out infinite alternate;
+      }
+      .dot-pulse {
+        animation: pulseDot 1.8s ease-in-out infinite;
+      }
+
+      .p1 { animation-delay: 0.05s; }
+      .p2 { animation-delay: 0.2s; }
+      .p3 { animation-delay: 0.4s; }
+      .p4 { animation-delay: 0.15s; }
+      .p5 { animation-delay: 0.35s; }
+      .p6 { animation-delay: 0.55s; }
+      .p7 { animation-delay: 0.1s; }
+      .p8 { animation-delay: 0.3s; }
+      .p9 { animation-delay: 0.5s; }
+      .p10 { animation-delay: 0.25s; }
+      .p11 { animation-delay: 0.45s; }
+      .p12 { animation-delay: 0.15s; }
+      .p13 { animation-delay: 0.35s; }
+      .p14 { animation-delay: 0.55s; }
+      .p15 { animation-delay: 0.2s; }
+      .p16 { animation-delay: 0.4s; }
+    </style>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1000" height="290" rx="16" fill="url(#heroBg)" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.5" />
+
+  <!-- Center Ambient Radial Glow -->
+  <circle cx="500" cy="145" r="280" fill="url(#centerGlow)" />
+
+  <!-- Subtle Ambient Grid Lines -->
+  <g opacity="0.05" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="72" x2="1000" y2="72" />
+    <line x1="0" y1="145" x2="1000" y2="145" />
+    <line x1="0" y1="218" x2="1000" y2="218" />
+    <line x1="250" y1="0" x2="250" y2="290" />
+    <line x1="500" y1="0" x2="500" y2="290" />
+    <line x1="750" y1="0" x2="750" y2="290" />
+  </g>
+
+  <!-- 1. Top Live Status Pill (Centered at X=500) -->
+  <rect x="365" y="24" width="270" height="28" rx="14" fill="#1e1b4b" fill-opacity="0.6" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1" />
+  <circle cx="382" cy="38" r="4" fill="#10b981" class="dot-pulse" />
+  <text x="395" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1" fill="#c7d2fe">MULTIMODAL AUDIO INTELLIGENCE</text>
+
+  <!-- 2. Main Title (Centered at X=500) -->
+  <text x="500" y="98" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="46" font-weight="900" letter-spacing="-1.2" fill="#ffffff">
+    OmniNote <tspan fill="url(#neonTitle)">AI</tspan>
+  </text>
+
+  <!-- 3. Subtitle (Centered at X=500) -->
+  <text x="500" y="126" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="500" fill="#94a3b8">
+    Meeting Notes Summarizer • Decision Diarization • Interactive Copilot
+  </text>
+
+  <!-- 4. Center Animated Soundwave Frequency Bars (Centered at X=500) -->
+  <g opacity="0.65">
+    <rect class="eq-bar p1" x="380" y="160" width="4" height="20" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p2" x="392" y="155" width="4" height="25" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p3" x="404" y="165" width="4" height="15" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p4" x="416" y="150" width="4" height="30" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p5" x="428" y="162" width="4" height="18" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p6" x="440" y="148" width="4" height="32" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p7" x="452" y="158" width="4" height="22" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p8" x="464" y="145" width="4" height="35" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p9" x="476" y="160" width="4" height="20" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p10" x="488" y="142" width="4" height="38" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p11" x="500" y="140" width="4" height="40" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p12" x="512" y="145" width="4" height="35" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p13" x="524" y="155" width="4" height="25" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p14" x="536" y="142" width="4" height="38" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p15" x="548" y="160" width="4" height="20" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p16" x="560" y="148" width="4" height="32" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p1" x="572" y="162" width="4" height="18" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p3" x="584" y="152" width="4" height="28" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p5" x="596" y="165" width="4" height="15" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p7" x="608" y="155" width="4" height="25" rx="2" fill="url(#eqGrad)" />
+    <rect class="eq-bar p9" x="620" y="168" width="4" height="12" rx="2" fill="url(#eqGrad)" />
+  </g>
+
+  <!-- 5. Bottom Feature Badges (Centered) -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">
+    <!-- React 19 -->
+    <rect x="230" y="222" width="115" height="30" rx="7" fill="#131b2e" fill-opacity="0.8" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1" />
+    <circle cx="245" cy="237" r="3.5" fill="#38bdf8" />
+    <text x="256" y="241" fill="#e0f2fe">React 19</text>
+
+    <!-- Gemini 2.5 Flash -->
+    <rect x="355" y="222" width="160" height="30" rx="7" fill="#1e1533" fill-opacity="0.8" stroke="#c084fc" stroke-opacity="0.35" stroke-width="1" />
+    <text x="368" y="241" fill="#f3e8ff">✨ Gemini 2.5 Flash</text>
+
+    <!-- Live Mic -->
+    <rect x="525" y="222" width="115" height="30" rx="7" fill="#0d211b" fill-opacity="0.8" stroke="#10b981" stroke-opacity="0.3" stroke-width="1" />
+    <text x="538" y="241" fill="#d1fae5">🎙️ Live Mic</text>
+
+    <!-- AI Copilot -->
+    <rect x="650" y="222" width="125" height="30" rx="7" fill="#241a0d" fill-opacity="0.8" stroke="#f59e0b" stroke-opacity="0.3" stroke-width="1" />
+    <text x="662" y="241" fill="#fef3c7">💬 AI Copilot</text>
+  </g>
+</svg>

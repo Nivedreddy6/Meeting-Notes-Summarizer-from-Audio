@@ -1,12 +1,24 @@
-# OmniNote AI: Meeting Notes Summarizer from Audio
+<div align="center">
 
-[![React 19](https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://react.dev)
-[![Google Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=flat-square&logo=google&logoColor=white)](https://ai.google.dev)
-[![Vite](https://img.shields.io/badge/Vite_8-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev)
-[![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)](https://nodejs.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](./LICENSE)
+  <!-- Clean Animated Hero SVG Banner -->
+  <img src="./assets/hero-banner.svg" alt="OmniNote AI Banner" width="100%" />
 
-An intelligent, real-time meeting intelligence platform powered by **Google Gemini Multimodal GenAI** and **React 19**. It ingests meeting audio from files or live microphone recordings to extract structured executive summaries, consensus decisions, interactive action checklists, and full transcripts.
+  <br/><br/>
+
+  <!-- Badges -->
+  <p align="center">
+    <a href="https://react.dev"><img src="https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React 19" /></a>
+    <a href="https://ai.google.dev"><img src="https://img.shields.io/badge/Google_Gemini-4285F4?style=flat-square&logo=google&logoColor=white" alt="Google Gemini" /></a>
+    <a href="https://vitejs.dev"><img src="https://img.shields.io/badge/Vite_8-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" /></a>
+    <a href="https://nodejs.org"><img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" /></a>
+    <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="MIT License" /></a>
+  </p>
+
+  <p align="center">
+    <b>⚡ Transform unstructured meeting audio into structured executive intelligence, decision logs, and interactive action items with zero latency.</b>
+  </p>
+
+</div>
 
 ---
 
@@ -25,15 +37,11 @@ An intelligent, real-time meeting intelligence platform powered by **Google Gemi
 
 ---
 
-## 🔄 How It Works
+## 🔄 System Pipeline & Workflow
 
-```
-1. CAPTURE         2. ENCODE          3. REASON (GenAI)      4. INTERACT
-[Live Mic / File] ──> [Node.js Base64] ──> [Gemini 2.5 Flash] ──> [React 19 UI]
-                      JSON Schema          Multimodal Audio       • Action Checklist
-                                           Diarization + Logic    • Decision Logs
-                                                                  • Meeting Copilot
-```
+<div align="center">
+  <img src="./assets/workflow-pipeline.svg" alt="OmniNote Pipeline Workflow" width="100%" />
+</div>
 
 ---
 
@@ -100,7 +108,7 @@ Select specialized extraction personas tailored to your meeting:
 ├── src/
 │   ├── main.jsx                     # React entrypoint
 │   ├── App.jsx                      # Root application state & layout
-│   ├── index.css                    # Responsive styling & themes
+│   ├── index.css                    # Responsive styling & animations
 │   ├── components/
 │   │   ├── Header.jsx               # Navigation & connectivity badge
 │   │   ├── AudioUploader.jsx        # Drag-and-drop audio upload
