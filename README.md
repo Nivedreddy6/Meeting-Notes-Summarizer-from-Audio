@@ -28,24 +28,24 @@
 
   <!-- Interactive Quick-Navigation Pill Buttons Deck (Clickable Anchors) -->
   <p align="center">
-    <a href="#quickstart"><img src="./assets/btn-nav-quickstart.svg" alt="Quickstart" height="28" /></a>
+    <a href="#quickstart"><img src="./assets/pill-quickstart.svg" alt="Quickstart" height="30" /></a>
     &nbsp;
-    <a href="#architecture"><img src="./assets/btn-nav-architecture.svg" alt="Architecture" height="28" /></a>
+    <a href="#architecture"><img src="./assets/pill-architecture.svg" alt="Architecture" height="30" /></a>
     &nbsp;
-    <a href="#features"><img src="./assets/btn-nav-features.svg" alt="Features" height="28" /></a>
+    <a href="#features"><img src="./assets/pill-features.svg" alt="Features" height="30" /></a>
     &nbsp;
-    <a href="#tools-and-technologies"><img src="./assets/btn-nav-tools.svg" alt="Tools & Technologies" height="28" /></a>
+    <a href="#tools-and-technologies"><img src="./assets/pill-tools.svg" alt="Tools & Technologies" height="30" /></a>
     &nbsp;
-    <a href="#archetypes"><img src="./assets/btn-nav-archetypes.svg" alt="Archetypes" height="28" /></a>
+    <a href="#archetypes"><img src="./assets/pill-archetypes.svg" alt="Archetypes" height="30" /></a>
     &nbsp;
-    <a href="#workspace"><img src="./assets/btn-nav-workspace.svg" alt="Workspace" height="28" /></a>
+    <a href="#workspace"><img src="./assets/pill-workspace.svg" alt="Workspace" height="30" /></a>
   </p>
   <p align="center">
-    <a href="#benchmarks"><img src="./assets/btn-nav-benchmarks.svg" alt="Benchmarks" height="28" /></a>
+    <a href="#benchmarks"><img src="./assets/pill-benchmarks.svg" alt="Benchmarks" height="30" /></a>
     &nbsp;
-    <a href="#samples"><img src="./assets/btn-nav-samples.svg" alt="Test Demos" height="28" /></a>
+    <a href="#samples"><img src="./assets/pill-samples.svg" alt="Test Demos" height="30" /></a>
     &nbsp;
-    <a href="#repository"><img src="./assets/btn-nav-repository.svg" alt="Repository Tree" height="28" /></a>
+    <a href="#repository"><img src="./assets/pill-repository.svg" alt="Repository Tree" height="30" /></a>
   </p>
 
 </div>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141 40" width="141" height="40">
+  <defs>
+    <linearGradient id="bgArchp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#120c02" />
+      <stop offset="50%" stop-color="#201504" />
+      <stop offset="100%" stop-color="#0c0701" />
+    </linearGradient>
+
+    <linearGradient id="borderArchp" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#eab308" />
+      <stop offset="50%" stop-color="#fde047" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </linearGradient>
+
+    <linearGradient id="glowRingArchp" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fde047" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#eab308" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="sheenArchp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.0" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <clipPath id="pillClipArchp">
+      <rect x="4" y="4" width="133" height="32" rx="16" />
+    </clipPath>
+
+    <style>
+      @keyframes neonBreatheArchp {
+        0%, 100% { opacity: 0.35; stroke-width: 2.5; }
+        50% { opacity: 0.75; stroke-width: 3.5; }
+      }
+      .glow-halo-archp {
+        animation: neonBreatheArchp 2.2s ease-in-out infinite alternate;
+      }
+      @keyframes haloBlink {
+        0%, 100% { r: 5; opacity: 0.9; }
+        50% { r: 7.5; opacity: 0.2; }
+      }
+      .key-halo {
+        animation: haloBlink 2s ease-in-out infinite;
+      }
+      @keyframes chevronNudgeArchp {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(2.5px); }
+      }
+      .chev-archp {
+        animation: chevronNudgeArchp 1.2s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- 100% ROUND OUTER GLOW AURA (Zero square edges, pure pill shape with transparent padding) -->
+  <rect class="glow-halo-archp" x="2.5" y="2.5" width="136" height="35" rx="17.5" fill="none" stroke="url(#glowRingArchp)" stroke-width="2.5" />
+
+  <!-- Main Round Pill Capsule Base -->
+  <rect x="4" y="4" width="133" height="32" rx="16" fill="url(#bgArchp)" stroke="url(#borderArchp)" stroke-width="1.8" />
+
+  <!-- Diagonal Specular Glass Reflection (Clipped to Pill) -->
+  <g clip-path="url(#pillClipArchp)">
+    <path d="M 72 4 L 104 4 L 137 36 L 104 36 Z" fill="url(#sheenArchp)" />
+    <rect x="9" y="6.5" width="123" height="12" rx="6" fill="#ffffff" opacity="0.09" />
+  </g>
+
+  <!-- SVG Vector Icon: Golden Key with Glowing Halo -->
+  <g transform="translate(4, 4)">
+    <circle class="key-halo" cx="14" cy="16" r="5" fill="none" stroke="#fde047" stroke-width="0.8" />
+    <circle cx="14" cy="16" r="3.8" fill="none" stroke="#facc15" stroke-width="1.6" />
+    <line x1="18" y1="16" x2="25" y2="16" stroke="#facc15" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="22" y1="16" x2="22" y2="19.5" stroke="#facc15" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="24.5" y1="16" x2="24.5" y2="18.5" stroke="#facc15" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+
+  <text x="38" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="800" fill="#ffffff" letter-spacing="0.3">Archetypes</text>
+
+  <g class="chev-archp">
+    <path d="M 121 16 L 125 20 L 121 24" fill="none" stroke="#fde047" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

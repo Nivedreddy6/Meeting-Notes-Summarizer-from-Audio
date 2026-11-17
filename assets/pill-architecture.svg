@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 40" width="154" height="40">
+  <defs>
+    <linearGradient id="bgArch" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040b14" />
+      <stop offset="50%" stop-color="#091424" />
+      <stop offset="100%" stop-color="#03070f" />
+    </linearGradient>
+
+    <linearGradient id="borderArch" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d2ff" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <linearGradient id="glowRingArch" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#00d2ff" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="sheenArch" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.0" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <clipPath id="pillClipArch">
+      <rect x="4" y="4" width="146" height="32" rx="16" />
+    </clipPath>
+
+    <style>
+      @keyframes neonBreatheArch {
+        0%, 100% { opacity: 0.35; stroke-width: 2.5; }
+        50% { opacity: 0.75; stroke-width: 3.5; }
+      }
+      .glow-halo-arch {
+        animation: neonBreatheArch 2.2s ease-in-out infinite alternate;
+      }
+      @keyframes floatStack {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-1.5px); }
+      }
+      .stack-icon {
+        animation: floatStack 2.2s ease-in-out infinite;
+      }
+      @keyframes chevronNudgeArch {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(2.5px); }
+      }
+      .chev-arch {
+        animation: chevronNudgeArch 1.2s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- 100% ROUND OUTER GLOW AURA (Zero square edges, pure pill shape with transparent padding) -->
+  <rect class="glow-halo-arch" x="2.5" y="2.5" width="149" height="35" rx="17.5" fill="none" stroke="url(#glowRingArch)" stroke-width="2.5" />
+
+  <!-- Main Round Pill Capsule Base -->
+  <rect x="4" y="4" width="146" height="32" rx="16" fill="url(#bgArch)" stroke="url(#borderArch)" stroke-width="1.8" />
+
+  <!-- Diagonal Specular Glass Reflection (Clipped to Pill) -->
+  <g clip-path="url(#pillClipArch)">
+    <path d="M 82 4 L 116 4 L 150 36 L 116 36 Z" fill="url(#sheenArch)" />
+    <rect x="9" y="6.5" width="136" height="12" rx="6" fill="#ffffff" opacity="0.09" />
+  </g>
+
+  <!-- SVG Vector Icon: 3D Isometric Stacked Layers (Cyan) -->
+  <g class="stack-icon">
+    <polygon points="22,21 27,24 22,27 17,24" fill="#0369a1" opacity="0.7" />
+    <polygon points="22,17 27,20 22,23 17,20" fill="#0284c7" opacity="0.85" />
+    <polygon points="22,13 27,16 22,19 17,16" fill="#38bdf8" stroke="#7dd3fc" stroke-width="0.6" />
+  </g>
+
+  <text x="38" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="800" fill="#ffffff" letter-spacing="0.3">Architecture</text>
+
+  <g class="chev-arch">
+    <path d="M 134 16 L 138 20 L 134 24" fill="none" stroke="#00d2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

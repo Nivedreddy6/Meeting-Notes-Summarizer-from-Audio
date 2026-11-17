@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 40" width="138" height="40">
+  <defs>
+    <!-- Dark Glass Capsule Background -->
+    <linearGradient id="bgQuick" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a070e" />
+      <stop offset="50%" stop-color="#140f1a" />
+      <stop offset="100%" stop-color="#08050c" />
+    </linearGradient>
+
+    <!-- Glowing Orange Border -->
+    <linearGradient id="borderQuick" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="50%" stop-color="#fb923c" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+
+    <linearGradient id="glowRingQuick" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fb923c" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Diagonal Specular Gloss Sheen -->
+    <linearGradient id="sheenQuick" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.0" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <clipPath id="pillClipQuick">
+      <rect x="4" y="4" width="130" height="32" rx="16" />
+    </clipPath>
+
+    <style>
+      @keyframes neonBreatheQuick {
+        0%, 100% { opacity: 0.35; stroke-width: 2.5; }
+        50% { opacity: 0.75; stroke-width: 3.5; }
+      }
+      .glow-halo-quick {
+        animation: neonBreatheQuick 2.2s ease-in-out infinite alternate;
+      }
+      @keyframes boltFlash {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.55; transform: scale(0.95); }
+      }
+      .bolt-icon {
+        transform-origin: 22px 20px;
+        animation: boltFlash 1.4s ease-in-out infinite;
+      }
+      @keyframes chevronNudgeQuick {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(2.5px); }
+      }
+      .chev-quick {
+        animation: chevronNudgeQuick 1.2s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- 100% ROUND OUTER GLOW AURA (Zero square edges, pure pill shape with transparent padding) -->
+  <rect class="glow-halo-quick" x="2.5" y="2.5" width="133" height="35" rx="17.5" fill="none" stroke="url(#glowRingQuick)" stroke-width="2.5" />
+
+  <!-- Main Round Pill Capsule Base -->
+  <rect x="4" y="4" width="130" height="32" rx="16" fill="url(#bgQuick)" stroke="url(#borderQuick)" stroke-width="1.8" />
+
+  <!-- Diagonal Specular Glass Reflection (Clipped to Pill) -->
+  <g clip-path="url(#pillClipQuick)">
+    <path d="M 69 4 L 102 4 L 134 36 L 101 36 Z" fill="url(#sheenQuick)" />
+    <!-- Top-Half Subtle Curved Gloss Highlight -->
+    <rect x="9" y="6.5" width="120" height="12" rx="6" fill="#ffffff" opacity="0.09" />
+  </g>
+
+  <!-- SVG Vector Icon: Pulsing Electric Lightning Bolt -->
+  <g class="bolt-icon">
+    <polygon points="22,10 16,21 21,21 19,29 26,18 21,18" fill="#f59e0b" stroke="#fbbf24" stroke-width="0.8" />
+  </g>
+
+  <!-- Button Text Label -->
+  <text x="38" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="800" fill="#ffffff" letter-spacing="0.3">Quickstart</text>
+
+  <!-- Right Animated Chevron -->
+  <g class="chev-quick">
+    <path d="M 118 16 L 122 20 L 118 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

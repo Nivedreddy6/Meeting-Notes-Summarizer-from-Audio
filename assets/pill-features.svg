@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 40" width="126" height="40">
+  <defs>
+    <linearGradient id="bgFeat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e0414" />
+      <stop offset="50%" stop-color="#1c0828" />
+      <stop offset="100%" stop-color="#0a020f" />
+    </linearGradient>
+
+    <linearGradient id="borderFeat" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="50%" stop-color="#f472b6" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="glowRingFeat" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="sheenFeat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.0" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <clipPath id="pillClipFeat">
+      <rect x="4" y="4" width="118" height="32" rx="16" />
+    </clipPath>
+
+    <style>
+      @keyframes neonBreatheFeat {
+        0%, 100% { opacity: 0.35; stroke-width: 2.5; }
+        50% { opacity: 0.75; stroke-width: 3.5; }
+      }
+      .glow-halo-feat {
+        animation: neonBreatheFeat 2.2s ease-in-out infinite alternate;
+      }
+      @keyframes sparkleSpin {
+        0% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+        50% { transform: scale(1.18) rotate(45deg); opacity: 1; }
+        100% { transform: scale(1) rotate(90deg); opacity: 0.9; }
+      }
+      .star-icon {
+        transform-origin: 22px 20px;
+        animation: sparkleSpin 4s ease-in-out infinite;
+      }
+      @keyframes chevronNudgeFeat {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(2.5px); }
+      }
+      .chev-feat {
+        animation: chevronNudgeFeat 1.2s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- 100% ROUND OUTER GLOW AURA (Zero square edges, pure pill shape with transparent padding) -->
+  <rect class="glow-halo-feat" x="2.5" y="2.5" width="121" height="35" rx="17.5" fill="none" stroke="url(#glowRingFeat)" stroke-width="2.5" />
+
+  <!-- Main Round Pill Capsule Base -->
+  <rect x="4" y="4" width="118" height="32" rx="16" fill="url(#bgFeat)" stroke="url(#borderFeat)" stroke-width="1.8" />
+
+  <!-- Diagonal Specular Glass Reflection (Clipped to Pill) -->
+  <g clip-path="url(#pillClipFeat)">
+    <path d="M 62 4 L 92 4 L 122 36 L 92 36 Z" fill="url(#sheenFeat)" />
+    <rect x="9" y="6.5" width="108" height="12" rx="6" fill="#ffffff" opacity="0.09" />
+  </g>
+
+  <!-- SVG Vector Icon: 4-Pointed Sparkle Star (Pink/Magenta) -->
+  <g class="star-icon">
+    <path d="M 22,12 Q 22,20 27,20 Q 22,20 22,28 Q 22,20 17,20 Q 22,20 22,12 Z" fill="#f472b6" stroke="#fbcfe8" stroke-width="0.5" />
+    <circle cx="22" cy="20" r="1.5" fill="#ffffff" />
+  </g>
+
+  <text x="38" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="800" fill="#ffffff" letter-spacing="0.3">Features</text>
+
+  <g class="chev-feat">
+    <path d="M 106 16 L 110 20 L 106 24" fill="none" stroke="#f472b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

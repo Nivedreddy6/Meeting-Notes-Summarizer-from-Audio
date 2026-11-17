@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141 40" width="141" height="40">
+  <defs>
+    <linearGradient id="bgBench" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140404" />
+      <stop offset="50%" stop-color="#240707" />
+      <stop offset="100%" stop-color="#0e0202" />
+    </linearGradient>
+
+    <linearGradient id="borderBench" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="50%" stop-color="#f87171" />
+      <stop offset="100%" stop-color="#dc2626" />
+    </linearGradient>
+
+    <linearGradient id="glowRingBench" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f87171" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="sheenBench" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.0" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </linearGradient>
+
+    <clipPath id="pillClipBench">
+      <rect x="4" y="4" width="133" height="32" rx="16" />
+    </clipPath>
+
+    <style>
+      @keyframes neonBreatheBench {
+        0%, 100% { opacity: 0.35; stroke-width: 2.5; }
+        50% { opacity: 0.75; stroke-width: 3.5; }
+      }
+      .glow-halo-bench {
+        animation: neonBreatheBench 2.2s ease-in-out infinite alternate;
+      }
+      @keyframes needleSweep {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(35deg); }
+      }
+      .gauge-needle {
+        transform-origin: 22px 24px;
+        animation: needleSweep 1.6s ease-in-out infinite;
+      }
+      @keyframes chevronNudgeBench {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(2.5px); }
+      }
+      .chev-bench {
+        animation: chevronNudgeBench 1.2s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- 100% ROUND OUTER GLOW AURA (Zero square edges, pure pill shape with transparent padding) -->
+  <rect class="glow-halo-bench" x="2.5" y="2.5" width="136" height="35" rx="17.5" fill="none" stroke="url(#glowRingBench)" stroke-width="2.5" />
+
+  <!-- Main Round Pill Capsule Base -->
+  <rect x="4" y="4" width="133" height="32" rx="16" fill="url(#bgBench)" stroke="url(#borderBench)" stroke-width="1.8" />
+
+  <!-- Diagonal Specular Glass Reflection (Clipped to Pill) -->
+  <g clip-path="url(#pillClipBench)">
+    <path d="M 72 4 L 104 4 L 137 36 L 104 36 Z" fill="url(#sheenBench)" />
+    <rect x="9" y="6.5" width="123" height="12" rx="6" fill="#ffffff" opacity="0.09" />
+  </g>
+
+  <!-- SVG Vector Icon: Speedometer Gauge with Animated Needle -->
+  <g transform="translate(4, 4)">
+    <path d="M 12,20 A 6.5 6.5 0 1 1 24,20" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linecap="round" />
+    <circle cx="18" cy="20" r="1.5" fill="#fca5a5" />
+    <line class="gauge-needle" x1="18" y1="20" x2="22.5" y2="15" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+
+  <text x="38" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="800" fill="#ffffff" letter-spacing="0.3">Benchmarks</text>
+
+  <g class="chev-bench">
+    <path d="M 121 16 L 125 20 L 121 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>
