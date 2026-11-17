@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" width="100%" height="100%">
+  <defs>
+    <!-- Background Canvas -->
+    <linearGradient id="studioBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040612" />
+      <stop offset="50%" stop-color="#080e22" />
+      <stop offset="100%" stop-color="#03050c" />
+    </linearGradient>
+
+    <!-- Active Tab Gradient -->
+    <linearGradient id="studioTab" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <style>
+      @keyframes pulseLive {
+        0%, 100% { fill-opacity: 0.5; }
+        50% { fill-opacity: 1; }
+      }
+      .live-dot { animation: pulseLive 1.5s infinite; }
+    </style>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1000" height="320" rx="16" fill="url(#studioBg)" stroke="#1e293b" stroke-width="1.2" />
+
+  <!-- Top Studio Navigation Bar -->
+  <rect x="0" y="0" width="1000" height="42" rx="16" fill="#0b1329" fill-opacity="0.95" />
+  <circle cx="25" cy="21" r="5" fill="#ef4444" />
+  <circle cx="42" cy="21" r="5" fill="#eab308" />
+  <circle cx="59" cy="21" r="5" fill="#22c55e" />
+  <text x="82" y="26" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="900" fill="#38bdf8">REACT 19 STUDIO WORKSPACE DECK • INTERACTIVE INTELLIGENCE</text>
+  <rect x="835" y="10" width="140" height="22" rx="11" fill="#1e1b4b" stroke="#818cf8" stroke-width="1" />
+  <circle cx="852" cy="21" r="4" fill="#10b981" class="live-dot" />
+  <text x="915" y="25" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="800" fill="#c7d2fe">● LIVE DECK (60 FPS)</text>
+
+  <!-- Tab Selection Ribbon -->
+  <g font-family="sans-serif" font-size="10" font-weight="800">
+    <!-- Active Tab -->
+    <rect x="25" y="52" width="135" height="26" rx="6" fill="url(#studioTab)" />
+    <text x="92" y="69" text-anchor="middle" fill="#ffffff">📋 Overview &amp; Hero</text>
+
+    <rect x="168" y="52" width="145" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="240" y="69" text-anchor="middle" fill="#94a3b8">✅ Action Items (5)</text>
+
+    <rect x="321" y="52" width="145" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="393" y="69" text-anchor="middle" fill="#94a3b8">💡 Decisions ADR (3)</text>
+
+    <rect x="474" y="52" width="145" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="546" y="69" text-anchor="middle" fill="#94a3b8">📊 Topics Timeline</text>
+
+    <rect x="627" y="52" width="150" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="702" y="69" text-anchor="middle" fill="#94a3b8">📜 Diarized Transcript</text>
+
+    <rect x="785" y="52" width="190" height="26" rx="6" fill="#3b0764" stroke="#a855f7" stroke-width="1" />
+    <text x="880" y="69" text-anchor="middle" fill="#f0abfc">💬 Grounded AI Copilot</text>
+  </g>
+
+
+  <!-- ================= 3 STUDIO PANES (Zero identical dashed boxes!) ================= -->
+
+  <!-- PANE 1: DIARIZED SPEAKER DIALOGUE STREAM (Left 320px) -->
+  <rect x="25" y="88" width="310" height="215" rx="10" fill="#0f172a" stroke="#0284c7" stroke-width="1.2" />
+  <rect x="35" y="98" width="290" height="22" rx="4" fill="#0369a1" />
+  <text x="180" y="113" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="900" fill="#ffffff">👥 DIARIZED AUDIO DIALOGUE</text>
+
+  <!-- Speaker Marcus Bubble -->
+  <circle cx="50" cy="142" r="12" fill="#0284c7" />
+  <text x="50" y="146" text-anchor="middle" font-size="10" font-weight="900" fill="#ffffff">MV</text>
+  <rect x="70" y="130" width="245" height="42" rx="6" fill="#1e293b" />
+  <text x="78" y="144" font-family="sans-serif" font-size="9" font-weight="800" fill="#38bdf8">Marcus Vance • 18:14</text>
+  <text x="78" y="160" font-family="sans-serif" font-size="8.5" fill="#e2e8f0">"Redis Sentinel handles failover under 3s."</text>
+
+  <!-- Speaker Elena Bubble -->
+  <circle cx="50" cy="195" r="12" fill="#9333ea" />
+  <text x="50" y="199" text-anchor="middle" font-size="10" font-weight="900" fill="#ffffff">ER</text>
+  <rect x="70" y="183" width="245" height="42" rx="6" fill="#1e293b" />
+  <text x="78" y="197" font-family="sans-serif" font-size="9" font-weight="800" fill="#c084fc">Elena Rostova • 18:22</text>
+  <text x="78" y="213" font-family="sans-serif" font-size="8.5" fill="#e2e8f0">"Are we benchmarking with 5,000 req/sec?"</text>
+
+  <!-- Speaker Marcus Answer -->
+  <circle cx="50" cy="248" r="12" fill="#0284c7" />
+  <text x="50" y="252" text-anchor="middle" font-size="10" font-weight="900" fill="#ffffff">MV</text>
+  <rect x="70" y="236" width="245" height="42" rx="6" fill="#1e293b" />
+  <text x="78" y="250" font-family="sans-serif" font-size="9" font-weight="800" fill="#38bdf8">Marcus Vance • 18:24</text>
+  <text x="78" y="266" font-family="sans-serif" font-size="8.5" fill="#e2e8f0">"Yes, connection pools benchmarked Friday."</text>
+
+
+  <!-- PANE 2: INTERACTIVE ACTION BOARD (Center 320px) -->
+  <rect x="345" y="88" width="310" height="215" rx="10" fill="#06231a" stroke="#10b981" stroke-width="1.2" />
+  <rect x="355" y="98" width="290" height="22" rx="4" fill="#065f46" />
+  <text x="500" y="113" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="900" fill="#ffffff">✅ ACTION ITEMS BOARD</text>
+
+  <!-- Interactive Task 1 -->
+  <rect x="355" y="128" width="290" height="48" rx="6" fill="#093527" stroke="#10b981" stroke-width="1" />
+  <circle cx="375" cy="152" r="9" fill="#059669" />
+  <text x="375" y="156" text-anchor="middle" font-size="9" font-weight="900" fill="#ffffff">✓</text>
+  <text x="392" y="146" font-family="sans-serif" font-size="10" font-weight="800" fill="#ffffff">Benchmark Redis Sentinel failover</text>
+  <rect x="392" y="152" width="65" height="14" rx="3" fill="#7f1d1d" />
+  <text x="424" y="162" text-anchor="middle" font-family="sans-serif" font-size="7.5" font-weight="900" fill="#fca5a5">HIGH PRIORITY</text>
+  <text x="465" y="163" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#38bdf8">@Marcus (Fri)</text>
+
+  <!-- Interactive Task 2 -->
+  <rect x="355" y="184" width="290" height="48" rx="6" fill="#093527" stroke="#334155" stroke-width="1" />
+  <circle cx="375" cy="208" r="9" fill="#1e293b" stroke="#64748b" stroke-width="1.5" />
+  <text x="392" y="202" font-family="sans-serif" font-size="10" font-weight="700" fill="#cbd5e1">Update billing webhook contracts</text>
+  <rect x="392" y="208" width="65" height="14" rx="3" fill="#854d0e" />
+  <text x="424" y="218" text-anchor="middle" font-family="sans-serif" font-size="7.5" font-weight="900" fill="#fef08a">MED PRIORITY</text>
+  <text x="465" y="219" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#c084fc">@Elena (Tue)</text>
+
+  <!-- Live Progress Indicator -->
+  <rect x="355" y="240" width="290" height="48" rx="6" fill="#093527" />
+  <text x="370" y="260" font-family="sans-serif" font-size="9.5" font-weight="800" fill="#34d399">Sprint Completion: 75%</text>
+  <rect x="370" y="266" width="260" height="12" rx="6" fill="#1e293b" />
+  <rect x="370" y="266" width="195" height="12" rx="6" fill="#10b981" />
+
+
+  <!-- PANE 3: GROUNDED COPILOT CONSOLE (Right 320px) -->
+  <rect x="665" y="88" width="310" height="215" rx="10" fill="#160e26" stroke="#c084fc" stroke-width="1.2" />
+  <rect x="675" y="98" width="290" height="22" rx="4" fill="#581c87" />
+  <text x="820" y="113" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="900" fill="#ffffff">💬 GROUNDED AI COPILOT</text>
+
+  <!-- User Query -->
+  <rect x="685" y="130" width="270" height="34" rx="6" fill="#2e1065" stroke="#7e22ce" stroke-width="1" />
+  <text x="695" y="148" font-family="sans-serif" font-size="9" font-weight="700" fill="#e9d5ff">User: "What did Marcus commit to?"</text>
+
+  <!-- Copilot Verbatim Answer -->
+  <rect x="685" y="172" width="270" height="74" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="1" />
+  <text x="695" y="190" font-family="sans-serif" font-size="9" font-weight="900" fill="#38bdf8">OmniNote AI Copilot:</text>
+  <text x="695" y="206" font-family="sans-serif" font-size="8.5" fill="#ffffff">"Marcus confirmed Redis Sentinel failover</text>
+  <text x="695" y="220" font-family="sans-serif" font-size="8.5" fill="#ffffff">in &lt;3s with zero planned downtime,</text>
+  <text x="695" y="234" font-family="sans-serif" font-size="8.5" fill="#38bdf8">citing timestamp 18:24."</text>
+
+  <rect x="685" y="254" width="270" height="34" rx="4" fill="#3b0764" />
+  <text x="820" y="274" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="800" fill="#f0abfc">✓ Instant Verbatim In-Memory Citations</text>
+</svg>

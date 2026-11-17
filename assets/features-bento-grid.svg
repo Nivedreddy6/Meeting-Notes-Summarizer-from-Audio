@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Canvas -->
+    <linearGradient id="bentoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040612" />
+      <stop offset="50%" stop-color="#080e22" />
+      <stop offset="100%" stop-color="#03050c" />
+    </linearGradient>
+
+    <!-- Chip Gold Gradient -->
+    <linearGradient id="chipGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="50%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#92400e" />
+    </linearGradient>
+
+    <style>
+      /* CSS KEYFRAME ANIMATIONS */
+      @keyframes radarWave {
+        0% { r: 14px; opacity: 1; }
+        100% { r: 38px; opacity: 0; }
+      }
+      @keyframes eqMini {
+        0%, 100% { height: 6px; y: 122px; }
+        50% { height: 28px; y: 100px; }
+      }
+      @keyframes dotChat {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; }
+      }
+      @keyframes pinGlow {
+        0%, 100% { stroke: #818cf8; }
+        50% { stroke: #38bdf8; }
+      }
+
+      .radar-wave-1 { animation: radarWave 2s ease-out infinite; }
+      .radar-wave-2 { animation: radarWave 2s ease-out infinite 0.7s; }
+      
+      .eq-b1 { animation: eqMini 0.9s ease-in-out infinite alternate; }
+      .eq-b2 { animation: eqMini 1.2s ease-in-out infinite alternate 0.2s; }
+      .eq-b3 { animation: eqMini 0.7s ease-in-out infinite alternate 0.4s; }
+      .eq-b4 { animation: eqMini 1.1s ease-in-out infinite alternate 0.1s; }
+      .eq-b5 { animation: eqMini 0.8s ease-in-out infinite alternate 0.3s; }
+
+      .chat-dot-1 { animation: dotChat 1.4s infinite 0.1s; }
+      .chat-dot-2 { animation: dotChat 1.4s infinite 0.3s; }
+      .chat-dot-3 { animation: dotChat 1.4s infinite 0.5s; }
+
+      .chip-pin { animation: pinGlow 2s ease-in-out infinite alternate; }
+    </style>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1000" height="400" rx="16" fill="url(#bentoBg)" stroke="#1e293b" stroke-width="1.2" />
+
+  <!-- ================= WIDGET 1: LIVE AUDIO RADAR ORB (Left Top) ================= -->
+  <rect x="25" y="25" width="300" height="165" rx="14" fill="#062e24" fill-opacity="0.9" stroke="#10b981" stroke-width="1.8" />
+  <!-- Radar Wave Rings -->
+  <circle cx="80" cy="80" r="14" fill="#047857" />
+  <circle cx="80" cy="80" r="22" fill="none" stroke="#34d399" stroke-width="1.5" class="radar-wave-1" />
+  <circle cx="80" cy="80" r="32" fill="none" stroke="#10b981" stroke-width="1.2" class="radar-wave-2" />
+  <text x="80" y="86" text-anchor="middle" font-size="18">🎙️</text>
+
+  <!-- Title & Specs -->
+  <text x="140" y="65" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="900" fill="#a7f3d0">Live Mic Spectrum</text>
+  <text x="140" y="82" font-family="sans-serif" font-size="10" font-weight="700" fill="#34d399">16kHz PCM Stream</text>
+  <text x="140" y="98" font-family="sans-serif" font-size="9" fill="#cbd5e1">Browser Web Audio API</text>
+
+  <!-- Equalizer Spectrum Bars -->
+  <g fill="#34d399">
+    <rect class="eq-b1" x="50" y="122" width="4" height="6" rx="2" />
+    <rect class="eq-b2" x="58" y="118" width="4" height="10" rx="2" />
+    <rect class="eq-b3" x="66" y="112" width="4" height="16" rx="2" />
+    <rect class="eq-b4" x="74" y="106" width="4" height="22" rx="2" fill="#38bdf8" />
+    <rect class="eq-b5" x="82" y="102" width="4" height="26" rx="2" fill="#38bdf8" />
+    <rect class="eq-b2" x="90" y="110" width="4" height="18" rx="2" />
+    <rect class="eq-b1" x="98" y="116" width="4" height="12" rx="2" />
+    <rect class="eq-b4" x="106" y="122" width="4" height="6" rx="2" />
+  </g>
+
+  <!-- Ingest Format Pills -->
+  <rect x="135" y="115" width="36" height="18" rx="4" fill="#064e3b" />
+  <text x="153" y="127" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="800" fill="#a7f3d0">WAV</text>
+  <rect x="176" y="115" width="36" height="18" rx="4" fill="#064e3b" />
+  <text x="194" y="127" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="800" fill="#a7f3d0">MP3</text>
+  <rect x="217" y="115" width="36" height="18" rx="4" fill="#064e3b" />
+  <text x="235" y="127" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="800" fill="#a7f3d0">M4A</text>
+  <rect x="258" y="115" width="42" height="18" rx="4" fill="#064e3b" />
+  <text x="279" y="127" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="800" fill="#a7f3d0">WEBM</text>
+
+  <rect x="40" y="148" width="270" height="24" rx="5" fill="#042f2e" />
+  <text x="175" y="164" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#34d399">⚡ 60 FPS HTML5 Canvas Realtime Visualizer</text>
+
+
+  <!-- ================= WIDGET 2: GEMINI NEURAL SILICON CHIP (Center Top) ================= -->
+  <rect x="345" y="25" width="320" height="165" rx="14" fill="#150d2a" fill-opacity="0.9" stroke="#c084fc" stroke-width="1.8" />
+  
+  <!-- Outer Circuit Pins radiating from chip -->
+  <g stroke="#818cf8" stroke-width="1.5" class="chip-pin">
+    <line x1="435" y1="42" x2="435" y2="52" />
+    <line x1="465" y1="42" x2="465" y2="52" />
+    <line x1="495" y1="42" x2="495" y2="52" />
+    <line x1="525" y1="42" x2="525" y2="52" />
+    <line x1="555" y1="42" x2="555" y2="52" />
+    <line x1="575" y1="75" x2="585" y2="75" />
+    <line x1="575" y1="95" x2="585" y2="95" />
+    <line x1="575" y1="115" x2="585" y2="115" />
+    <line x1="405" y1="75" x2="415" y2="75" />
+    <line x1="405" y1="95" x2="415" y2="95" />
+    <line x1="405" y1="115" x2="415" y2="115" />
+  </g>
+
+  <!-- Central Processor Die -->
+  <rect x="415" y="52" width="160" height="80" rx="8" fill="#2e1065" stroke="url(#chipGold)" stroke-width="2" />
+  <text x="495" y="74" text-anchor="middle" font-size="16">🧠</text>
+  <text x="495" y="93" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="900" fill="#ffffff">GEMINI 2.5 FLASH</text>
+  <text x="495" y="108" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="800" fill="#f0abfc">MULTIMODAL NEURAL CORE</text>
+  <rect x="445" y="114" width="100" height="14" rx="3" fill="#581c87" />
+  <text x="495" y="125" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="800" fill="#38bdf8">DIRECT AUDIO TOKENS</text>
+
+  <!-- Metrics Bar -->
+  <rect x="360" y="145" width="290" height="28" rx="6" fill="#1e1538" />
+  <text x="505" y="163" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="800" fill="#e9d5ff">⚡ Single-Pass Acoustic Diarization • &lt;7.3s Latency</text>
+
+
+  <!-- ================= WIDGET 3: INTERACTIVE TASK BOARD CARD (Right Top) ================= -->
+  <rect x="685" y="25" width="290" height="165" rx="14" fill="#0c1b2a" fill-opacity="0.9" stroke="#2dd4bf" stroke-width="1.8" />
+  <!-- Card Header -->
+  <text x="705" y="52" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="900" fill="#ccfbf1">✅ Interactive Action Board</text>
+  <rect x="895" y="38" width="65" height="18" rx="4" fill="#0f766e" />
+  <text x="927" y="51" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="800" fill="#a7f3d0">3 / 4 DONE</text>
+
+  <!-- Actual Task Item 1 -->
+  <rect x="702" y="65" width="256" height="42" rx="6" fill="#132438" stroke="#0284c7" stroke-width="1" />
+  <circle cx="720" cy="86" r="8" fill="#059669" />
+  <text x="720" y="90" text-anchor="middle" font-size="9" font-weight="900" fill="#ffffff">✓</text>
+  <text x="735" y="81" font-family="sans-serif" font-size="10" font-weight="700" fill="#ffffff">Benchmark Redis Sentinel pool</text>
+  <rect x="735" y="86" width="60" height="14" rx="3" fill="#7f1d1d" />
+  <text x="765" y="96" text-anchor="middle" font-family="sans-serif" font-size="7.5" font-weight="800" fill="#fca5a5">HIGH PRIORITY</text>
+  <text x="802" y="97" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#38bdf8">@Marcus (Fri)</text>
+
+  <!-- Actual Task Item 2 -->
+  <rect x="702" y="112" width="256" height="42" rx="6" fill="#132438" stroke="#334155" stroke-width="1" />
+  <circle cx="720" cy="133" r="8" fill="#1e293b" stroke="#64748b" stroke-width="1.5" />
+  <text x="735" y="128" font-family="sans-serif" font-size="10" font-weight="600" fill="#94a3b8">Update OpenAPI webhook contract</text>
+  <rect x="735" y="133" width="55" height="14" rx="3" fill="#854d0e" />
+  <text x="762" y="143" text-anchor="middle" font-family="sans-serif" font-size="7.5" font-weight="800" fill="#fef08a">MED PRIORITY</text>
+  <text x="797" y="144" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#c084fc">@Elena (Tue)</text>
+
+  <!-- Live Progress Strip -->
+  <rect x="702" y="160" width="256" height="18" rx="4" fill="#042f2e" />
+  <text x="830" y="173" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="800" fill="#5eead4">● 75% Tasks Completed • Realtime Tracker</text>
+
+
+  <!-- ================= WIDGET 4: CONSENSUS ADR GOVERNANCE SEAL (Left Bottom) ================= -->
+  <rect x="25" y="210" width="300" height="165" rx="14" fill="#101828" fill-opacity="0.9" stroke="#6366f1" stroke-width="1.8" />
+  <!-- Official Shield / Seal Emblem -->
+  <circle cx="68" cy="255" r="22" fill="#312e81" stroke="#818cf8" stroke-width="2" />
+  <text x="68" y="263" text-anchor="middle" font-size="20">💡</text>
+  <text x="105" y="248" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="900" fill="#c7d2fe">Consensus Decision ADR</text>
+  <rect x="105" y="255" width="85" height="18" rx="4" fill="#1e1b4b" stroke="#6366f1" stroke-width="1" />
+  <text x="147" y="268" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="800" fill="#a5b4fc">ADR RECORD #42</text>
+
+  <!-- ADR Content Box -->
+  <rect x="40" y="285" width="270" height="50" rx="6" fill="#1e1b4b" fill-opacity="0.6" stroke="#4338ca" stroke-width="1" />
+  <text x="50" y="302" font-family="sans-serif" font-size="10" font-weight="700" fill="#ffffff">Decision: Adopt Redis Sentinel for Failover</text>
+  <text x="50" y="318" font-family="sans-serif" font-size="9" fill="#cbd5e1">Rationale: 65% reduction in PostgreSQL read pool load</text>
+  <text x="50" y="330" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#38bdf8">Champion: @Marcus (Lead Architect) • Approved</text>
+
+  <rect x="40" y="342" width="270" height="20" rx="4" fill="#312e81" />
+  <text x="175" y="356" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="800" fill="#c7d2fe">✓ Never Lose Critical Meeting Architecture Decisions</text>
+
+
+  <!-- ================= WIDGET 5: GROUNDED CHAT DIALOGUE UI (Center Bottom) ================= -->
+  <rect x="345" y="210" width="320" height="165" rx="14" fill="#170e24" fill-opacity="0.9" stroke="#e879f9" stroke-width="1.8" />
+  <text x="365" y="235" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="900" fill="#fae8ff">💬 Ask Meeting AI (Copilot)</text>
+
+  <!-- User Speech Bubble (Right) -->
+  <rect x="420" y="246" width="230" height="26" rx="8" fill="#4a044e" stroke="#86198f" stroke-width="1" />
+  <text x="430" y="263" font-family="sans-serif" font-size="9" font-weight="700" fill="#f5d0fe">"What was the agreed failover SLA?"</text>
+
+  <!-- Copilot Speech Bubble (Left) -->
+  <rect x="360" y="280" width="290" height="58" rx="8" fill="#1e1b4b" stroke="#6366f1" stroke-width="1" />
+  <!-- Animated typing dots -->
+  <circle cx="375" cy="295" r="3.5" fill="#38bdf8" class="chat-dot-1" />
+  <circle cx="385" cy="295" r="3.5" fill="#818cf8" class="chat-dot-2" />
+  <circle cx="395" cy="295" r="3.5" fill="#c084fc" class="chat-dot-3" />
+  <text x="405" y="298" font-family="sans-serif" font-size="9.5" font-weight="800" fill="#38bdf8">OmniNote AI Copilot:</text>
+  <text x="375" y="316" font-family="sans-serif" font-size="8.5" fill="#e0e7ff">At timestamp <tspan fill="#38bdf8" font-weight="800">18:24</tspan>, Marcus confirmed that Redis Sentinel</text>
+  <text x="375" y="330" font-family="sans-serif" font-size="8.5" fill="#e0e7ff">guarantees failover in &lt;3s with zero planned downtime.</text>
+
+  <rect x="360" y="344" width="290" height="20" rx="4" fill="#3b0764" />
+  <text x="505" y="358" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="800" fill="#f0abfc">⚡ Verbatim In-Memory Audio Citation Engine</text>
+
+
+  <!-- ================= WIDGET 6: AUDIO PLAYER DECK & EXPORT (Right Bottom) ================= -->
+  <rect x="685" y="210" width="290" height="165" rx="14" fill="#201506" fill-opacity="0.9" stroke="#f59e0b" stroke-width="1.8" />
+  <text x="705" y="235" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="900" fill="#fef3c7">🎚️ Waveform Audio Deck</text>
+  
+  <!-- Waveform Scrub Bar -->
+  <rect x="702" y="248" width="256" height="32" rx="6" fill="#451a03" stroke="#b45309" stroke-width="1" />
+  <!-- Waveform simulated bars -->
+  <g fill="#f59e0b" opacity="0.8">
+    <rect x="712" y="260" width="3" height="10" rx="1" />
+    <rect x="718" y="256" width="3" height="16" rx="1" />
+    <rect x="724" y="252" width="3" height="22" rx="1" />
+    <rect x="730" y="255" width="3" height="18" rx="1" />
+    <rect x="736" y="250" width="3" height="26" rx="1" fill="#38bdf8" />
+    <rect x="742" y="258" width="3" height="14" rx="1" />
+    <rect x="748" y="252" width="3" height="22" rx="1" />
+    <rect x="754" y="260" width="3" height="10" rx="1" />
+  </g>
+  <text x="880" y="268" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#fde68a">18:24 / 42:00</text>
+
+  <!-- Speed Toggles -->
+  <rect x="702" y="288" width="45" height="22" rx="4" fill="#78350f" />
+  <text x="724" y="303" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="800" fill="#fde68a">1x</text>
+  <rect x="752" y="288" width="48" height="22" rx="4" fill="#78350f" />
+  <text x="776" y="303" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="800" fill="#fde68a">1.25x</text>
+  <rect x="805" y="288" width="48" height="22" rx="4" fill="#0369a1" stroke="#38bdf8" stroke-width="1" />
+  <text x="829" y="303" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="800" fill="#ffffff">1.5x</text>
+  <rect x="858" y="288" width="45" height="22" rx="4" fill="#78350f" />
+  <text x="880" y="303" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="800" fill="#fde68a">2x</text>
+
+  <!-- Export Format Pills -->
+  <rect x="702" y="320" width="256" height="42" rx="6" fill="#451a03" />
+  <text x="712" y="337" font-family="sans-serif" font-size="9.5" font-weight="800" fill="#ffffff">Universal 1-Click Export:</text>
+  <rect x="712" y="342" width="70" height="16" rx="3" fill="#15803d" />
+  <text x="747" y="353" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="800" fill="#ffffff">Markdown .md</text>
+  <rect x="788" y="342" width="65" height="16" rx="3" fill="#0284c7" />
+  <text x="820" y="353" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="800" fill="#ffffff">PDF Document</text>
+  <rect x="860" y="342" width="55" height="16" rx="3" fill="#9333ea" />
+  <text x="887" y="353" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="800" fill="#ffffff">Raw JSON</text>
+</svg>

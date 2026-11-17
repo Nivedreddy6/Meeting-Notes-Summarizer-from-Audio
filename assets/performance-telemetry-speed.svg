@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 310" width="100%" height="100%">
+  <defs>
+    <!-- Background Canvas -->
+    <linearGradient id="teleBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040612" />
+      <stop offset="50%" stop-color="#080e22" />
+      <stop offset="100%" stop-color="#03050c" />
+    </linearGradient>
+
+    <!-- Speedometer Gradients -->
+    <linearGradient id="gaugeRed" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#f87171" />
+    </linearGradient>
+
+    <linearGradient id="gaugeGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <style>
+      @keyframes raceDash {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -120; }
+      }
+      @keyframes needleShakeSlow {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(-3deg); }
+      }
+      @keyframes turboGlow {
+        0%, 100% { filter: drop-shadow(0 0 4px #06b6d4); }
+        50% { filter: drop-shadow(0 0 14px #10b981); }
+      }
+
+      .race-track {
+        stroke-dasharray: 12, 6;
+        animation: raceDash 1s linear infinite;
+      }
+      .turbo-badge {
+        animation: turboGlow 2s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1000" height="310" rx="16" fill="url(#teleBg)" stroke="#1e293b" stroke-width="1.2" />
+
+  <!-- Title Header Bar -->
+  <text x="35" y="32" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="900" letter-spacing="1.5" fill="#38bdf8">ENGINEERING BENCHMARK TELEMETRY</text>
+  <text x="35" y="52" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="900" fill="#ffffff">Latency Speedometer: Gemini 2.5 Flash vs Legacy Whisper STT + LLM Chains</text>
+
+
+  <!-- ================= LEFT GAUGE: LEGACY CHAIN (SLOW RED) ================= -->
+  <rect x="25" y="70" width="310" height="220" rx="12" fill="#180c0c" stroke="#ef4444" stroke-width="1.6" />
+  <text x="180" y="96" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="900" fill="#fca5a5">🐢 LEGACY WHISPER + LLM</text>
+
+  <!-- Circular Dial Outer Arc -->
+  <path d="M 100 190 A 70 70 0 1 1 260 190" fill="none" stroke="#331414" stroke-width="14" stroke-linecap="round" />
+  <path d="M 100 190 A 70 70 0 0 1 250 140" fill="none" stroke="url(#gaugeRed)" stroke-width="14" stroke-linecap="round" />
+
+  <!-- Speedometer Center Hub -->
+  <circle cx="180" cy="180" r="14" fill="#450a0a" stroke="#ef4444" stroke-width="2" />
+  <!-- Overheated Needle pointing low/stuck -->
+  <line x1="180" y1="180" x2="135" y2="135" stroke="#ef4444" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Digital Time Readout -->
+  <text x="180" y="215" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="900" fill="#f87171">52.4 sec</text>
+  <text x="180" y="232" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#fca5a5">Overheating Pipeline Latency</text>
+
+  <!-- Spec Pills -->
+  <rect x="45" y="248" width="125" height="22" rx="4" fill="#2d1212" />
+  <text x="107" y="262" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#fca5a5">Whisper STT: 25.0s</text>
+  <rect x="180" y="248" width="135" height="22" rx="4" fill="#2d1212" />
+  <text x="247" y="262" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#fca5a5">LLM Chaining: 20.0s</text>
+
+
+  <!-- ================= CENTER: DRAG RACE TRACK & TURBO SHIELD ================= -->
+  <rect x="355" y="70" width="290" height="220" rx="12" fill="#0b172a" stroke="#38bdf8" stroke-width="1.5" />
+  
+  <text x="500" y="98" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="900" letter-spacing="1" fill="#38bdf8">⚡ HEAD-TO-HEAD DRAG RACE</text>
+
+  <!-- Racing Track Line -->
+  <rect x="375" y="115" width="250" height="28" rx="6" fill="#071324" />
+  <line x1="385" y1="129" x2="615" y2="129" stroke="#38bdf8" stroke-width="3" class="race-track" />
+  <!-- Turbo Jet Lead -->
+  <circle cx="605" cy="129" r="6" fill="#10b981" />
+  <circle cx="410" cy="129" r="5" fill="#ef4444" />
+
+  <!-- Big Winner Trophy Badge -->
+  <rect x="375" y="155" width="250" height="60" rx="10" fill="#064e3b" stroke="#10b981" stroke-width="2" class="turbo-badge" />
+  <text x="500" y="180" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="900" fill="#ffffff">8.9x SPEEDUP ADVANTAGE</text>
+  <text x="500" y="200" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="800" fill="#34d399">⚡ 85% End-to-End Latency Slashed</text>
+
+  <rect x="375" y="228" width="250" height="42" rx="6" fill="#0c1e34" />
+  <text x="500" y="244" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#94a3b8">Single-Pass Neural Acoustic Tokenizer</text>
+  <text x="500" y="258" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#38bdf8">Eliminates Whisper speech-to-text transcoding</text>
+
+
+  <!-- ================= RIGHT GAUGE: OMNINOTE GEMINI 2.5 (MAX GREEN) ================= -->
+  <rect x="665" y="70" width="310" height="220" rx="12" fill="#042318" stroke="#10b981" stroke-width="1.8" />
+  <text x="820" y="96" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="900" fill="#a7f3d0">🚀 OMNINOTE AI (GEMINI 2.5)</text>
+
+  <!-- Circular Dial Outer Arc -->
+  <path d="M 740 190 A 70 70 0 1 1 900 190" fill="none" stroke="#063d2b" stroke-width="14" stroke-linecap="round" />
+  <path d="M 740 190 A 70 70 0 1 1 890 140" fill="none" stroke="url(#gaugeGreen)" stroke-width="14" stroke-linecap="round" />
+
+  <!-- Speedometer Center Hub -->
+  <circle cx="820" cy="180" r="14" fill="#047857" stroke="#10b981" stroke-width="2" />
+  <!-- Maxed Needle pointing straight up/high speed -->
+  <line x1="820" y1="180" x2="865" y2="125" stroke="#34d399" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Digital Time Readout -->
+  <text x="820" y="215" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="900" fill="#34d399">&lt; 7.3 sec</text>
+  <text x="820" y="232" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#a7f3d0">Instantaneous Real-time Response</text>
+
+  <!-- Spec Pills -->
+  <rect x="685" y="248" width="130" height="22" rx="4" fill="#064e3b" />
+  <text x="750" y="262" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#a7f3d0">Tokenization: 2.8s</text>
+  <rect x="825" y="248" width="130" height="22" rx="4" fill="#064e3b" />
+  <text x="890" y="262" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#a7f3d0">Reasoning: 4.5s</text>
+</svg>

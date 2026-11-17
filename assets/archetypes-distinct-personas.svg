@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" width="100%" height="100%">
+  <defs>
+    <!-- Background Canvas -->
+    <linearGradient id="archCanvasBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040612" />
+      <stop offset="50%" stop-color="#080e22" />
+      <stop offset="100%" stop-color="#03050c" />
+    </linearGradient>
+
+    <!-- Gold Luxury Gradient for Executive -->
+    <linearGradient id="goldExec" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="50%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#78350f" />
+    </linearGradient>
+
+    <style>
+      @keyframes sparkPulse {
+        0%, 100% { stroke-opacity: 0.6; }
+        50% { stroke-opacity: 1; stroke-width: 2.5; }
+      }
+      .spark-line { animation: sparkPulse 2s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1000" height="280" rx="16" fill="url(#archCanvasBg)" stroke="#1e293b" stroke-width="1.2" />
+
+  <!-- Title Header -->
+  <text x="35" y="32" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="900" letter-spacing="1.5" fill="#38bdf8">SPECIALIZED AI PERSONA PROFILES</text>
+  <text x="35" y="52" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="900" fill="#ffffff">5 Tailored Extraction Archetypes with Dedicated Visual Identities</text>
+
+
+  <!-- ================= PERSONA 1: LEGAL CLIPBOARD SCROLL (Full Minutes) ================= -->
+  <!-- Clipboard Body (x=25, y=70, w=180, h=195) -->
+  <rect x="25" y="75" width="180" height="190" rx="10" fill="#0f172a" stroke="#6366f1" stroke-width="1.8" />
+  <!-- Clipboard Top Brass Clip -->
+  <rect x="80" y="66" width="70" height="18" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1.2" />
+  <circle cx="115" cy="75" r="3.5" fill="#e2e8f0" />
+  <text x="115" y="105" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="900" fill="#c7d2fe">📝 Full Minutes</text>
+  <text x="115" y="118" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#818cf8">ADMINISTRATIVE SCRIBE</text>
+
+  <!-- Document Line Items -->
+  <rect x="35" y="128" width="160" height="22" rx="3" fill="#1e293b" />
+  <text x="42" y="142" font-family="sans-serif" font-size="9" fill="#e2e8f0">• Full discussion transcript</text>
+  <rect x="35" y="154" width="160" height="22" rx="3" fill="#1e293b" />
+  <text x="42" y="168" font-family="sans-serif" font-size="9" fill="#e2e8f0">• Topic duration breakdown</text>
+  <rect x="35" y="180" width="160" height="22" rx="3" fill="#1e293b" />
+  <text x="42" y="194" font-family="sans-serif" font-size="9" fill="#e2e8f0">• All action items &amp; owners</text>
+
+  <!-- Official Notary Stamp at bottom -->
+  <rect x="35" y="210" width="160" height="42" rx="5" fill="#1e1b4b" stroke="#6366f1" stroke-width="1" />
+  <text x="115" y="226" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="800" fill="#a5b4fc">OFFICIAL RECORD SEAL</text>
+  <text x="115" y="242" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#cbd5e1">All-Hands &amp; Board Meetings</text>
+
+
+  <!-- ================= PERSONA 2: LUXURY GOLD C-SUITE BRIEF (Executive) ================= -->
+  <!-- Gold Bordered Card (x=218, y=70, w=180, h=195) -->
+  <rect x="218" y="75" width="180" height="190" rx="10" fill="#1c1404" stroke="url(#goldExec)" stroke-width="2" />
+  <circle cx="240" cy="98" r="10" fill="#78350f" />
+  <text x="240" y="102" text-anchor="middle" font-size="11">👑</text>
+  <text x="256" y="96" font-family="sans-serif" font-size="12" font-weight="900" fill="#fde68a">C-Suite Brief</text>
+  <text x="256" y="109" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#fbbf24">CHIEF OF STAFF</text>
+
+  <!-- Rising Financial Sparkline Graph -->
+  <rect x="228" y="118" width="160" height="48" rx="5" fill="#2d1c04" />
+  <text x="236" y="132" font-family="sans-serif" font-size="9" font-weight="700" fill="#fef08a">ARR Target: <tspan fill="#34d399" font-weight="900">$12.4M ↑</tspan></text>
+  <!-- Sparkline Path -->
+  <path d="M 236 156 L 260 152 L 285 154 L 315 142 L 345 146 L 375 130" fill="none" stroke="#34d399" stroke-width="2" class="spark-line" />
+  <circle cx="375" cy="130" r="3" fill="#34d399" />
+
+  <!-- Macro KPIs -->
+  <rect x="228" y="172" width="160" height="20" rx="3" fill="#2d1c04" />
+  <text x="236" y="185" font-family="sans-serif" font-size="8.5" fill="#fde68a">• 78% Gross Margin Target</text>
+  <rect x="228" y="196" width="160" height="20" rx="3" fill="#2d1c04" />
+  <text x="236" y="209" font-family="sans-serif" font-size="8.5" fill="#fde68a">• Critical Strategic Blockers</text>
+
+  <rect x="228" y="222" width="160" height="30" rx="4" fill="#78350f" />
+  <text x="308" y="238" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="900" fill="#ffffff">EXECUTIVE LEADERSHIP</text>
+  <text x="308" y="249" text-anchor="middle" font-family="sans-serif" font-size="7.5" fill="#fde68a">High-Impact Macro Synthesis</text>
+
+
+  <!-- ================= PERSONA 3: MINI KANBAN SPRINT BOARD (Daily Scrum) ================= -->
+  <!-- Kanban Board Frame (x=411, y=70, w=180, h=195) -->
+  <rect x="411" y="75" width="180" height="190" rx="10" fill="#06231a" stroke="#10b981" stroke-width="1.8" />
+  <circle cx="433" cy="98" r="10" fill="#047857" />
+  <text x="433" y="102" text-anchor="middle" font-size="11">🏃</text>
+  <text x="450" y="96" font-family="sans-serif" font-size="12" font-weight="900" fill="#a7f3d0">Daily Scrum</text>
+  <text x="450" y="109" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#34d399">SCRUM MASTER</text>
+
+  <!-- 3 Mini Kanban Columns -->
+  <!-- TODO Column -->
+  <rect x="421" y="120" width="48" height="85" rx="4" fill="#093527" />
+  <text x="445" y="132" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="800" fill="#94a3b8">TODO</text>
+  <rect x="424" y="138" width="42" height="18" rx="2" fill="#0c4a37" />
+  <rect x="424" y="160" width="42" height="18" rx="2" fill="#0c4a37" />
+
+  <!-- DOING Column -->
+  <rect x="477" y="120" width="48" height="85" rx="4" fill="#093527" />
+  <text x="501" y="132" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="800" fill="#38bdf8">DOING</text>
+  <rect x="480" y="138" width="42" height="24" rx="2" fill="#075985" />
+  <text x="501" y="152" text-anchor="middle" font-size="7" fill="#ffffff">Redis</text>
+
+  <!-- DONE Column -->
+  <rect x="533" y="120" width="48" height="85" rx="4" fill="#093527" />
+  <text x="557" y="132" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="800" fill="#34d399">DONE</text>
+  <rect x="536" y="138" width="42" height="18" rx="2" fill="#065f46" />
+  <text x="557" y="150" text-anchor="middle" font-size="8" fill="#a7f3d0">✓ 85%</text>
+
+  <rect x="421" y="215" width="160" height="38" rx="5" fill="#064e3b" />
+  <text x="501" y="230" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="900" fill="#ffffff">SPRINT COMMITTED</text>
+  <text x="501" y="244" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#6ee7b7">Done • In-Progress • Blockers</text>
+
+
+  <!-- ================= PERSONA 4: ENGINEERING BLUEPRINT (Architecture) ================= -->
+  <!-- Blueprint Grid Frame (x=604, y=70, w=180, h=195) -->
+  <rect x="604" y="75" width="180" height="190" rx="10" fill="#130e28" stroke="#c084fc" stroke-width="1.8" />
+  <!-- Blueprint Grid lines inside -->
+  <g opacity="0.1" stroke="#c084fc" stroke-width="1">
+    <line x1="604" y1="120" x2="784" y2="120" />
+    <line x1="604" y1="160" x2="784" y2="160" />
+    <line x1="604" y1="200" x2="784" y2="200" />
+    <line x1="664" y1="75" x2="664" y2="265" />
+    <line x1="724" y1="75" x2="724" y2="265" />
+  </g>
+
+  <circle cx="626" cy="98" r="10" fill="#6b21a8" />
+  <text x="626" y="102" text-anchor="middle" font-size="11">🛠️</text>
+  <text x="643" y="96" font-family="sans-serif" font-size="12" font-weight="900" fill="#f3e8ff">Architecture</text>
+  <text x="643" y="109" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#c084fc">PRINCIPAL ARCHITECT</text>
+
+  <!-- ADR Technical Schematic Box -->
+  <rect x="614" y="120" width="160" height="85" rx="5" fill="#2e1065" stroke="#9333ea" stroke-width="1" />
+  <text x="622" y="136" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="800" fill="#38bdf8">ADR-42: Redis Sentinel</text>
+  <text x="622" y="152" font-family="sans-serif" font-size="8.5" fill="#cbd5e1">• Failover SLA: &lt; 3.0s</text>
+  <text x="622" y="167" font-family="sans-serif" font-size="8.5" fill="#cbd5e1">• Connection Pool: 5k req/s</text>
+  <text x="622" y="182" font-family="sans-serif" font-size="8.5" fill="#cbd5e1">• Dual-write shadow mode</text>
+  <text x="622" y="197" font-family="sans-serif" font-size="8" font-weight="700" fill="#a7f3d0">✓ Trade-Offs Documented</text>
+
+  <rect x="614" y="215" width="160" height="38" rx="5" fill="#581c87" />
+  <text x="694" y="230" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="900" fill="#ffffff">SYSTEM ADR LOGS</text>
+  <text x="694" y="244" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#d8b4fe">Engineering RFCs &amp; Specs</text>
+
+
+  <!-- ================= PERSONA 5: CLIENT CONTRACT PROPOSAL (Discovery) ================= -->
+  <!-- Corporate Proposal Card (x=797, y=70, w=180, h=195) -->
+  <rect x="797" y="75" width="180" height="190" rx="10" fill="#241706" stroke="#f59e0b" stroke-width="1.8" />
+  <circle cx="819" cy="98" r="10" fill="#b45309" />
+  <text x="819" y="102" text-anchor="middle" font-size="11">🤝</text>
+  <text x="836" y="96" font-family="sans-serif" font-size="12" font-weight="900" fill="#fef3c7">Client Discovery</text>
+  <text x="836" y="109" font-family="sans-serif" font-size="8.5" font-weight="700" fill="#f59e0b">SOLUTIONS DIRECTOR</text>
+
+  <!-- Proposal Contract Details -->
+  <rect x="807" y="120" width="160" height="85" rx="5" fill="#451a03" stroke="#b45309" stroke-width="1" />
+  <text x="815" y="136" font-family="sans-serif" font-size="9" font-weight="800" fill="#fef3c7">Deal: Enterprise Migration</text>
+  <text x="815" y="152" font-family="sans-serif" font-size="8.5" fill="#fde68a">• Pain: Legacy CRM latency</text>
+  <text x="815" y="167" font-family="sans-serif" font-size="8.5" fill="#fde68a">• Timeline: 90-Day Rollout</text>
+  <!-- Compliance checkmark chips -->
+  <rect x="815" y="174" width="42" height="14" rx="2" fill="#78350f" />
+  <text x="836" y="184" text-anchor="middle" font-size="7.5" font-weight="800" fill="#34d399">✓ SOC-2</text>
+  <rect x="862" y="174" width="42" height="14" rx="2" fill="#78350f" />
+  <text x="883" y="184" text-anchor="middle" font-size="7.5" font-weight="800" fill="#34d399">✓ HIPAA</text>
+  <rect x="909" y="174" width="42" height="14" rx="2" fill="#78350f" />
+  <text x="930" y="184" text-anchor="middle" font-size="7.5" font-weight="800" fill="#34d399">✓ GDPR</text>
+
+  <rect x="807" y="215" width="160" height="38" rx="5" fill="#78350f" />
+  <text x="887" y="230" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="900" fill="#ffffff">SOLUTIONS DISCOVERY</text>
+  <text x="887" y="244" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#fef3c7">Sales &amp; Discovery Calls</text>
+</svg>

@@ -108,8 +108,8 @@
 ## ✨ Core Features & Intelligence Suite
 
 <div align="center">
-  <!-- 6-Card Animated Feature Grid -->
-  <img src="./assets/features-grid.svg" alt="OmniNote Features Grid" width="100%" />
+  <!-- Interactive Bento Grid with 6 Radically Distinct Widgets -->
+  <img src="./assets/features-bento-grid.svg" alt="OmniNote Features Bento Grid" width="100%" />
 </div>
 
 <br/>
@@ -128,8 +128,8 @@
 ## 🖥️ React 19 Workspace & Interactive Tabs
 
 <div align="center">
-  <!-- React 19 UI Workspace Showcase -->
-  <img src="./assets/ui-tabs-showcase.svg" alt="React 19 Workspace Showcase" width="100%" />
+  <!-- React 19 Studio Console: Diarized Speech, Task Kanban & Grounded AI -->
+  <img src="./assets/ui-studio-console.svg" alt="React 19 Studio Console" width="100%" />
 </div>
 
 <br/>
@@ -147,8 +147,8 @@
 ## 🎯 5 Specialized Meeting Archetypes
 
 <div align="center">
-  <!-- Archetypes Matrix -->
-  <img src="./assets/archetypes-matrix.svg" alt="Meeting Archetypes Matrix" width="100%" />
+  <!-- 5 Radically Distinct Persona Cards: Legal, Executive Sparkline, Scrum Kanban, Blueprint ADR, Sales -->
+  <img src="./assets/archetypes-distinct-personas.svg" alt="Meeting Archetypes Distinct Personas" width="100%" />
 </div>
 
 <br/>
@@ -166,8 +166,8 @@
 ## ⚡ Performance Benchmarks & Latency Advantage
 
 <div align="center">
-  <!-- Animated Performance Benchmarks Table -->
-  <img src="./assets/performance-table.svg" alt="Performance Benchmarks Table" width="100%" />
+  <!-- Dual Speedometer Latency Telemetry Dashboard -->
+  <img src="./assets/performance-telemetry-speed.svg" alt="Performance Speedometer Telemetry" width="100%" />
 </div>
 
 <br/>
